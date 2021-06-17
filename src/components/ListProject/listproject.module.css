@@ -42,7 +42,6 @@
 }
 
 .stackTech {
-  filter: brightness(0.9);
   color: #fff;
   border-radius: 100rem;
   padding: 0.3rem 0.5rem;
@@ -95,6 +94,10 @@
 
   .link:hover {
     filter: brightness(1.1);
+  }
+
+  .stackTech {
+    filter: brightness(0.9);
   }
 
   .stackTech:hover {

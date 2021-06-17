@@ -1,10 +1,11 @@
 :root {
   --primary-color: #6ec2f7;
-  --secondary-color: #ec9a29;
+  --secondary-color: #cef6ff;
   --white-color: #fff;
   --hard-black: #222;
   --text-color: rgba(0, 0, 0, 0.8);
   --text-secondary-color: rgba(0, 0, 0, 0.6);
+  /*#CEF6FF*/
 }
 
 * {

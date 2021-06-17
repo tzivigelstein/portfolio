@@ -1,4 +1,52 @@
 .container {
-  height: 50vh;
-  background-color: coral;
+  margin-bottom: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(12.5rem, 1fr));
+  gap: 3rem;
+}
+
+.title {
+  font-size: 1.5rem;
+  color: var(--text-color);
+}
+
+.subtitle {
+  font-size: 1.15rem;
+  color: var(--text-color);
+}
+
+.text {
+  font-size: 1rem;
+  color: var(--text-secondary-color);
+}
+
+.goalsContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.goal {
+  font-size: 1rem;
+  color: var(--text-secondary-color);
+  margin-bottom: 0.6rem;
+}
+
+.skillsContainer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 1rem;
+  align-items: center;
+  justify-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.icon {
+  color: #000;
+}
+
+@media (max-width: 480px) {
+  .container {
+    flex-direction: column;
+  }
 }
