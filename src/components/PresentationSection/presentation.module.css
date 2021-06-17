@@ -4,6 +4,20 @@
 }
 
 .info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.title {
+  color: var(--text-color);
+  font-size: 1.5rem;
+}
+
+.text {
+  font-size: 1rem;
+  color: var(--text-secondary-color);
+  margin: 0;
 }
 
 .imageContainer {

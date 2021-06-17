@@ -2,7 +2,6 @@ import React from 'react'
 import styles from './sections.module.css'
 import PresentationSection from '../PresentationSection/PresentationSection'
 import ProjectsSection from '../ProjectsSection/ProjectsSection'
-import ContactSection from '../ContactSection/ContactSection'
 import AboutSection from '../AboutSection/AboutSection'
 
 const Sections = () => {
@@ -11,7 +10,6 @@ const Sections = () => {
       <PresentationSection />
       <ProjectsSection />
       <AboutSection />
-      <ContactSection />
     </div>
   )
 }

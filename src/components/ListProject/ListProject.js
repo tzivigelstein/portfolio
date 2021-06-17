@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from './listproject.module.css'
-import GithubIcon from '../GithubIcon'
-import SiteIcon from '../SiteIcon'
+import { GithubIcon } from '../SocialIcons'
+import { SiteIcon } from '../UICons'
 
 const ListProject = ({ project }) => {
   const { title, subtitle, image, repository, site, stack } = project
@@ -30,7 +30,7 @@ const ListProject = ({ project }) => {
             href={repository}
           >
             Repository
-            <GithubIcon className={styles.linkIcon} width={18} height={18} stroke="rgba(0,0,0,0.8)" />
+            <GithubIcon className={styles.linkIcon} width={18} height={18} fill="rgba(0,0,0,0.8)" />
           </a>
         </div>
         <div className={styles.linkContainer}>

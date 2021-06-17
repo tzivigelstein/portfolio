@@ -1,0 +1,16 @@
+.skill {
+  align-items: center;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  padding: 0.6rem;
+  width: max-content;
+  height: max-content;
+  transition: filter 0.3s ease;
+}
+
+@media (hover) {
+  .skill:hover {
+    filter: brightness(1.1);
+  }
+}
