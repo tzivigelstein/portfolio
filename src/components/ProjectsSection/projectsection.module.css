@@ -1,0 +1,19 @@
+.container {
+}
+
+.secondarySection {
+  margin-bottom: 4rem;
+}
+
+.sectionTitle {
+  margin: 1.5rem auto;
+  color: var(--text-color);
+}
+
+.projectList {
+  margin: 0 auto;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  gap: 2rem;
+}

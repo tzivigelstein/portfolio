@@ -1,0 +1,35 @@
+.container {
+  display: flex;
+  margin: 2rem 0;
+}
+
+.info {
+}
+
+.imageContainer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.image {
+  width: 80%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+@media (hover) {
+  .image:hover {
+    transform: scale(1.05);
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .imageContainer {
+    justify-content: center;
+  }
+}

@@ -1,0 +1,29 @@
+.navigation {
+  position: sticky;
+  display: flex;
+  width: calc(100% - 1rem);
+  top: 1rem;
+  left: 0;
+  margin: 0 auto 1rem auto;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.3));
+  box-shadow: 0 0.5rem 2rem 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(2rem);
+  -webkit-backdrop-filter: blur(2rem);
+  border-radius: 0.5rem;
+}
+
+.navigationTitle {
+  margin: 0;
+  font-size: 1.313rem;
+}
+
+.navigationButton {
+  box-sizing: content-box;
+  cursor: pointer;
+  padding: 0.6rem;
+  background-color: var(--secondary-color);
+  border-radius: 50%;
+}

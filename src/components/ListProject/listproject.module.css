@@ -1,0 +1,103 @@
+.container {
+  transition: box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.188rem 1.25rem 0.125rem rgb(64 62 67 / 16%);
+  cursor: pointer;
+}
+
+.imageContainer {
+}
+
+.image {
+  border-radius: 0.5rem;
+  width: 100%;
+  object-fit: cover;
+}
+
+.infoContainer {
+  padding: 1rem;
+  flex: 1;
+}
+
+.title {
+  font-weight: bold;
+  margin: 0.3rem 0;
+  font-size: 1.125rem;
+  color: var(--text-color);
+}
+
+.subtitle {
+  margin: 0.3rem 0;
+  font-size: 0.875rem;
+  color: var(--text-secondary-color);
+}
+
+.stackList {
+  margin: 0;
+  padding: 0.7rem 0 0 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.stackTech {
+  filter: brightness(0.9);
+  color: #fff;
+  border-radius: 100rem;
+  padding: 0.3rem 0.5rem;
+  transition: filter 0.3s ease;
+  margin: 0.3rem;
+  font-size: 0.875rem;
+}
+
+.linksContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  width: 100%;
+}
+
+.linkContainer {
+  flex: 1;
+  margin: 0 0.3rem;
+}
+
+.link {
+  color: var(--text-color);
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 0.5rem 0.8rem;
+  border-radius: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: filter 0.3s ease;
+}
+
+.linkIcon {
+  margin-left: 0.3rem;
+}
+
+.githubLink {
+  background-color: var(--secondary-color);
+}
+
+.siteLink {
+  background-color: var(--primary-color);
+}
+
+@media (hover) {
+  .container:hover {
+    box-shadow: 0 0.188rem 1.25rem 0.125rem rgb(64 62 67 / 32%);
+  }
+
+  .link:hover {
+    filter: brightness(1.1);
+  }
+
+  .stackTech:hover {
+    filter: brightness(1);
+  }
+}
