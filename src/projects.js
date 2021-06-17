@@ -4,7 +4,7 @@ const projects = [
     category: 'web',
     title: 'MERNTasks Web',
     subtitle: 'Productivity App',
-    image: './images/merntasks.webp',
+    image: './images/MERNTasks.webp',
     repository: 'https://github.com/tzivigelstein/MERNTasks-Client',
     site: 'https://mern-tasks-client.vercel.app/',
     stack: [
