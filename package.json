@@ -12,7 +12,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build process.env.CI = true",
+    "build": "CI= true react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
