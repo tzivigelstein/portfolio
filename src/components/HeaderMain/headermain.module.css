@@ -48,6 +48,12 @@
   background-color: var(--white-color);
 }
 
+@media (max-width: 768px) {
+  .headerImageContainer {
+    display: none;
+  }
+}
+
 @media (hover) {
   .headerLinkButton:hover {
     filter: brightness(1.1);
