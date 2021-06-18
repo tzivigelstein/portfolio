@@ -3,7 +3,7 @@
   margin: 0 auto;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 768px) {
   .sectionsContainer {
     width: 90%;
   }
