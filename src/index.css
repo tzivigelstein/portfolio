@@ -5,7 +5,6 @@
   --hard-black: #222;
   --text-color: rgba(0, 0, 0, 0.8);
   --text-secondary-color: rgba(0, 0, 0, 0.6);
-  /*#CEF6FF*/
 }
 
 * {
@@ -14,12 +13,6 @@
 
 html {
   box-sizing: inherit;
-}
-
-body {
-  all: unset;
-  margin: 0;
-  font-family: sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-touch-callout: none;
@@ -28,6 +21,16 @@ body {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+}
+
+body {
+  all: unset;
+  margin: 0;
+  font-family: sans-serif;
+}
+
+p {
+  margin: 0;
 }
 
 @media (min-width: 1366px) {

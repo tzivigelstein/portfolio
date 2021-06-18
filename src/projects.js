@@ -100,6 +100,7 @@ const projects = [
     image: './images/CryptoFlyerApp.webp',
     repository: 'https://github.com/tzivigelstein/Twitter-Clone',
     site: 'https://twitter-cl.vercel.app/login',
+    apk: 'Crypto',
     stack: [
       {
         id: 'JV',
@@ -122,7 +123,7 @@ const projects = [
     ],
   },
   {
-    id: '0T9',
+    id: '2NB',
     category: 'web',
     title: 'Cripto',
     subtitle: 'Entertainment App',

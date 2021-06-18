@@ -10,19 +10,19 @@ const Footer = () => {
           <h4>Where can I find you?</h4>
           <ul className={styles.socialList}>
             <li>
-              <a href="" className={styles.socialLink}>
+              <a href="https://www.linkedin.com/in/tzivigelstein/" className={styles.socialLink}>
                 <LinkedinIcon className={styles.icon} fill="" />
                 Linkedin
               </a>
             </li>
             <li>
-              <a href="" className={styles.socialLink}>
+              <a href="https://github.com/tzivigelstein" className={styles.socialLink}>
                 <GithubIcon className={styles.icon} fill="" />
                 Github
               </a>
             </li>
             <li>
-              <a href="" className={styles.socialLink}>
+              <a href="https://twitter.com/tzivigelstein" className={styles.socialLink}>
                 <TwitterIcon className={styles.icon} fill="" />
                 Twitter
               </a>
@@ -33,7 +33,7 @@ const Footer = () => {
           <h4>I want to know more...</h4>
           <ul className={styles.socialList}>
             <li>
-              <p href="" className={styles.socialLink}>
+              <p className={styles.socialLink}>
                 <Resume className={styles.icon} fill="" />
                 Resume
               </p>
