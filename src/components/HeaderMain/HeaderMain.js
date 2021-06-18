@@ -18,9 +18,9 @@ const HeaderMain = () => {
             Linkedin
           </a>
           <div className={styles.hiddenResumeDownloadContainer}>
-            <a onClick={() => setActiveDownloadResume(!activeDownloadResume)} className={styles.headerLinkButtonResume}>
+            <p onClick={() => setActiveDownloadResume(!activeDownloadResume)} className={styles.headerLinkButtonResume}>
               Resume
-            </a>
+            </p>
             <div
               className={`${styles.hiddenResumeDownload} ${activeDownloadResume && styles.hiddenResumeDownloadActive}`}
             >
