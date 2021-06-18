@@ -32,3 +32,19 @@ export const SiteIcon = props => (
     <path d="M7 17L17 7M7 7h10v10" />
   </svg>
 )
+
+export const TimesIcon = props => (
+  <svg
+    viewBox="0 0 24 24"
+    width={24}
+    height={24}
+    stroke="currentColor"
+    strokeWidth={2}
+    fill="none"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    {...props}
+  >
+    <path d="M18 6L6 18M6 6l12 12" />
+  </svg>
+)

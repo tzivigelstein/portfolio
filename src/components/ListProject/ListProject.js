@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import styles from './listproject.module.css'
 import { GithubIcon } from '../SocialIcons'
-import { SiteIcon, DownloadIcon } from '../UICons'
+import { SiteIcon, DownloadIcon, TimesIcon } from '../UICons'
 import ActivityIndicator from '../ActivityIndicator/ActivityIndicator'
 
 const url = 'http://192.168.0.10:4000/api/download/apk'
@@ -9,8 +9,9 @@ const url = 'http://192.168.0.10:4000/api/download/apk'
 const ListProject = ({ project }) => {
   const { category, title, subtitle, image, repository, site, stack, apk } = project
 
-  const [loading, setLoading] = useState(false)
   const [downloadUrl, setDownloadUrl] = useState('')
+  const [loading, setLoading] = useState(false)
+  const [error, setError] = useState(false)
 
   useEffect(() => {
     apk && handleGetLink()
@@ -26,7 +27,7 @@ const ListProject = ({ project }) => {
 
       setDownloadUrl(response)
     } else {
-      console.log('no link')
+      setError(true)
     }
     setLoading(false)
   }
@@ -83,9 +84,9 @@ const ListProject = ({ project }) => {
             </a>
           ) : (
             <a className={`${styles.link} ${styles.siteLink}`} href={downloadUrl}>
-              {loading ? (
-                <ActivityIndicator size="small" />
-              ) : (
+              {loading && <ActivityIndicator size="small" />}
+              {error && <TimesIcon width={18} height={18} />}
+              {!error && !loading && (
                 <>
                   Download
                   <DownloadIcon className={styles.linkIcon} width={18} height={18} stroke="rgba(0,0,0,0.8)" />
