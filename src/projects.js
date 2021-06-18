@@ -67,7 +67,7 @@ const projects = [
     category: 'web',
     title: 'Product Hunt',
     subtitle: 'Social App',
-    image: './images/ProductHuntFlyer.webp',
+    image: './images/PHuntFlyer.webp',
     repository: 'https://github.com/tzivigelstein/Product-Hunt-Clone',
     site: 'https://producthunt-cl.vercel.app/',
     stack: [
@@ -113,7 +113,7 @@ const projects = [
     category: 'web',
     title: 'Lyric it',
     subtitle: 'Entertainment App',
-    image: './images/Lyricit.webp',
+    image: './images/LyricItFlyer.webp',
     repository: 'https://github.com/tzivigelstein/Lyric-it',
     site: 'https://lyrict-it.netlify.app/',
     stack: [
@@ -126,7 +126,7 @@ const projects = [
     category: 'web',
     title: 'Cripto',
     subtitle: 'Entertainment App',
-    image: './images/CryptoConverter.webp',
+    image: './images/CryptoFlyer.webp',
     repository: 'https://github.com/tzivigelstein/Crypto',
     site: 'https://crypto-convert.netlify.app/',
     stack: [
