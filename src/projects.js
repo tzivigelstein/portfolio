@@ -97,7 +97,7 @@ const projects = [
     category: 'app',
     title: 'Crypto',
     subtitle: 'Productivity App',
-    image: './images/CryptoFlyer.webp',
+    image: './images/CryptoFlyerApp.webp',
     repository: 'https://github.com/tzivigelstein/Twitter-Clone',
     site: 'https://twitter-cl.vercel.app/login',
     stack: [
