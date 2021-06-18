@@ -31,6 +31,52 @@
   font-weight: bold;
   color: var(--text-color);
   margin: 0.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.hiddenResumeDownloadContainer {
+  position: relative;
+  margin: 0.5rem;
+}
+
+.headerLinkButtonResume {
+  background-color: var(--white-color);
+  text-decoration: none;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+  color: var(--text-color);
+  font-size: 1rem;
+  cursor: pointer;
+  z-index: 1;
+  position: relative;
+}
+
+.hiddenResumeDownload {
+  position: absolute;
+  background-color: var(--white-color);
+  top: 0;
+  left: 0;
+  font-size: 0rem;
+  width: 100%;
+  height: max-content;
+  padding: 0.5rem 0.3rem;
+  z-index: 0;
+  border-radius: 0.5rem;
+  transition: 0.3s top ease, 0.1s font-size ease, 0.1s z-index ease, 0.3s box-shadow ease;
+}
+
+.hiddenResumeDownloadActive {
+  top: 100%;
+  font-size: 1rem;
+  z-index: 2;
+  box-shadow: 0 0.188rem 1.25rem 0.125rem rgb(64 62 67 / 16%);
+}
+
+.hiddenResumeDownloadLinks {
+  font-size: inherit;
+  margin: 0;
 }
 
 .headerImageContainer {

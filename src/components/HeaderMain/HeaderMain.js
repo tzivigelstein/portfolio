@@ -1,7 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styles from './headermain.module.css'
 
 const HeaderMain = () => {
+  const [activeDownloadResume, setActiveDownloadResume] = useState(false)
+
   return (
     <div className={styles.headerMain}>
       <div className={styles.headerTitleContainer}>
@@ -15,13 +17,25 @@ const HeaderMain = () => {
           <a className={styles.headerLinkButton} href="https://www.linkedin.com/in/tzivigelstein/">
             Linkedin
           </a>
-          <a className={styles.headerLinkButton} href="">
-            Resume
-          </a>
+          <div className={styles.hiddenResumeDownloadContainer}>
+            <a onClick={() => setActiveDownloadResume(!activeDownloadResume)} className={styles.headerLinkButtonResume}>
+              Resume
+            </a>
+            <div
+              className={`${styles.hiddenResumeDownload} ${activeDownloadResume && styles.hiddenResumeDownloadActive}`}
+            >
+              <a className={styles.hiddenResumeDownloadLinks} href="./resume/Tzivi_Gelstein_CV_EN.pdf">
+                English 🇺🇸
+              </a>
+              <a className={styles.hiddenResumeDownloadLinks} href="./resume/Tzivi_Gelstein_CV_ES.pdf">
+                Spanish 🇪🇸
+              </a>
+            </div>
+          </div>
         </div>
       </div>
       <div className={styles.headerImageContainer}>
-        <img className={styles.headerImage} src="images/me.png" alt="Tzivi Gelstein" />
+        <img className={styles.headerImage} src="images/HeaderImage.png" alt="Tzivi Gelstein" />
       </div>
     </div>
   )

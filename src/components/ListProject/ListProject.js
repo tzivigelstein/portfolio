@@ -1,10 +1,10 @@
 import React from 'react'
 import styles from './listproject.module.css'
 import { GithubIcon } from '../SocialIcons'
-import { SiteIcon } from '../UICons'
+import { SiteIcon, DownloadIcon } from '../UICons'
 
 const ListProject = ({ project }) => {
-  const { title, subtitle, image, repository, site, stack } = project
+  const { category, title, subtitle, image, repository, site, stack } = project
   return (
     <div className={styles.container}>
       <div className={styles.imageContainer}>
@@ -35,8 +35,12 @@ const ListProject = ({ project }) => {
         </div>
         <div className={styles.linkContainer}>
           <a target="_blank" rel="​noopener noreferrer" className={`${styles.link} ${styles.siteLink}`} href={site}>
-            Site
-            <SiteIcon className={styles.linkIcon} width={18} height={18} stroke="rgba(0,0,0,0.8)" />
+            {category === 'web' ? 'Site' : 'Download'}
+            {category === 'web' ? (
+              <SiteIcon className={styles.linkIcon} width={18} height={18} stroke="rgba(0,0,0,0.8)" />
+            ) : (
+              <DownloadIcon className={styles.linkIcon} width={18} height={18} stroke="rgba(0,0,0,0.8)" />
+            )}
           </a>
         </div>
       </div>
