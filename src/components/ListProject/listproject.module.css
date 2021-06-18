@@ -87,6 +87,17 @@
   background-color: var(--primary-color);
 }
 
+@media (max-width: 768px) {
+  .linksContainer {
+    flex-direction: column;
+    align-items: initial;
+  }
+
+  .linkContainer {
+    margin: 0.3rem 0;
+  }
+}
+
 @media (hover) {
   .container:hover {
     box-shadow: 0 0.188rem 1.25rem 0.125rem rgb(64 62 67 / 32%);
