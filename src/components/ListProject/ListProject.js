@@ -14,7 +14,11 @@ const ListProject = ({ project }) => {
   const [error, setError] = useState(false)
 
   useEffect(() => {
-    apk && handleGetLink()
+    if (apk) {
+      handleGetLink()
+    } else {
+      setError(true)
+    }
   }, [])
 
   async function handleGetLink() {
