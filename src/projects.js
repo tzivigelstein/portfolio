@@ -19,7 +19,7 @@ const projects = [
     title: 'MERNTasks App',
     subtitle: 'Productivity App',
     image: './images/MERNTasksFlyer.webp',
-    repository: '',
+    repository: 'https://github.com/tzivigelstein/MERNTasks-App',
     site: '',
     stack: [
       { id: 'eI', name: 'React Native', color: '#03a3ce' },
@@ -47,7 +47,7 @@ const projects = [
     title: 'Tidify App',
     subtitle: 'Food App',
     image: './images/TidifyFlyerApp.webp',
-    repository: '',
+    repository: 'https://github.com/tzivigelstein/Tidify-Client',
     site: '',
     stack: [
       {
@@ -98,8 +98,8 @@ const projects = [
     title: 'Crypto',
     subtitle: 'Productivity App',
     image: './images/CryptoFlyerApp.webp',
-    repository: 'https://github.com/tzivigelstein/Twitter-Clone',
-    site: 'https://twitter-cl.vercel.app/login',
+    repository: 'https://github.com/tzivigelstein/Crypto-App',
+    site: '',
     apk: 'Crypto',
     stack: [
       {
