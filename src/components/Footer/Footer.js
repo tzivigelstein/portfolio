@@ -51,7 +51,6 @@ const Footer = () => {
           </ul>
         </div>
       </div>
-      <p className={styles.footerMessage}>Made with ❤ by Tzivi</p>
     </footer>
   )
 }
