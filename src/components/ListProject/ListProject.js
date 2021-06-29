@@ -4,7 +4,7 @@ import { GithubIcon } from '../SocialIcons'
 import { SiteIcon, DownloadIcon, TimesIcon } from '../UICons'
 import ActivityIndicator from '../ActivityIndicator/ActivityIndicator'
 
-const url = 'http://192.168.0.10:4000/api/download/apk'
+const url = 'http://192.168.0.10:4000/api/download'
 
 const ListProject = ({ project }) => {
   const { category, title, subtitle, image, repository, site, stack, apk } = project

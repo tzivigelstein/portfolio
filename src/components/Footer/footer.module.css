@@ -50,15 +50,6 @@
   align-items: center;
 }
 
-.footerMessage {
-  background-color: var(--secondary-color);
-  color: var(--text-color);
-  font-size: 1rem;
-  margin: 0;
-  padding: 1rem;
-  text-align: center;
-}
-
 @media (max-width: 480px) {
   .infoContainer {
     align-items: center;
