@@ -3,8 +3,7 @@ import styles from './listproject.module.css'
 import { GithubIcon } from '../SocialIcons'
 import { SiteIcon, DownloadIcon, TimesIcon } from '../UICons'
 import ActivityIndicator from '../ActivityIndicator/ActivityIndicator'
-
-const url = 'http://192.168.0.10:4000/api/download'
+import axiosClient from '../../config/axiosClient'
 
 const ListProject = ({ project }) => {
   const { category, title, subtitle, image, repository, site, stack, apk } = project
@@ -12,7 +11,7 @@ const ListProject = ({ project }) => {
   const [downloadUrl, setDownloadUrl] = useState('')
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState(false)
-
+  console.log({ downloadUrl })
   useEffect(() => {
     if (apk) {
       handleGetLink()
@@ -23,25 +22,22 @@ const ListProject = ({ project }) => {
 
   async function handleGetLink() {
     setLoading(true)
-    const res = await getLink()
-
-    if (res.ok) {
-      const json = await res.json()
-      const { response } = json
-
+    const query = await getLink()
+    try {
+      const { response } = query.data
       setDownloadUrl(response)
-    } else {
+    } catch (error) {
+      console.log(error)
       setError(true)
+      console.log('entre al error links')
     }
     setLoading(false)
   }
 
   async function getLink() {
     try {
-      const query = fetch(url, {
-        method: 'GET',
+      const query = axiosClient('/api/download', {
         headers: {
-          'Content-Type': 'application/json',
           package: apk,
         },
       })
