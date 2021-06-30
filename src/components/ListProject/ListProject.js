@@ -11,7 +11,7 @@ const ListProject = ({ project }) => {
   const [downloadUrl, setDownloadUrl] = useState('')
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState(false)
-  console.log({ downloadUrl })
+
   useEffect(() => {
     if (apk) {
       handleGetLink()
@@ -29,7 +29,6 @@ const ListProject = ({ project }) => {
     } catch (error) {
       console.log(error)
       setError(true)
-      console.log('entre al error links')
     }
     setLoading(false)
   }

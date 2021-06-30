@@ -5,8 +5,6 @@ const url =
     ? process.env.REACT_APP_PRODUCTION_BACKEND_URL
     : process.env.REACT_APP_DEVELOPMENT_BACKEND_URL
 
-console.log(url)
-
 const axiosConfig = {
   baseURL: url,
 }
