@@ -5,6 +5,7 @@
   border-radius: 0.5rem;
   box-shadow: 0 0.188rem 1.25rem 0.125rem rgb(64 62 67 / 16%);
   cursor: pointer;
+  background-color: var(--white);
 }
 
 .imageContainer {
