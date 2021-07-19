@@ -24,7 +24,7 @@
 }
 
 .headerLinkButton {
-  background-color: var(--white-color);
+  background-color: var(--white);
   text-decoration: none;
   border-radius: 0.5rem;
   padding: 0.5rem 1rem;
@@ -41,7 +41,7 @@
 }
 
 .headerLinkButtonResume {
-  background-color: var(--white-color);
+  background-color: var(--white);
   text-decoration: none;
   border-radius: 0.5rem;
   padding: 0.5rem 1rem;
@@ -55,7 +55,7 @@
 
 .hiddenResumeDownload {
   position: absolute;
-  background-color: var(--white-color);
+  background-color: var(--white);
   top: 0;
   left: 0;
   font-size: 0rem;
@@ -91,7 +91,7 @@
   height: auto;
   border-radius: 66% 34% 70% 30% / 47% 60% 40% 53%;
   object-fit: cover;
-  background-color: var(--white-color);
+  background-color: var(--white);
 }
 
 @media (max-width: 768px) {

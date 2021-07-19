@@ -1,6 +1,12 @@
 .sectionsContainer {
-  width: 80%;
+  width: 65%;
   margin: 0 auto;
+}
+
+@media (min-width: 1361px) {
+  .sectionsContainer {
+    width: 60%;
+  }
 }
 
 @media (max-width: 768px) {

@@ -1,7 +1,7 @@
 :root {
   --primary-color: #6ec2f7;
   --secondary-color: #cef6ff;
-  --white-color: #fff;
+  --white: #fff;
   --hard-black: #222;
   --text-color: rgba(0, 0, 0, 0.8);
   --text-secondary-color: rgba(0, 0, 0, 0.6);
@@ -35,6 +35,6 @@ p {
 
 @media (min-width: 1366px) {
   html {
-    font-size: 137.5%;
+    font-size: 100%;
   }
 }

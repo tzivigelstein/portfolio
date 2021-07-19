@@ -6,7 +6,7 @@
 
 .circle {
   fill: none;
-  stroke: var(--white-color);
+  stroke: var(--white);
   stroke-width: 0.25rem;
   stroke-dasharray: 1rem, 200rem;
   stroke-dashoffset: 0rem;

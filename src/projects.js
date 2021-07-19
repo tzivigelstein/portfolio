@@ -2,11 +2,11 @@ const projects = [
   {
     id: 'O1i',
     category: 'web',
-    title: 'MERNTasks Web',
+    title: 'Minity',
     subtitle: 'Productivity App',
-    image: './images/MERNTasks.webp',
+    image: './images/Minity.webp',
     repository: 'https://github.com/tzivigelstein/MERNTasks-Client',
-    site: 'https://mern-tasks-client.vercel.app/',
+    site: 'https://minity.vercel.app/',
     stack: [
       { id: 'XH', name: 'React', color: '#5ed3f3' },
       { id: 'Ms', name: 'Node', color: '#7fc728' },
