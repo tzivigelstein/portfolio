@@ -32,12 +32,6 @@
   transition: transform 0.3s ease;
 }
 
-@media (hover) {
-  .image:hover {
-    transform: scale(1.05);
-  }
-}
-
 @media (max-width: 480px) {
   .container {
     flex-direction: column;

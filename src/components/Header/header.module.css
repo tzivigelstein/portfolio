@@ -4,3 +4,114 @@
   display: flex;
   flex-direction: column;
 }
+
+.headerMain {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  margin: 0 auto;
+  flex: 1;
+}
+.headerTitle {
+  font-size: 3rem;
+  color: var(--white);
+  text-shadow: 0 0.06rem 1rem var(--hard-primary-color);
+}
+
+.headerLinksContainer {
+  display: flex;
+  width: max-content;
+  align-items: center;
+}
+
+.headerLinkButton {
+  background-color: var(--white);
+  text-decoration: none;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+  color: var(--text-color);
+  margin: 0.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.hiddenResumeDownloadContainer {
+  position: relative;
+  margin: 0.5rem;
+}
+
+.headerLinkButtonResume {
+  background-color: var(--white);
+  text-decoration: none;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+  color: var(--text-color);
+  font-size: 1rem;
+  cursor: pointer;
+  z-index: 1;
+  position: relative;
+}
+
+.hiddenResumeDownload {
+  position: absolute;
+  background-color: var(--white);
+  top: 0;
+  left: 0;
+  font-size: 0rem;
+  width: 100%;
+  height: max-content;
+  padding: 0.5rem 0.3rem;
+  z-index: 0;
+  border-radius: 0.5rem;
+  transition: 0.3s top ease, 0.1s font-size ease, 0.1s z-index ease, 0.3s box-shadow ease;
+}
+
+.hiddenResumeDownloadActive {
+  top: calc(100% - 0.25rem);
+  font-size: 1rem;
+  z-index: 2;
+  box-shadow: 0 0.188rem 1.25rem 0.125rem rgb(64 62 67 / 16%);
+}
+
+.hiddenResumeDownloadLinks {
+  font-size: inherit;
+  margin: 0;
+}
+
+.headerImageContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.headerImage {
+  max-width: 70%;
+  height: auto;
+  border-radius: 66% 34% 70% 30% / 47% 60% 40% 53%;
+  object-fit: cover;
+  background-color: var(--white);
+}
+
+@media (max-width: 768px) {
+  .headerImageContainer {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .headerMain {
+    width: 90%;
+  }
+}
+
+@media (hover) {
+  .headerLinkButton:hover {
+    filter: brightness(1.1);
+  }
+}
