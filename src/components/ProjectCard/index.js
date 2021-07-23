@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react'
-import styles from './listproject.module.css'
+import styles from './index.module.css'
 import { GithubIcon } from '../SocialIcons'
 import { SiteIcon, DownloadIcon, TimesIcon } from '../UICons'
 import ActivityIndicator from '../ActivityIndicator/ActivityIndicator'
 import axiosClient from '../../config/axiosClient'
 
-const ListProject = ({ project }) => {
+const ProjectCard = ({ project }) => {
   const { category, title, subtitle, image, repository, site, stack, apk } = project
 
   const [downloadUrl, setDownloadUrl] = useState('')
@@ -48,9 +48,9 @@ const ListProject = ({ project }) => {
   }
 
   return (
-    <div className={styles.container}>
+    <a className={styles.container} target="_blank" rel="​noopener noreferrer" href={site}>
       <div className={styles.imageContainer}>
-        <img className={styles.image} src={image} alt={`${title}, ${subtitle}`} />
+        <img className={styles.image} loading="lazy" src={image} alt={`${title}, ${subtitle}`} />
       </div>
       <div className={styles.infoContainer}>
         <p className={styles.title}>{title}</p>
@@ -95,8 +95,8 @@ const ListProject = ({ project }) => {
           )}
         </div>
       </div>
-    </div>
+    </a>
   )
 }
 
-export default ListProject
+export default ProjectCard

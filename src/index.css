@@ -1,8 +1,10 @@
 :root {
+  --hard-primary-color: hsl(203, 90%, 60%);
   --primary-color: #6ec2f7;
-  --secondary-color: #cef6ff;
+  --secondary-color: #f7b457;
   --white: #fff;
   --hard-black: #222;
+  --light-black: rgba(0, 0, 0, 0.2);
   --text-color: rgba(0, 0, 0, 0.8);
   --text-secondary-color: rgba(0, 0, 0, 0.6);
 }

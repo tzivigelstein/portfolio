@@ -1,6 +1,6 @@
 import React from 'react'
 import styles from './footer.module.css'
-import { GithubIcon, LinkedinIcon, TwitterIcon, WhatsAppIcon, Resume } from '../SocialIcons'
+import { GithubIcon, LinkedinIcon, TwitterIcon, WhatsAppIcon, Resume, TelegramIcon } from '../SocialIcons'
 
 const Footer = () => {
   return (
@@ -46,6 +46,12 @@ const Footer = () => {
               <a href="https://wa.me/541169708476" className={styles.socialLink}>
                 <WhatsAppIcon className={styles.icon} fill="" />
                 Whatsapp
+              </a>
+            </li>
+            <li>
+              <a href="https://t.me/tzivigelstein" className={styles.socialLink}>
+                <TelegramIcon className={styles.icon} />
+                Telegram
               </a>
             </li>
           </ul>
