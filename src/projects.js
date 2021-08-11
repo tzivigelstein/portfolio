@@ -125,14 +125,14 @@ const projects = [
   {
     id: '2NB',
     category: 'web',
-    title: 'Cripto',
-    subtitle: 'Entertainment App',
-    image: './images/CryptoFlyer.webp',
-    repository: 'https://github.com/tzivigelstein/Crypto',
-    site: 'https://crypto-convert.netlify.app/',
+    title: 'Binast',
+    subtitle: 'Productivity App',
+    image: './images/BinastWeb.webp',
+    repository: 'https://github.com/tzivigelstein/Binast',
+    site: 'https://binast.vercel.app/',
     stack: [
-      { id: 'wf', name: 'React', color: '#5ed3f3' },
       { id: 'gG', name: 'CSS', color: '#006bb4' },
+      { id: 'Lx', name: 'Next', color: '#222' },
     ],
   },
 ]
