@@ -9,7 +9,7 @@ const Header = () => {
       <div className={styles.headerMain}>
         <div className={styles.headerTitleContainer}>
           <h1 className={styles.headerTitle}>
-            Hello! I'm Tzivi, Frontend developer.<span id="header-change-text"></span>
+            Hello! I'm Tzivi. Frontend developer.<span id="header-change-text"></span>
           </h1>
           <div className={styles.headerLinksContainer}>
             <a className={styles.headerLinkButton} href="https://github.com/tzivigelstein">
