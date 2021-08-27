@@ -6,7 +6,7 @@
   --hard-black: #222;
   --light-black: rgba(0, 0, 0, 0.2);
   --text-color: rgba(0, 0, 0, 0.8);
-  --text-secondary-color: rgba(0, 0, 0, 0.6);
+  --text-secondary-color: rgba(0, 0, 0, 0.65);
 }
 
 * {
