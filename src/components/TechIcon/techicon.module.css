@@ -2,15 +2,44 @@
   align-items: center;
   border-radius: 50%;
   display: flex;
+  height: max-content;
   justify-content: center;
   padding: 0.6rem;
-  width: max-content;
-  height: max-content;
+  position: relative;
   transition: filter 0.3s ease;
+  width: max-content;
+}
+
+.skillTooltip {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 0.3rem;
+  position: absolute;
+  padding: 0.3rem;
+  bottom: -1.3rem;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  color: var(--white);
+  transition: 0.2s ease opacity;
+  z-index: 10;
+}
+
+.skillTooltip::after {
+  content: '';
+  border: 0.5rem solid transparent;
+  border-bottom: 0.5rem solid rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: -29%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 @media (hover) {
   .skill:hover {
     filter: brightness(1.1);
+  }
+
+  .skill:hover + .skillTooltip {
+    opacity: 1;
   }
 }

@@ -33,8 +33,8 @@ const AboutSection = () => {
           Professional skills <span className={styles.icon}>👨‍💻</span>
         </h3>
         <div className={styles.skillsContainer}>
-          {technologies.map(({ id, color, Icon }) => (
-            <TechIcon key={id} backgroundColor={color}>
+          {technologies.map(({ id, color, Icon, name }) => (
+            <TechIcon key={id} backgroundColor={color} name={name}>
               <Icon />
             </TechIcon>
           ))}
