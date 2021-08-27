@@ -1,9 +1,9 @@
 import React from 'react'
 import styles from './techicon.module.css'
 
-const TechIcon = ({ children, backgroundColor, name }) => {
+const TechIcon = ({ children, backgroundColor, name, link }) => {
   return (
-    <div style={{ position: 'relative' }}>
+    <a href={link} target="_blank" rel="noopener noreferrer" style={{ position: 'relative' }}>
       <div
         style={{
           backgroundColor,
@@ -12,8 +12,10 @@ const TechIcon = ({ children, backgroundColor, name }) => {
       >
         {children}
       </div>
-      <div className={styles.skillTooltip}>{name}</div>
-    </div>
+      <div translate="no" className={styles.skillTooltip}>
+        <span>{name}</span>
+      </div>
+    </a>
   )
 }
 
