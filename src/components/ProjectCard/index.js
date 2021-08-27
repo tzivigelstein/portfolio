@@ -48,7 +48,7 @@ const ProjectCard = ({ project }) => {
   }
 
   return (
-    <a className={styles.container} target="_blank" rel="​noopener noreferrer" href={site}>
+    <a className={styles.container} target="_blank" rel="​noopener noreferrer" href={site || downloadUrl}>
       <div className={styles.imageContainer}>
         <img className={styles.image} loading="lazy" src={image} alt={`${title}, ${subtitle}`} />
       </div>
