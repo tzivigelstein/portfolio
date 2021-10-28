@@ -48,9 +48,11 @@ const ProjectCard = ({ project }) => {
   }
 
   return (
-    <a className={styles.container} target="_blank" rel="​noopener noreferrer" href={site || downloadUrl}>
+    <div className={styles.container}>
       <div className={styles.imageContainer}>
-        <img className={styles.image} loading="lazy" src={image} alt={`${title}, ${subtitle}`} />
+        <a className={styles.imageLink} target="_blank" rel="​noopener noreferrer" href={site || downloadUrl}>
+          <img className={styles.image} loading="lazy" src={image} alt={`${title}, ${subtitle}`} />
+        </a>
       </div>
       <div className={styles.infoContainer}>
         <p className={styles.title}>{title}</p>
@@ -95,7 +97,7 @@ const ProjectCard = ({ project }) => {
           )}
         </div>
       </div>
-    </a>
+    </div>
   )
 }
 
