@@ -62,11 +62,12 @@
   align-items: center;
   padding: 1rem;
   width: 100%;
+  flex-wrap: wrap;
 }
 
 .linkContainer {
   flex: 1;
-  margin: 0 0.3rem;
+  margin: 0.3rem;
 }
 
 .link {
