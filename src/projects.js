@@ -116,7 +116,7 @@ const projects = [
     subtitle: 'Entertainment App',
     image: './images/LyricItFlyer.webp',
     repository: 'https://github.com/tzivigelstein/Lyric-it',
-    site: 'https://lyrict-it.netlify.app/',
+    site: 'https://lyric-it.netlify.app/',
     stack: [
       { id: 'wf', name: 'React', color: '#5ed3f3' },
       { id: 'gG', name: 'Bootstrap', color: '#7952b3' },
