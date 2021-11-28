@@ -15,10 +15,10 @@
   margin: 0 auto;
   flex: 1;
 }
+
 .headerTitle {
   font-size: 3rem;
-  color: var(--white);
-  text-shadow: 0 0.06rem 1rem var(--hard-primary-color);
+  color: var(--hard-black);
 }
 
 .headerLinksContainer {
