@@ -1,14 +1,13 @@
 import React from 'react'
 import styles from './index.module.css'
 import { GithubIcon } from '../SocialIcons'
-import { SiteIcon, DownloadIcon, TimesIcon } from '../UICons'
-import ActivityIndicator from '../ActivityIndicator/ActivityIndicator'
+import { SiteIcon, DownloadIcon } from '../UICons'
 
 const ProjectCard = ({ project }) => {
-  const { category, title, subtitle, image, repository, site, stack, apk } = project
+  const { category, title, subtitle, image, repository, site, stack } = project
 
   return (
-    <div className={styles.container}>
+    <li className={styles.container}>
       <div className={styles.imageContainer}>
         <a className={styles.imageLink} target="_blank" rel="​noopener noreferrer" href={site}>
           <img className={styles.image} loading="lazy" src={image} alt={`${title}, ${subtitle}`} />
@@ -19,9 +18,9 @@ const ProjectCard = ({ project }) => {
         <p className={styles.subtitle}>{subtitle}</p>
         <ul className={styles.stackList}>
           {stack.map(({ id, name, color }) => (
-            <span className={styles.stackTech} style={{ backgroundColor: color }} key={id}>
-              {name}
-            </span>
+            <li key={id} className={styles.stackTechContainer} style={{ backgroundColor: color }}>
+              <span className={styles.stackTech}>{name}</span>
+            </li>
           ))}
         </ul>
       </div>
@@ -51,7 +50,7 @@ const ProjectCard = ({ project }) => {
           )}
         </div>
       </div>
-    </div>
+    </li>
   )
 }
 
