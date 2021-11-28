@@ -12,7 +12,7 @@ const PresentationSection = () => {
         </p>
       </div>
       <div className={styles.imageContainer}>
-        <img className={styles.image} loading="lazy" src="./images/previewed.png" alt="Projects preview" />
+        <img className={styles.image} loading="lazy" src="./images/previewed.webp" alt="Projects preview" />
       </div>
     </section>
   )
