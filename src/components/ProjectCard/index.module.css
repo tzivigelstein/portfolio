@@ -8,9 +8,6 @@
   text-decoration: none;
 }
 
-.imageContainer {
-}
-
 .imageLink {
   cursor: pointer;
   text-decoration: none;
@@ -41,18 +38,21 @@
 }
 
 .stackList {
+  gap: 0.5rem;
   margin: 0;
   padding: 0.7rem 0 0 0;
   display: flex;
   flex-wrap: wrap;
+  list-style: none;
+}
+
+.stackTechContainer {
+  padding: 0.3rem 0.5rem;
+  border-radius: 100rem;
 }
 
 .stackTech {
   color: #fff;
-  border-radius: 100rem;
-  padding: 0.3rem 0.5rem;
-  transition: filter 0.3s ease;
-  margin: 0.3rem;
   font-size: 0.875rem;
 }
 
@@ -114,14 +114,6 @@
 
   .link:hover {
     filter: brightness(1.1);
-  }
-
-  .stackTech {
-    filter: brightness(0.9);
-  }
-
-  .stackTech:hover {
-    filter: brightness(1);
   }
 
   .githubLink:hover {
