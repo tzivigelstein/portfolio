@@ -41,7 +41,7 @@ const Header = () => {
           </div>
         </div>
         <div className={styles.headerImageContainer}>
-          <img className={styles.headerImage} src="images/HeaderImage.png" alt="Tzivi Gelstein" />
+          <img className={styles.headerImage} src="images/HeaderImage.webp" alt="Tzivi Gelstein" />
         </div>
       </div>
     </header>
