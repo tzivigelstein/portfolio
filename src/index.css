@@ -3,7 +3,8 @@
   --primary-color: #6ec2f7;
   --secondary-color: #f7b457;
   --background-color: #fff;
-  --white: #fff;
+  --background-primary-color: #fff;
+  --background-secondary-color: #fff;
   --hard-black: #222;
   --light-black: rgba(0, 0, 0, 0.2);
   --text-color: rgba(0, 0, 0, 0.8);
@@ -14,8 +15,8 @@
   --hard-primary-color: hsl(203, 90%, 60%);
   --primary-color: #6ec2f7;
   --secondary-color: #f7b457;
-  --background-color: #222;
-  --white: #444;
+  --background-primary-color: #222;
+  --background-secondary-color: #333;
   --hard-black: #eee;
   --light-black: rgba(255, 255, 255, 0.2);
   --text-color: rgba(255, 255, 255, 0.8);
