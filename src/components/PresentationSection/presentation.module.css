@@ -1,6 +1,7 @@
 .container {
   display: flex;
   margin: 2rem 0;
+  background-color: var(--background-color)
 }
 
 .info {
