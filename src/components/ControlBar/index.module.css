@@ -18,7 +18,8 @@
   position: relative;
   border-radius: 0.5rem;
   overflow: hidden;
-  background-color: var(--white);
+  background-color: var(--background-secondary-color);
+  transition: 0.3s ease-in-out background-color;
   box-shadow: 0 2px 5px rgb(64 67 62 / 16%);
 }
 
@@ -38,4 +39,9 @@
 
 .checkBox:checked + .toggle > .toggleIconContainer {
   transform: translateY(-50%);
+}
+
+.moonIcon {
+  stroke: var(--text-color);
+  fill: var(--text-color);
 }

@@ -24,7 +24,7 @@ const ControlBar = () => {
       <label htmlFor="checkbox" className={styles.toggle}>
         <div className={styles.toggleIconContainer}>
           <SunIcon />
-          <MoonIcon />
+          <MoonIcon className={styles.moonIcon} />
         </div>
       </label>
     </div>
