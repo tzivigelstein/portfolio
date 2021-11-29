@@ -1,11 +1,13 @@
 import React, { useState } from 'react'
 import styles from './header.module.css'
+import ControlBar from '../ControlBar'
 
 const Header = () => {
   const [activeDownloadResume, setActiveDownloadResume] = useState(false)
 
   return (
     <header className={styles.header}>
+      <ControlBar />
       <div className={styles.headerMain}>
         <div className={styles.headerTitleContainer}>
           <h1 className={styles.headerTitle}>
