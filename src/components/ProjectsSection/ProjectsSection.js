@@ -1,7 +1,6 @@
 import React from 'react'
 import styles from './projectsection.module.css'
 import projects from '../../projects'
-import ProjectCard from '../ProjectCard'
 import Card from '../Card'
 
 const ProjectsSection = () => {
@@ -14,7 +13,7 @@ const ProjectsSection = () => {
         <h2 className={styles.sectionTitle}>Web Projects</h2>
         <ul className={styles.projectList}>
           {webs.map(project => (
-            <ProjectCard key={project.id} project={project} />
+            <Card key={project.id} project={project} />
           ))}
         </ul>
       </section>
