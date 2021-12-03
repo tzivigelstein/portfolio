@@ -2,6 +2,7 @@ import React from 'react'
 import styles from './projectsection.module.css'
 import projects from '../../projects'
 import ProjectCard from '../ProjectCard'
+import Card from '../Card'
 
 const ProjectsSection = () => {
   const webs = projects.filter(({ category }) => category === 'web')
@@ -21,7 +22,7 @@ const ProjectsSection = () => {
         <h2 className={styles.sectionTitle}>App Projects</h2>
         <ul className={styles.projectList}>
           {apps.map(project => (
-            <ProjectCard key={project.id} project={project} />
+            <Card key={project.id} project={project} />
           ))}
         </ul>
       </section>
