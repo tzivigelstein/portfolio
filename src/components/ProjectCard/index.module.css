@@ -1,10 +1,10 @@
 .container {
-  background-color: var(--white);
+  background-color: var(--background-secondary-color);
   transition: box-shadow 0.3s ease;
   display: flex;
   flex-direction: column;
   border-radius: 0.5rem;
-  box-shadow: 0 0.188rem 1.25rem 0.125rem rgb(64 62 67 / 16%);
+  box-shadow: var(--card-shadow);
   text-decoration: none;
 }
 
@@ -14,9 +14,9 @@
 }
 
 .image {
-  border-radius: 0.5rem;
   width: 100%;
   object-fit: cover;
+  border-radius: 0.5rem;
 }
 
 .infoContainer {
