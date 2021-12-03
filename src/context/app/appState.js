@@ -9,10 +9,8 @@ const AppState = ({ children }) => {
 
   const getInitialTheme = theme => {
     const userPrefersDark = window.matchMedia('(prefers-color-scheme: dark)')
-    console.log({ theme })
     if (typeof theme == 'undefined') {
       setLocalTheme(userPrefersDark ? 'dark' : 'light')
-      console.log('cambie el tema')
     }
 
     return theme
