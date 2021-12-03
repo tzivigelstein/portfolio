@@ -26,6 +26,8 @@ const projects = [
       { id: 'K3', name: 'Node', color: '#7fc728' },
       { id: 'GQ', name: 'GraphQL', color: '#de33a6' },
     ],
+    color: 'linear-gradient(90deg, #005893, #0081bf)',
+    theme: 'dark',
   },
   {
     id: 'SGE',
@@ -61,6 +63,7 @@ const projects = [
         color: '#f7c62d',
       },
     ],
+    color: '#f2917e',
   },
   {
     id: '2Jp',
@@ -108,6 +111,7 @@ const projects = [
         color: '#03a3ce',
       },
     ],
+    color: '#8efdf3',
   },
   {
     id: '0T9',
