@@ -8,13 +8,15 @@ const Card = ({ project }) => {
 
   return (
     <article theme={theme} style={{ background: color }} className={styles.card}>
-      <header className={styles.cardHeader}>
-        <span className={styles.helper}>{subtitle}</span>
-        <p className={styles.title}>{title}</p>
-      </header>
-      <picture className={styles.cardPicture}>
-        <img className={styles.cardImage} src={image} />
-      </picture>
+      <a className={styles.projectLink} href={site} target="_blank" rel="noopener noreferer">
+        <header className={styles.cardHeader}>
+          <span className={styles.helper}>{subtitle}</span>
+          <p className={styles.title}>{title}</p>
+        </header>
+        <picture className={styles.cardPicture}>
+          <img loading="lazy" className={styles.cardImage} src={image} />
+        </picture>
+      </a>
       <footer className={styles.cardFooter}>
         <a className={styles.link} href={repository} target="_blank" rel="noopener noreferer">
           Repository
