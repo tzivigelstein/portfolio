@@ -1,12 +1,14 @@
-import React from 'react'
 import { SET_THEME } from './types'
 
-export default (state, { type, payload }) => {
+const appReducer = (state, { type, payload }) => {
   switch (type) {
     case SET_THEME:
+      window.localStorage.setItem('theme', JSON.stringify(payload))
       return {
         ...state,
         theme: payload,
       }
   }
 }
+
+export default appReducer
