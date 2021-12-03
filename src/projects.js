@@ -12,14 +12,15 @@ const projects = [
       { id: 'Ms', name: 'Node', color: '#7fc728' },
       { id: '4a', name: 'CSS', color: '#006bb4' },
     ],
+    color: '#acc6c6',
   },
   {
     id: 'jyO',
     category: 'app',
-    title: 'MERNTasks App',
+    title: 'Minity App',
     subtitle: 'Productivity App',
-    image: './images/MERNTasksFlyer.webp',
-    repository: 'https://github.com/tzivigelstein/MERNTasks-App',
+    image: './images/MinityApp.webp',
+    repository: 'https://github.com/tzivigelstein/Minity-app',
     site: '',
     stack: [
       { id: 'eI', name: 'React Native', color: '#03a3ce' },
@@ -42,6 +43,7 @@ const projects = [
       { id: 'ce', name: 'CSS', color: '#006bb4' },
       { id: 'J8', name: 'Firebase', color: '#f7c62d' },
     ],
+    color: '#ccff97',
   },
   {
     id: 'lKc',
@@ -79,6 +81,7 @@ const projects = [
       { id: 'vZ', name: 'CSS', color: '#006bb4' },
       { id: 'n3', name: 'Firebase', color: '#f7c62d' },
     ],
+    color: 'linear-gradient(90deg, #feaf04, #fa9814)',
   },
   {
     id: 'gCh',
@@ -94,6 +97,7 @@ const projects = [
       { id: 'gG', name: 'CSS', color: '#006bb4' },
       { id: 'Dv', name: 'Firebase', color: '#f7c62d' },
     ],
+    color: '#fff',
   },
   {
     id: 'lt4',
@@ -125,6 +129,8 @@ const projects = [
       { id: 'wf', name: 'React', color: '#5ed3f3' },
       { id: 'gG', name: 'Bootstrap', color: '#7952b3' },
     ],
+    color: '#ef476f',
+    theme: 'dark',
   },
   {
     id: '2NB',
@@ -138,6 +144,8 @@ const projects = [
       { id: 'gG', name: 'CSS', color: '#006bb4' },
       { id: 'Lx', name: 'Next', color: '#222' },
     ],
+    color: 'linear-gradient(90deg, #977EF1, #623CEA)',
+    theme: 'dark',
   },
 ]
 
