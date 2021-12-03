@@ -66,6 +66,7 @@ const projects = [
       },
     ],
     color: '#f2917e',
+    theme: 'dark',
   },
   {
     id: '2Jp',
