@@ -1,65 +1,69 @@
 .header {
-  background-color: var(--primary-color);
-  height: 100vh;
+  background-color: var(--header-background-color);
   display: flex;
   flex-direction: column;
+  height: 100vh;
+  transition: 0.3s ease-in-out background-color;
 }
 
 .headerMain {
-  display: grid;
-  grid-template-rows: 1fr;
-  grid-template-columns: repeat(2, 1fr);
-  justify-content: space-between;
   align-items: center;
-  width: 80%;
-  margin: 0 auto;
+  display: grid;
   flex: 1;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+  justify-content: space-between;
+  margin: 0 auto;
+  width: 80%;
 }
 
 .headerTitle {
+  color: var(--text-color);
   font-size: 3rem;
-  color: var(--hard-black);
+  transition: 0.3s ease-in-out color;
 }
 
 .headerLinksContainer {
+  align-items: center;
   display: flex;
   width: max-content;
-  align-items: center;
 }
 
 .headerLinkButton {
-  background-color: var(--white);
-  text-decoration: none;
+  background-color: var(--secondary-color);
   border-radius: 0.5rem;
-  padding: 0.5rem 1rem;
-  font-weight: bold;
   color: var(--text-color);
-  margin: 0.5rem;
-  font-size: 1rem;
   cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 0.5rem;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  transition: 0.3s ease-in-out background-color, 0.3s ease-in-out color;
 }
 
 .hiddenResumeDownloadContainer {
-  position: relative;
   margin: 0.5rem;
+  position: relative;
 }
 
 .headerLinkButtonResume {
-  background-color: var(--white);
-  text-decoration: none;
+  background-color: var(--background-secondary-color);
   border-radius: 0.5rem;
-  padding: 0.5rem 1rem;
-  font-weight: bold;
   color: var(--text-color);
-  font-size: 1rem;
   cursor: pointer;
-  z-index: 1;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
   position: relative;
+  text-decoration: none;
+  transition: 0.3s ease-in-out background-color, 0.3s ease-in-out color;
+  z-index: 1;
 }
 
 .hiddenResumeDownload {
   position: absolute;
-  background-color: var(--white);
+  background-color: var(--background-secondary-color);
   top: 0;
   left: 0;
   font-size: 0rem;
@@ -68,7 +72,8 @@
   padding: 0.5rem 0.3rem;
   z-index: 0;
   border-radius: 0.5rem;
-  transition: 0.3s top ease, 0.1s font-size ease, 0.1s z-index ease, 0.3s box-shadow ease;
+  transition: 0.3s top ease, 0.1s font-size ease, 0.1s z-index ease, 0.3s box-shadow ease,
+    0.3s background-color ease-in-out;
 }
 
 .hiddenResumeDownloadActive {
@@ -81,6 +86,7 @@
 .hiddenResumeDownloadLinks {
   font-size: inherit;
   margin: 0;
+  color: var(--text-color);
 }
 
 .headerImageContainer {
@@ -95,7 +101,7 @@
   height: auto;
   border-radius: 66% 34% 70% 30% / 47% 60% 40% 53%;
   object-fit: cover;
-  background-color: var(--white);
+  background-color: #ddd;
 }
 
 @media (max-width: 768px) {
@@ -111,7 +117,8 @@
 }
 
 @media (hover) {
-  .headerLinkButton:hover {
+  .headerLinkButton:hover,
+  .headerLinkButtonResume:hover {
     filter: brightness(1.1);
   }
 }
