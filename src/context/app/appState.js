@@ -1,11 +1,25 @@
 import React, { useReducer } from 'react'
+import useLocalStorage from '../../hooks/useLocalStorage'
 import AppContext from './appContext'
 import appReducer from './appReducer'
 import { SET_THEME } from './types'
 
 const AppState = ({ children }) => {
+  const [localTheme, setLocalTheme] = useLocalStorage('theme')
+
+  const getInitialTheme = theme => {
+    const userPrefersDark = window.matchMedia('(prefers-color-scheme: dark)')
+    console.log({ theme })
+    if (typeof theme == 'undefined') {
+      setLocalTheme(userPrefersDark ? 'dark' : 'light')
+      console.log('cambie el tema')
+    }
+
+    return theme
+  }
+
   const initialState = {
-    theme: window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light',
+    theme: getInitialTheme(localTheme),
   }
 
   const [state, dispatch] = useReducer(appReducer, initialState)
