@@ -1,26 +1,34 @@
 :root {
-  --hard-primary-color: hsl(203, 90%, 60%);
+  --header-background-color: #3daef5;
+  --header-text-color: rgba(0, 0, 0, 0.8);
+  --hard-primary-color: #3daef5;
   --primary-color: #6ec2f7;
-  --secondary-color: #f7b457;
+  --secondary-color: #6ba368;
   --background-color: #fff;
   --background-primary-color: #fff;
   --background-secondary-color: #fff;
+  --card-shadow: 0 0.188rem 1.25rem 0.125rem rgb(64 62 67 / 16%);
   --hard-black: #222;
   --light-black: rgba(0, 0, 0, 0.2);
   --text-color: rgba(0, 0, 0, 0.8);
   --text-secondary-color: rgba(0, 0, 0, 0.65);
+  --footer-background-color: #6ec2f7;
 }
 
 [data-theme='dark'] {
-  --hard-primary-color: hsl(203, 90%, 60%);
+  --header-background-color: #202c39;
+  --hard-primary-color: #3daef5;
   --primary-color: #6ec2f7;
   --secondary-color: #f7b457;
-  --background-primary-color: #222;
-  --background-secondary-color: #333;
+  --background-primary-color: hsl(211, 28%, 12%);
+  --background-secondary-color: #1c1c1e;
+  --card-shadow: none;
   --hard-black: #eee;
   --light-black: rgba(255, 255, 255, 0.2);
-  --text-color: rgba(255, 255, 255, 0.8);
-  --text-secondary-color: rgba(255, 255, 255, 0.65);
+  --text-color: rgba(255, 255, 255, 0.87);
+  --text-secondary-color: rgba(255, 255, 255, 0.67);
+  --footer-background-color: #202c39;
+  --footer-text-color: rgba(255, 255, 255, 0.87);
 }
 
 * {
