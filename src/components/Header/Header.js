@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import styles from './header.module.css'
 import ControlBar from '../ControlBar'
+import HeaderLinkButton from '../HeaderButton'
 
 const Header = () => {
   const [activeDownloadResume, setActiveDownloadResume] = useState(false)
@@ -14,12 +15,8 @@ const Header = () => {
             Hello! I'm Tzivi. Frontend developer.<span id="header-change-text"></span>
           </h1>
           <div className={styles.headerLinksContainer}>
-            <a className={styles.headerLinkButton} href="https://github.com/tzivigelstein">
-              Github
-            </a>
-            <a className={styles.headerLinkButton} href="https://www.linkedin.com/in/tzivigelstein/">
-              Linkedin
-            </a>
+            <HeaderLinkButton text="Github" link="https://github.com/tzivigelstein" />
+            <HeaderLinkButton text="Linkedin" link="https://www.linkedin.com/in/tzivigelstein/" />
             <div className={styles.hiddenResumeDownloadContainer}>
               <p
                 onClick={() => setActiveDownloadResume(!activeDownloadResume)}
