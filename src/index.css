@@ -1,9 +1,8 @@
 :root {
   --header-background-color: #3daef5;
   --header-text-color: rgba(0, 0, 0, 0.8);
-  --hard-primary-color: #3daef5;
   --primary-color: #6ec2f7;
-  --secondary-color: #6ba368;
+  --secondary-color: #fff;
   --background-color: #fff;
   --background-primary-color: #fff;
   --background-secondary-color: #fff;
@@ -12,12 +11,11 @@
   --light-black: rgba(0, 0, 0, 0.2);
   --text-color: rgba(0, 0, 0, 0.8);
   --text-secondary-color: rgba(0, 0, 0, 0.65);
-  --footer-background-color: #6ec2f7;
+  --footer-background-color: #3daef5;
 }
 
 [data-theme='dark'] {
   --header-background-color: #202c39;
-  --hard-primary-color: #3daef5;
   --primary-color: #6ec2f7;
   --secondary-color: #f7b457;
   --background-primary-color: hsl(211, 28%, 12%);
