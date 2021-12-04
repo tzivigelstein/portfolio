@@ -29,26 +29,13 @@
   width: max-content;
 }
 
-.headerLinkButton {
-  background-color: var(--secondary-color);
-  border-radius: 0.5rem;
-  color: var(--text-color);
-  cursor: pointer;
-  font-size: 1rem;
-  font-weight: bold;
-  margin: 0.5rem;
-  padding: 0.5rem 1rem;
-  text-decoration: none;
-  transition: 0.3s ease-in-out background-color, 0.3s ease-in-out color;
-}
-
 .hiddenResumeDownloadContainer {
   margin: 0.5rem;
   position: relative;
 }
 
 .headerLinkButtonResume {
-  background-color: var(--background-secondary-color);
+  background-color: var(--secondary-color);
   border-radius: 0.5rem;
   color: var(--text-color);
   cursor: pointer;
@@ -63,13 +50,13 @@
 
 .hiddenResumeDownload {
   position: absolute;
-  background-color: var(--background-secondary-color);
+  background-color: var(--secondary-color);
   top: 0;
   left: 0;
-  font-size: 0rem;
   width: 100%;
   height: max-content;
   padding: 0.5rem 0.3rem;
+  font-size: 0;
   z-index: 0;
   border-radius: 0.5rem;
   transition: 0.3s top ease, 0.1s font-size ease, 0.1s z-index ease, 0.3s box-shadow ease,
@@ -113,12 +100,5 @@
 @media (max-width: 480px) {
   .headerMain {
     width: 90%;
-  }
-}
-
-@media (hover) {
-  .headerLinkButton:hover,
-  .headerLinkButtonResume:hover {
-    filter: brightness(1.1);
   }
 }
