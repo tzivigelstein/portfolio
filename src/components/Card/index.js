@@ -4,8 +4,6 @@ import styles from './index.module.css'
 const Card = ({ project }) => {
   const { theme, color, title, subtitle, image, repository, site, category } = project
 
-  console.log({ theme })
-
   return (
     <article theme={theme} style={{ background: color }} className={styles.card}>
       <a className={styles.projectLink} href={site} target="_blank" rel="noopener noreferer">
@@ -28,8 +26,8 @@ const Card = ({ project }) => {
             stroke="currentColor"
             strokeWidth="2"
             fill="none"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           >
             <polyline points="9 18 15 12 9 6"></polyline>
           </svg>
