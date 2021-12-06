@@ -25,12 +25,18 @@
   background-color: var(--background-secondary-color);
   transition: 0.3s ease-in-out background-color;
   box-shadow: 0 2px 5px rgb(64 67 62 / 16%);
+  cursor: pointer;
+  transition: 0.3s ease-in-out filter;
 }
 
 @media (hover) {
   .toggle:hover {
-    cursor: pointer;
+    filter: brightness(1.1);
   }
+}
+
+.toggle:active {
+  filter: brightness(0.9);
 }
 
 .toggleIconContainer {
