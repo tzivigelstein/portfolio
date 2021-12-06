@@ -6,7 +6,7 @@ const Card = ({ project }) => {
 
   return (
     <article theme={theme} style={{ background: color }} className={styles.card}>
-      <a className={styles.projectLink} href={site} target="_blank" rel="noopener noreferer">
+      <a className={styles.projectLink} href={site} target="_blank" rel="noopener noreferrer">
         <header className={styles.cardHeader}>
           <span className={styles.helper}>{subtitle}</span>
           <p className={styles.title}>{title}</p>
@@ -16,7 +16,7 @@ const Card = ({ project }) => {
         </picture>
       </a>
       <footer className={styles.cardFooter}>
-        <a className={styles.link} href={repository} target="_blank" rel="noopener noreferer">
+        <a className={styles.link} href={repository} target="_blank" rel="noopener noreferrer">
           Repository
           <svg
             className={styles.chevronRight}
@@ -32,7 +32,7 @@ const Card = ({ project }) => {
             <polyline points="9 18 15 12 9 6"></polyline>
           </svg>
         </a>
-        <a href={site} target="_blank" rel="noopener noreferer" className={styles.button}>
+        <a href={site} target="_blank" rel="noopener noreferrer" className={styles.button}>
           {category === 'web' ? 'Visit' : 'Download'}
         </a>
       </footer>
