@@ -40,11 +40,23 @@
   align-items: center;
   transition: text-decoration 0.3s ease;
   margin: 0;
+  cursor: pointer;
+}
+
+.resumeLink {
+  color: var(--text-color);
 }
 
 .icon {
   margin-right: 0.6rem;
   fill: var(--text-secondary-color);
+  transition: 0.3s ease-in-out fill;
+}
+
+@media (hover) {
+  .socialLink:hover .icon {
+    fill: var(--text-color);
+  }
 }
 
 .resumesContainer {

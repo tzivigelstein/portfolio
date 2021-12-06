@@ -34,12 +34,16 @@ const Footer = () => {
           <ul className={styles.socialList}>
             <li>
               <p className={styles.socialLink}>
-                <Resume className={styles.icon} fill="" />
+                <Resume className={styles.icon} />
                 Resume
               </p>
               <div className={styles.resumesContainer}>
-                <a href="./resume/Tzivi_Gelstein_CV_EN.pdf">English 🇺🇸</a>
-                <a href="./resume/Tzivi_Gelstein_CV_ES.pdf">Spanish 🇪🇸</a>
+                <a className={styles.resumeLink} href="./resume/Tzivi_Gelstein_CV_EN.pdf">
+                  English 🇺🇸
+                </a>
+                <a className={styles.resumeLink} href="./resume/Tzivi_Gelstein_CV_ES.pdf">
+                  Spanish 🇪🇸
+                </a>
               </div>
             </li>
             <li>
