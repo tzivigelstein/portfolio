@@ -12,6 +12,8 @@
   --text-color: rgba(0, 0, 0, 0.8);
   --text-secondary-color: rgba(0, 0, 0, 0.65);
   --footer-background-color: #3daef5;
+  --scrollbar-thumb: hsl(203, 90%, 80%);
+  --scrollbar-thumb-hover: hsl(203, 90%, 70%);
 }
 
 [data-theme='dark'] {
@@ -27,28 +29,33 @@
   --text-secondary-color: rgba(255, 255, 255, 0.67);
   --footer-background-color: #202c39;
   --footer-text-color: rgba(255, 255, 255, 0.87);
+  --scrollbar-thumb: hsl(211, 28%, 25%);
+  --scrollbar-thumb-hover: hsl(211, 28%, 35%);
 }
 
 * {
   box-sizing: border-box;
 }
 
+#root {
+  height: 100%;
+  overflow: hidden;
+}
+
 html {
   box-sizing: inherit;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+  height: 100%;
+  overflow: hidden;
 }
 
 body {
   all: unset;
   margin: 0;
   font-family: sans-serif;
+  height: 100%;
+  overflow: hidden;
 }
 
 p {
