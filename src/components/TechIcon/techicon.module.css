@@ -12,15 +12,16 @@
 }
 
 .skillTooltip {
-  background-color: rgba(0, 0, 0, 0.7);
-  border-radius: 0.3rem;
+  backdrop-filter: saturate(180%) blur(20px);
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 0.5rem;
   position: absolute;
-  padding: 0.3rem;
+  padding: 0.5rem;
   bottom: -1.3rem;
   left: 50%;
   transform: translateX(-50%);
   opacity: 0;
-  color: var(--white);
+  color: var(--text-color);
   transition: 0.2s ease opacity;
   z-index: 10;
   pointer-events: none;
@@ -28,11 +29,12 @@
 
 .skillTooltip::after {
   content: '';
+  backdrop-filter: saturate(180%) blur(20px);
   border: 0.5rem solid transparent;
   border-bottom: 0.5rem solid rgba(0, 0, 0, 0.7);
-  position: absolute;
-  top: -28%;
   left: 50%;
+  position: absolute;
+  top: -24%;
   transform: translate(-50%, -50%);
 }
 
