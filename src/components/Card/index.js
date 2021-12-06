@@ -12,7 +12,7 @@ const Card = ({ project }) => {
           <p className={styles.title}>{title}</p>
         </header>
         <picture className={styles.cardPicture}>
-          <img loading="lazy" className={styles.cardImage} src={image} />
+          <img alt={`${title} preview`} loading="lazy" className={styles.cardImage} src={image} />
         </picture>
       </a>
       <footer className={styles.cardFooter}>
