@@ -13,10 +13,7 @@ const Header = () => {
       <ControlBar />
       <div className={styles.headerMain}>
         <div className={styles.headerTitleContainer}>
-          <h1 className={styles.headerTitle}>
-            {t('headerTitle')}
-            <span id="header-change-text"></span>
-          </h1>
+          <h1 className={styles.headerTitle}>{t('headerTitle')}</h1>
           <div className={styles.headerLinksContainer}>
             <HeaderLinkButton text="Github" link="https://github.com/tzivigelstein" />
             <HeaderLinkButton text="Linkedin" link="https://www.linkedin.com/in/tzivigelstein/" />
