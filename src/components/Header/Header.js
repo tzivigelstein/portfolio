@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import styles from './header.module.css'
 import ControlBar from '../ControlBar'
-import HeaderLinkButton from '../HeaderButton'
+import HeaderLinkButton from '../HeaderLinkButton'
 import { useTranslation } from 'react-i18next'
 
 const Header = () => {
