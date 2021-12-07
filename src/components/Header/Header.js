@@ -2,8 +2,10 @@ import React, { useState } from 'react'
 import styles from './header.module.css'
 import ControlBar from '../ControlBar'
 import HeaderLinkButton from '../HeaderButton'
+import { useTranslation } from 'react-i18next'
 
 const Header = () => {
+  const [t] = useTranslation('', { useSuspense: false })
   const [activeDownloadResume, setActiveDownloadResume] = useState(false)
 
   return (
@@ -12,7 +14,8 @@ const Header = () => {
       <div className={styles.headerMain}>
         <div className={styles.headerTitleContainer}>
           <h1 className={styles.headerTitle}>
-            Hello! I'm Tzivi. Frontend developer.<span id="header-change-text"></span>
+            {t('headerTitle')}
+            <span id="header-change-text"></span>
           </h1>
           <div className={styles.headerLinksContainer}>
             <HeaderLinkButton text="Github" link="https://github.com/tzivigelstein" />
@@ -22,7 +25,7 @@ const Header = () => {
                 onClick={() => setActiveDownloadResume(!activeDownloadResume)}
                 className={styles.headerLinkButtonResume}
               >
-                Resume
+                {t('headerResumeLink')}
               </p>
               <div
                 className={`${styles.hiddenResumeDownload} ${
