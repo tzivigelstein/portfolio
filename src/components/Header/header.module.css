@@ -17,16 +17,23 @@
   width: 80%;
 }
 
+.headerTitleContainer {
+  width: 100%;
+}
+
 .headerTitle {
   color: var(--text-color);
   font-size: 3rem;
   transition: 0.3s ease-in-out color;
+  white-space: normal;
 }
 
 .headerLinksContainer {
-  align-items: center;
   display: flex;
+  align-items: center;
   width: max-content;
+  flex-wrap: wrap;
+  width: 100%;
 }
 
 .hiddenResumeDownloadContainer {
@@ -101,5 +108,6 @@
 @media (max-width: 480px) {
   .headerMain {
     width: 90%;
+    grid-template-columns: none;
   }
 }
