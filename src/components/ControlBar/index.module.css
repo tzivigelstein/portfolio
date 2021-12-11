@@ -4,11 +4,52 @@
   height: 4rem;
   justify-content: flex-end;
   left: 0;
-  padding: 1rem;
+  padding: 2rem;
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 3;
+  gap: 0.7rem;
+}
+
+.barToggle {
+  display: block;
+  width: 3rem;
+  height: 3rem;
+  position: relative;
+  border-radius: 0.5rem;
+  background-color: var(--background-secondary-color);
+  transition: 0.3s ease-in-out background-color;
+  box-shadow: 0 2px 5px rgb(64 67 62 / 16%);
+  cursor: pointer;
+  transition: 0.3s ease-in-out filter;
+}
+
+.iconContainer {
+  height: 100%;
+  display: grid;
+  place-items: center;
+  position: relative;
+}
+
+.languageIcon {
+  fill: var(--text-color);
+  transition: 0.3s ease-in-out fill;
+}
+
+.languageIndicator {
+  background-color: var(--secondary-color);
+  border-radius: 1000rem;
+  padding: 0.3rem;
+  position: absolute;
+  right: -0.6rem;
+  bottom: -0.6rem;
+}
+
+.languageIndicatorText {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 0.9rem;
 }
 
 .checkBox {
@@ -54,4 +95,5 @@
 .moonIcon {
   stroke: var(--text-color);
   fill: var(--text-color);
+  transition: 0.3s ease-in-out fill, 0.3s ease-in-out stroke;
 }
