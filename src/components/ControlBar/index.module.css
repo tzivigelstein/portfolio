@@ -38,7 +38,9 @@
 }
 
 .languageIndicator {
-  background-color: var(--secondary-color);
+  display: flex;
+  aspect-ratio: 1 / 1;
+  background-color: var(--language-indicator);
   border-radius: 1000rem;
   padding: 0.3rem;
   position: absolute;
