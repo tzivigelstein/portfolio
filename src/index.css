@@ -14,6 +14,7 @@
   --footer-background-color: #3daef5;
   --scrollbar-thumb: hsl(203, 90%, 80%);
   --scrollbar-thumb-hover: hsl(203, 90%, 70%);
+  --language-indicator: #f7b457;
 }
 
 [data-theme='dark'] {
@@ -31,6 +32,7 @@
   --footer-text-color: rgba(255, 255, 255, 0.87);
   --scrollbar-thumb: hsl(211, 28%, 25%);
   --scrollbar-thumb-hover: hsl(211, 28%, 35%);
+  --language-indicator: #f7b457;
 }
 
 @font-face {
