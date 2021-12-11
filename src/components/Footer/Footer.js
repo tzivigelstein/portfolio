@@ -1,13 +1,16 @@
 import React from 'react'
 import styles from './footer.module.css'
 import { GithubIcon, LinkedinIcon, TwitterIcon, WhatsAppIcon, Resume, TelegramIcon } from '../SocialIcons'
+import { useTranslation } from 'react-i18next'
 
 const Footer = () => {
+  const [t] = useTranslation('', { useSuspense: false })
+
   return (
     <footer className={styles.wrapper}>
       <div className={styles.container}>
         <div className={styles.infoContainer}>
-          <h4>Where can I find you?</h4>
+          <h4>{t('footerFirstSubtitle')}</h4>
           <ul className={styles.socialList}>
             <li>
               <a href="https://www.linkedin.com/in/tzivigelstein/" className={styles.socialLink}>
@@ -30,12 +33,12 @@ const Footer = () => {
           </ul>
         </div>
         <div className={styles.infoContainer}>
-          <h4>I want to know more...</h4>
+          <h4>{t('footerSecondSubtitle')}</h4>
           <ul className={styles.socialList}>
             <li>
               <p className={styles.socialLink}>
                 <Resume className={styles.icon} />
-                Resume
+                {t('footerResumeLink')}
               </p>
               <div className={styles.resumesContainer}>
                 <a className={styles.resumeLink} href="./resume/Tzivi_Gelstein_CV_EN.pdf">

@@ -1,8 +1,10 @@
 import React from 'react'
+import { useTranslation } from 'react-i18next'
 import styles from './index.module.css'
 
 const Card = ({ project }) => {
   const { theme, color, title, subtitle, image, repository, site, category } = project
+  const [t] = useTranslation('', { useSuspense: false })
 
   return (
     <article theme={theme} style={{ background: color }} className={styles.card}>
@@ -17,7 +19,7 @@ const Card = ({ project }) => {
       </a>
       <footer className={styles.cardFooter}>
         <a className={styles.link} href={repository} target="_blank" rel="noopener noreferrer">
-          Repository
+          {t('cardRepositoryLink')}
           <svg
             className={styles.chevronRight}
             viewBox="0 0 24 24"
@@ -33,7 +35,7 @@ const Card = ({ project }) => {
           </svg>
         </a>
         <a href={site} target="_blank" rel="noopener noreferrer" className={styles.button}>
-          {category === 'web' ? 'Visit' : 'Download'}
+          {category === 'web' ? t('cardSiteLink') : t('cardDownloadLink')}
         </a>
       </footer>
     </article>
