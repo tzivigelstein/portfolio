@@ -8,7 +8,8 @@
   position: relative;
   transition: filter 0.3s ease;
   width: max-content;
-  color: #000;
+  color: var(--text-color);
+  text-decoration: none;
 }
 
 .skillTooltip {
@@ -21,7 +22,7 @@
   left: 50%;
   transform: translateX(-50%);
   opacity: 0;
-  color: var(--text-color);
+  color: var(--tooltip-text-color);
   transition: 0.2s ease opacity;
   z-index: 10;
   pointer-events: none;
