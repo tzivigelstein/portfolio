@@ -7,6 +7,7 @@
   --background-primary-color: #fff;
   --background-secondary-color: #fff;
   --card-shadow: 0 0.188rem 1.25rem 0.125rem rgb(64 62 67 / 16%);
+  --tooltip-text-color: rgba(255, 255, 255, 0.87);
   --hard-black: #222;
   --light-black: rgba(0, 0, 0, 0.2);
   --text-color: rgba(0, 0, 0, 0.8);
@@ -24,6 +25,7 @@
   --background-primary-color: hsl(211, 28%, 12%);
   --background-secondary-color: hsl(211, 28%, 25%);
   --card-shadow: none;
+  --tooltip-text-color: rgba(255, 255, 255, 0.87);
   --hard-black: #eee;
   --light-black: rgba(255, 255, 255, 0.2);
   --text-color: rgba(255, 255, 255, 0.87);
