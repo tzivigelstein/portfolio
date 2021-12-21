@@ -103,9 +103,7 @@
   .headerImageContainer {
     display: none;
   }
-}
 
-@media (max-width: 480px) {
   .headerMain {
     width: 90%;
     grid-template-columns: none;
