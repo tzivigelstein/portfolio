@@ -1,37 +1,37 @@
-import React from 'react'
 import styles from './aboutsection.module.css'
 import TechIcon from '../TechIcon/TechIcon'
 import technologies from '../technologies'
-import { useTranslation } from 'react-i18next'
+import useTranslation from 'next-translate/useTranslation'
 
 const AboutSection = () => {
-  const [t] = useTranslation('', { useSuspense: false })
+  const { t } = useTranslation()
+
   return (
     <section className={styles.container}>
-      <h2 className={styles.title}>{t('aboutSectionTitle')}</h2>
+      <h2 className={styles.title}>{t('common:aboutSectionTitle')}</h2>
       <div className={styles.aboutInfoContainer}>
         <div>
           <div>
             <h3 className={styles.subtitle}>
-              {t('experienceTitle')} <span className={styles.icon}>👨‍🔬</span>
+              {t('common:experienceTitle')} <span className={styles.icon}>👨‍🔬</span>
             </h3>
-            <p className={styles.text}>{t('experienceText')}</p>
+            <p className={styles.text}>{t('common:experienceText')}</p>
           </div>
           <div>
-            <h3 className={styles.subtitle}>{t('goalsTitle')} ✍</h3>
+            <h3 className={styles.subtitle}>{t('common:goalsTitle')} ✍</h3>
             <div className={styles.goalsContainer}>
               <span className={styles.goal}>
-                <span className={styles.icon}>👆</span> {t('goalsFirstTip')}
+                <span className={styles.icon}>👆</span> {t('common:goalsFirstTip')}
               </span>
               <span className={styles.goal}>
-                <span className={styles.icon}>💡</span> {t('goalsSecondTip')}
+                <span className={styles.icon}>💡</span> {t('common:goalsSecondTip')}
               </span>
             </div>
           </div>
         </div>
         <div>
           <h3 className={styles.subtitle}>
-            {t('professionalTitle')} <span className={styles.icon}>👨‍💻</span>
+            {t('common:professionalTitle')} <span className={styles.icon}>👨‍💻</span>
           </h3>
           <div className={styles.skillsContainer}>
             {technologies.map(({ id, color, Icon, name, link }) => (
@@ -42,14 +42,14 @@ const AboutSection = () => {
           </div>
           <div>
             <h3 className={styles.subtitle}>
-              {t('softSkillsTitle')} <span className={styles.icon}>🦸‍♂️</span>
+              {t('common:softSkillsTitle')} <span className={styles.icon}>🦸‍♂️</span>
             </h3>
             <div className={styles.goalsContainer}>
               <span className={styles.goal}>
-                <span className={styles.icon}>👉</span> {t('softSkillsFirstTip')}
+                <span className={styles.icon}>👉</span> {t('common:softSkillsFirstTip')}
               </span>
               <span className={styles.goal}>
-                <span className={styles.icon}>👉</span> {t('softSkillsSecondTip')}
+                <span className={styles.icon}>👉</span> {t('common:softSkillsSecondTip')}
               </span>
             </div>
           </div>
