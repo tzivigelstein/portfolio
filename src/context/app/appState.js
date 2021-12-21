@@ -4,11 +4,13 @@ import AppContext from './appContext'
 import appReducer from './appReducer'
 import { SET_THEME } from './types'
 
+const isWindowAccessible = typeof window !== 'undefined'
+
 const AppState = ({ children }) => {
   const [localTheme, setLocalTheme] = useLocalStorage('theme')
 
   const getInitialTheme = theme => {
-    const userPrefersDark = window.matchMedia('(prefers-color-scheme: dark)')
+    const userPrefersDark = isWindowAccessible && window.matchMedia('(prefers-color-scheme: dark)')
     if (typeof theme == 'undefined') {
       setLocalTheme(userPrefersDark ? 'dark' : 'light')
     }
