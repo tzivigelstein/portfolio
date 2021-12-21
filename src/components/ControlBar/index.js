@@ -2,12 +2,15 @@ import React, { useState, useEffect } from 'react'
 import styles from './index.module.css'
 import { SunIcon, MoonIcon, LanguageIcon } from '../UICons'
 import useApp from '../../hooks/useApp'
-import { useTranslation } from 'react-i18next'
+import { useRouter } from 'next/router'
+import useTranslation from 'next-translate/useTranslation'
 
 const ControlBar = () => {
   const { theme, setTheme } = useApp()
   const [isChecked, setChecked] = useState(theme === 'dark')
-  const [t, i18n] = useTranslation('', { useSuspense: false })
+  const { lang } = useTranslation()
+
+  const router = useRouter()
 
   useEffect(() => {
     window.addEventListener('keydown', handleKeyDown)
@@ -28,7 +31,7 @@ const ControlBar = () => {
   }
 
   function handleLanguageChange() {
-    i18n.changeLanguage(i18n.language === 'en' ? 'es' : 'en')
+    router.replace('/', undefined, { locale: lang === 'en' ? 'es' : 'en' })
   }
 
   return (
@@ -52,7 +55,7 @@ const ControlBar = () => {
         <div className={styles.iconContainer}>
           <LanguageIcon className={styles.languageIcon} />
           <div className={styles.languageIndicator}>
-            <span className={styles.languageIndicatorText}>{i18n.language}</span>
+            <span className={styles.languageIndicatorText}>{lang}</span>
           </div>
         </div>
       </div>
