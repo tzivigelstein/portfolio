@@ -1,5 +1,3 @@
-import React from 'react'
-
 export const ReactIcon = props => {
   return (
     <svg aria-hidden="true" data-prefix="fab" data-icon="react" viewBox="0 0 512 512" {...props}>
