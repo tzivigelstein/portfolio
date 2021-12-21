@@ -39,12 +39,13 @@
 
 .languageIndicator {
   display: flex;
-  background-color: var(--language-indicator);
+  background-color: var(--language-indicator-background);
   border-radius: 1000rem;
   padding: 0.3rem;
   position: absolute;
   right: -0.6rem;
   bottom: -0.6rem;
+  color: var(--language-indicator-color);
 }
 
 .languageIndicatorText {
