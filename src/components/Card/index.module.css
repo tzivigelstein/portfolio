@@ -27,7 +27,7 @@
 
 .title {
   font-size: 1.75rem;
-  color: var(--text-primary-color);
+  color: var(--card-text-primary-color);
   font-weight: 600;
   margin: 0.5rem 0;
   justify-self: flex-start;
@@ -37,7 +37,7 @@
   font-weight: 600;
   font-size: 0.75rem;
   justify-self: flex-start;
-  color: var(--helper-color);
+  color: var(--card-helper-color);
   text-transform: uppercase;
 }
 
@@ -67,7 +67,7 @@
 
 .link {
   align-items: center;
-  color: var(--link-color);
+  color: var(--card-link-color);
   display: flex;
   font-size: 1.0625rem;
   font-weight: 400;
@@ -81,15 +81,15 @@
 }
 
 .chevronRight {
-  stroke: var(--link-color);
+  stroke: var(--card-link-color);
   width: 1.0625rem;
   aspect-ratio: 1 / 1;
 }
 
 .button {
-  background: var(--button);
+  background: var(--card-button);
   border-radius: 1000rem;
-  color: var(--button-text);
+  color: var(--card-button-text);
   font-size: 1.0625rem;
   font-weight: 400;
   cursor: pointer;
