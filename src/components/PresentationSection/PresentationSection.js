@@ -1,15 +1,14 @@
-import React from 'react'
-import { useTranslation } from 'react-i18next'
 import styles from './presentation.module.css'
+import useTranslation from 'next-translate/useTranslation'
 
 const PresentationSection = () => {
-  const [t] = useTranslation('', { useSuspense: false })
+  const { t } = useTranslation()
 
   return (
     <section className={styles.container}>
       <div className={styles.info}>
-        <h2 className={styles.title}>{t('presentationSectionTitle')}</h2>
-        <p className={styles.text}>{t('presentationSectionText')}</p>
+        <h2 className={styles.title}>{t('common:presentationSectionTitle')}</h2>
+        <p className={styles.text}>{t('common:presentationSectionText')}</p>
       </div>
       <div className={styles.imageContainer}>
         <img className={styles.image} loading="lazy" src="./images/previewed.webp" alt="Projects preview" />

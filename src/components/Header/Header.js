@@ -1,17 +1,18 @@
 import React, { useState } from 'react'
 import styles from './header.module.css'
 import HeaderLinkButton from '../HeaderLinkButton'
-import { useTranslation } from 'react-i18next'
+import useTranslation from 'next-translate/useTranslation'
 
 const Header = () => {
-  const [t] = useTranslation('', { useSuspense: false })
   const [activeDownloadResume, setActiveDownloadResume] = useState(false)
+
+  const { t } = useTranslation()
 
   return (
     <header className={styles.header}>
       <div className={styles.headerMain}>
         <div className={styles.headerTitleContainer}>
-          <h1 className={styles.headerTitle}>{t('headerTitle')}</h1>
+          <h1 className={styles.headerTitle}>{t('common:headerTitle')}</h1>
           <div className={styles.headerLinksContainer}>
             <HeaderLinkButton text="Github" link="https://github.com/tzivigelstein" />
             <HeaderLinkButton text="Linkedin" link="https://www.linkedin.com/in/tzivigelstein/" />
@@ -20,7 +21,7 @@ const Header = () => {
                 onClick={() => setActiveDownloadResume(!activeDownloadResume)}
                 className={styles.headerLinkButtonResume}
               >
-                {t('headerResumeLink')}
+                {t('common:headerResumeLink')}
               </p>
               <div
                 className={`${styles.hiddenResumeDownload} ${
