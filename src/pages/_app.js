@@ -18,7 +18,7 @@ const MyApp = ({ Component, pageProps }) => (
       />
       //Open Graph / Facebook
       <meta property="og:type" content="website" />
-      <meta property="og:url" content="https://tzivi.vercel.app/" />
+      <meta property="og:url" content="https://www.tzivi.site/" />
       <meta property="og:title" content="Tzivi | Portfolio" />
       <meta
         property="og:description"
@@ -27,7 +27,7 @@ const MyApp = ({ Component, pageProps }) => (
       <meta property="og:image" content="./images/Cover.webp" />
       //Twitter
       <meta property="twitter:card" content="summary_large_image" />
-      <meta property="twitter:url" content="https://tzivi.vercel.app/" />
+      <meta property="twitter:url" content="https://www.tzivi.site/" />
       <meta property="twitter:title" content="Tzivi | Portfolio" />
       <meta
         property="twitter:description"
