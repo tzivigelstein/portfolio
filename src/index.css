@@ -16,6 +16,13 @@
   --scrollbar-thumb: hsl(203, 90%, 80%);
   --scrollbar-thumb-hover: hsl(203, 90%, 70%);
   --language-indicator: #f7b457;
+
+  /* Card */
+  --card-text-primary-color: #1d1d1f;
+  --card-helper-color: #6e6e73;
+  --card-button: #0071e3;
+  --card-button-text: #fff;
+  --card-link-color: #06c;
 }
 
 [data-theme='dark'] {
@@ -35,11 +42,18 @@
   --scrollbar-thumb: hsl(211, 28%, 25%);
   --scrollbar-thumb-hover: hsl(211, 28%, 35%);
   --language-indicator: #f7b457;
+
+  /* Card */
+  --card-text-primary-color: #fff;
+  --card-helper-color: #f5f5f7;
+  --card-button: #fff;
+  --card-button-text: #000;
+  --card-link-color: #fff;
 }
 
 @font-face {
   font-family: 'SF Pro Display';
-  src: url('assets/fonts/SFProDisplay_Regular.ttf') format('truetype');
+  src: url('/fonts/SFProDisplay_Regular.ttf') format('truetype');
 }
 
 * {
@@ -47,7 +61,7 @@
   font-family: 'SF Pro Display', sans-serif;
 }
 
-#root {
+#__next {
   height: 100%;
   overflow: hidden;
 }
