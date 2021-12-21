@@ -24,16 +24,17 @@ const MyApp = ({ Component, pageProps }) => (
         property="og:description"
         content="I'm Tzivi and this is my portfolio 👨‍💻. Come on in and find out more about me 🤗."
       />
-      <meta property="og:image" content="./images/Cover.webp" />
+      <meta property="og:image" content="./images/SocialCover.webp" />
       //Twitter
       <meta property="twitter:card" content="summary_large_image" />
       <meta property="twitter:url" content="https://www.tzivi.site/" />
       <meta property="twitter:title" content="Tzivi | Portfolio" />
+      <meta property="twitter:creator" content="@tzivigelstein" />
       <meta
         property="twitter:description"
         content="I'm Tzivi and this is my portfolio 👨‍💻. Come on in and find out more about me 🤗."
       />
-      <meta property="twitter:image" content="/images/Cover.webp" />
+      <meta property="twitter:image" content="/images/SocialCover.webp" />
       <link rel="apple-touch-icon" href="/favicon.png" />
       <link rel="manifest" href="/manifest.json" />
     </Head>
