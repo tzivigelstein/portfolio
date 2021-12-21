@@ -1,13 +1,17 @@
 {
   "headerTitle": "¡Hola! Soy Tzivi. Desarrollador frontend.",
   "headerResumeLink": "Curriculum",
+
   "presentationSectionTitle": "Mis proyectos",
   "presentationSectionText": "A lo largo de 2 años he trabajado en diferentes proyectos personales, entre ellos, aplicaciones web, aplicaciones móviles y diseños web. Esto con el objetivo de practicar las habilidades incorporadas durante mi recorrido.",
+
   "projectsSectionWebTitle": "Proyectos Web",
   "projectsSectionAppTitle": "Aplicaciones",
+
   "cardRepositoryLink": "Repositorio",
   "cardSiteLink": "Visitar",
   "cardDownloadLink": "Descargar",
+
   "aboutSectionTitle": "Un poco sobre mí",
   "experienceTitle": "Carrera y experiencia",
   "experienceText": "Soy un estudiante de desarrollo web autodidacta centrado en el stack MERN. Ya tengo dos años de experiencia en proyectos principalmente personales 🚀. Me adapto fácilmente a entornos colaborativos, me gusta aprender cosas nuevas y trabajar en equipos de alto rendimiento. Quiero seguir creciendo profesionalmente para dar lo mejor de mí cada día de trabajo.",
@@ -18,6 +22,7 @@
   "softSkillsTitle": "Habilidades blandas",
   "softSkillsFirstTip": "Capacidad de rápida adaptación",
   "softSkillsSecondTip": "Me encanta aprender nuevas cosas",
+
   "footerFirstSubtitle": "¿Dónde puede encontrate?",
   "footerSecondSubtitle": "Quiero saber más...",
   "footerResumeLink": "Curriculum"
