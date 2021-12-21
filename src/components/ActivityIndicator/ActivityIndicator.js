@@ -1,4 +1,3 @@
-import React from 'react'
 import styles from './activityindicator.module.css'
 
 const ActivityIndicator = () => {
