@@ -1,46 +1,13 @@
-import React, { useReducer } from 'react'
-import useLocalStorage from '../../hooks/useLocalStorage'
+import { useReducer } from 'react'
 import AppContext from './appContext'
 import appReducer from './appReducer'
-import { SET_THEME } from './types'
-
-const isWindowAccessible = typeof window !== 'undefined'
 
 const AppState = ({ children }) => {
-  const [localTheme, setLocalTheme] = useLocalStorage('theme')
-
-  const getInitialTheme = theme => {
-    const userPrefersDark = isWindowAccessible && window.matchMedia('(prefers-color-scheme: dark)')
-    if (typeof theme == 'undefined') {
-      setLocalTheme(userPrefersDark ? 'dark' : 'light')
-    }
-
-    return theme
-  }
-
-  const initialState = {
-    theme: getInitialTheme(localTheme),
-  }
+  const initialState = {}
 
   const [state, dispatch] = useReducer(appReducer, initialState)
 
-  const setTheme = newTheme => {
-    dispatch({
-      type: SET_THEME,
-      payload: newTheme,
-    })
-  }
-
-  return (
-    <AppContext.Provider
-      value={{
-        theme: state.theme,
-        setTheme,
-      }}
-    >
-      {children}
-    </AppContext.Provider>
-  )
+  return <AppContext.Provider value={{}}>{children}</AppContext.Provider>
 }
 
 export default AppState
