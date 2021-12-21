@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import '../index.css'
+import { ThemeProvider } from 'next-themes'
 
 const MyApp = ({ Component, pageProps }) => (
   <>
@@ -36,7 +37,9 @@ const MyApp = ({ Component, pageProps }) => (
       <link rel="apple-touch-icon" href="/favicon.png" />
       <link rel="manifest" href="/manifest.json" />
     </Head>
-    <Component {...pageProps} />
+    <ThemeProvider>
+      <Component {...pageProps} />
+    </ThemeProvider>
   </>
 )
 
