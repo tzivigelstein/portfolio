@@ -1,5 +1,7 @@
 import { useState } from 'react'
 
+const isWindowAccessible = typeof window !== 'undefined'
+
 const useLocalStorage = (key, initialValue) => {
   const [storedValue, setStoredValue] = useState(() => {
     try {
@@ -18,7 +20,7 @@ const useLocalStorage = (key, initialValue) => {
 
       setStoredValue(valueToStore)
 
-      window.localStorage.setItem(key, JSON.stringify(valueToStore))
+      isWindowAccessible && window.localStorage.setItem(key, JSON.stringify(valueToStore))
     } catch (error) {
       console.error(error)
     }
