@@ -1,13 +1,13 @@
-import React from 'react'
-import { useTranslation } from 'react-i18next'
 import styles from './index.module.css'
+import useTranslation from 'next-translate/useTranslation'
 
 const Card = ({ project }) => {
+  const { t } = useTranslation()
+
   const { theme, color, title, subtitle, image, repository, site, category } = project
-  const [t] = useTranslation('', { useSuspense: false })
 
   return (
-    <article theme={theme} style={{ background: color }} className={styles.card}>
+    <article data-theme={theme} style={{ background: color }} className={styles.card}>
       <a className={styles.projectLink} href={site} target="_blank" rel="noopener noreferrer">
         <header className={styles.cardHeader}>
           <span className={styles.helper}>{subtitle}</span>
@@ -19,7 +19,7 @@ const Card = ({ project }) => {
       </a>
       <footer className={styles.cardFooter}>
         <a className={styles.link} href={repository} target="_blank" rel="noopener noreferrer">
-          {t('cardRepositoryLink')}
+          {t('common:cardRepositoryLink')}
           <svg
             className={styles.chevronRight}
             viewBox="0 0 24 24"
@@ -35,7 +35,7 @@ const Card = ({ project }) => {
           </svg>
         </a>
         <a href={site} target="_blank" rel="noopener noreferrer" className={styles.button}>
-          {category === 'web' ? t('cardSiteLink') : t('cardDownloadLink')}
+          {category === 'web' ? t('common:cardSiteLink') : t('common:cardDownloadLink')}
         </a>
       </footer>
     </article>
