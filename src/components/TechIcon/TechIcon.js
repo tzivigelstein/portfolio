@@ -1,4 +1,3 @@
-import React from 'react'
 import styles from './techicon.module.css'
 
 const TechIcon = ({ children, backgroundColor, name, link }) => {
