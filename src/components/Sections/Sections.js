@@ -1,4 +1,3 @@
-import React from 'react'
 import styles from './sections.module.css'
 import PresentationSection from '../PresentationSection/PresentationSection'
 import ProjectsSection from '../ProjectsSection/ProjectsSection'

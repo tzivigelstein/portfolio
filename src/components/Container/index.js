@@ -1,4 +1,3 @@
-import React from 'react'
 import useApp from '../../hooks/useApp'
 import styles from './index.module.css'
 
