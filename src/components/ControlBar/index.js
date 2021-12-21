@@ -1,21 +1,22 @@
-import React, { useState, useEffect } from 'react'
+import React, { useEffect } from 'react'
 import styles from './index.module.css'
 import { SunIcon, MoonIcon, LanguageIcon } from '../UICons'
-import useApp from '../../hooks/useApp'
 import { useRouter } from 'next/router'
 import useTranslation from 'next-translate/useTranslation'
+import { useTheme } from 'next-themes'
+
+const isWindowAccessible = typeof window !== 'undefined'
 
 const ControlBar = () => {
-  const { theme, setTheme } = useApp()
-  const [isChecked, setChecked] = useState(theme === 'dark')
+  const { theme, setTheme } = useTheme()
   const { lang } = useTranslation()
 
   const router = useRouter()
 
   useEffect(() => {
-    window.addEventListener('keydown', handleKeyDown)
+    isWindowAccessible && window.addEventListener('keydown', handleKeyDown)
 
-    return () => window.removeEventListener('keydown', handleKeyDown)
+    return () => isWindowAccessible && window.removeEventListener('keydown', handleKeyDown)
   }, [handleKeyDown])
 
   function handleKeyDown({ key }) {
@@ -25,8 +26,7 @@ const ControlBar = () => {
     }
   }
 
-  function handleCheckboxChange(e) {
-    setChecked(e.target.checked)
+  function handleCheckboxChange() {
     setTheme(theme === 'dark' ? 'light' : 'dark')
   }
 
@@ -41,7 +41,7 @@ const ControlBar = () => {
           id="checkbox"
           type="checkbox"
           className={styles.checkBox}
-          checked={isChecked}
+          checked={theme === 'dark' ? true : false}
           onChange={handleCheckboxChange}
         />
         <label htmlFor="checkbox" className={styles.toggle}>
