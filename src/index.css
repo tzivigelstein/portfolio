@@ -15,14 +15,8 @@
   --footer-background-color: #3daef5;
   --scrollbar-thumb: hsl(203, 90%, 80%);
   --scrollbar-thumb-hover: hsl(203, 90%, 70%);
-  --language-indicator: #f7b457;
-
-  /* Card */
-  --card-text-primary-color: #1d1d1f;
-  --card-helper-color: #6e6e73;
-  --card-button: #0071e3;
-  --card-button-text: #fff;
-  --card-link-color: #06c;
+  --language-indicator-background: #f7b457;
+  --language-indicator-color: rgba(0, 0, 0, 0.8);
 }
 
 [data-theme='dark'] {
@@ -41,14 +35,8 @@
   --footer-text-color: rgba(255, 255, 255, 0.87);
   --scrollbar-thumb: hsl(211, 28%, 25%);
   --scrollbar-thumb-hover: hsl(211, 28%, 35%);
-  --language-indicator: #f7b457;
-
-  /* Card */
-  --card-text-primary-color: #fff;
-  --card-helper-color: #f5f5f7;
-  --card-button: #fff;
-  --card-button-text: #000;
-  --card-link-color: #fff;
+  --language-indicator-background: #f7b457;
+  --language-indicator-color: rgba(0, 0, 0, 0.8);
 }
 
 @font-face {
