@@ -10,7 +10,7 @@ const MyApp = ({ Component, pageProps }) => (
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <meta name="theme-color" content="#6ec2f7" />
       //Primary metatags
-      <title>Tzivi | Portfolio</title>
+      <title>Tzivi Gelstein | Portfolio</title>
       <meta name="title" content="Tzivi | Portfolio" />
       <meta
         name="description"
