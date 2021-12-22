@@ -42,6 +42,7 @@
 @font-face {
   font-family: 'SF Pro Display';
   src: url('/fonts/SFProDisplay_Regular.ttf') format('truetype');
+  font-display: swap;
 }
 
 * {
