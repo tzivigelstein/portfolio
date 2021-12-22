@@ -69,6 +69,8 @@
   border-radius: 0.5rem;
   transition: 0.3s top ease, 0.1s font-size ease, 0.1s z-index ease, 0.3s box-shadow ease,
     0.3s background-color ease-in-out;
+  gap: 0.5rem;
+  display: grid;
 }
 
 .hiddenResumeDownloadActive {
@@ -82,6 +84,8 @@
   font-size: inherit;
   margin: 0;
   color: var(--text-color);
+  white-space: nowrap;
+  display: block;
 }
 
 .headerImageContainer {
