@@ -10,9 +10,9 @@ const projects = [
     stack: [
       { id: 'XH', name: 'React', color: '#5ed3f3' },
       { id: 'Ms', name: 'Node', color: '#7fc728' },
-      { id: '4a', name: 'CSS', color: '#006bb4' },
+      { id: '4a', name: 'CSS', color: '#006bb4' }
     ],
-    color: '#acc6c6',
+    color: '#acc6c6'
   },
 
   {
@@ -26,9 +26,9 @@ const projects = [
     stack: [
       { id: 'im', name: 'React', color: '#5ed3f3' },
       { id: 'ce', name: 'CSS', color: '#006bb4' },
-      { id: 'J8', name: 'Firebase', color: '#f7c62d' },
+      { id: 'J8', name: 'Firebase', color: '#f7c62d' }
     ],
-    color: '#ccff97',
+    color: '#ccff97'
   },
   {
     id: '2Jp',
@@ -42,9 +42,9 @@ const projects = [
       { id: 'sI', name: 'React', color: '#5ed3f3' },
       { id: 'Nq', name: 'Next', color: '#222' },
       { id: 'vZ', name: 'CSS', color: '#006bb4' },
-      { id: 'n3', name: 'Firebase', color: '#f7c62d' },
+      { id: 'n3', name: 'Firebase', color: '#f7c62d' }
     ],
-    color: 'linear-gradient(90deg, #feaf04, #fa9814)',
+    color: 'linear-gradient(90deg, #feaf04, #fa9814)'
   },
   {
     id: 'gCh',
@@ -58,9 +58,9 @@ const projects = [
       { id: 'wf', name: 'React', color: '#5ed3f3' },
       { id: 'Lx', name: 'Next', color: '#222' },
       { id: 'gG', name: 'CSS', color: '#006bb4' },
-      { id: 'Dv', name: 'Firebase', color: '#f7c62d' },
+      { id: 'Dv', name: 'Firebase', color: '#f7c62d' }
     ],
-    color: '#fff',
+    color: '#fff'
   },
   {
     id: '0T9',
@@ -72,10 +72,10 @@ const projects = [
     site: 'https://lyric-it.netlify.app/',
     stack: [
       { id: 'wf', name: 'React', color: '#5ed3f3' },
-      { id: 'gG', name: 'Bootstrap', color: '#7952b3' },
+      { id: 'gG', name: 'Bootstrap', color: '#7952b3' }
     ],
     color: '#ef476f',
-    theme: 'dark',
+    theme: 'dark'
   },
   {
     id: '2NB',
@@ -87,10 +87,10 @@ const projects = [
     site: 'https://binast.vercel.app/',
     stack: [
       { id: 'gG', name: 'CSS', color: '#006bb4' },
-      { id: 'Lx', name: 'Next', color: '#222' },
+      { id: 'Lx', name: 'Next', color: '#222' }
     ],
     color: 'linear-gradient(90deg, #977EF1, #623CEA)',
-    theme: 'dark',
+    theme: 'dark'
   },
   {
     id: 'jyO',
@@ -103,10 +103,10 @@ const projects = [
     stack: [
       { id: 'eI', name: 'React Native', color: '#03a3ce' },
       { id: 'K3', name: 'Node', color: '#7fc728' },
-      { id: 'GQ', name: 'GraphQL', color: '#de33a6' },
+      { id: 'GQ', name: 'GraphQL', color: '#de33a6' }
     ],
     color: 'linear-gradient(90deg, #005893, #0081bf)',
-    theme: 'dark',
+    theme: 'dark'
   },
   {
     id: 'lt4',
@@ -121,10 +121,10 @@ const projects = [
       {
         id: 'JV',
         name: 'React Native',
-        color: '#03a3ce',
-      },
+        color: '#03a3ce'
+      }
     ],
-    color: '#8efdf3',
+    color: '#8efdf3'
   },
   {
     id: 'lKc',
@@ -138,17 +138,17 @@ const projects = [
       {
         id: 'JV',
         name: 'React Native',
-        color: '#03a3ce',
+        color: '#03a3ce'
       },
       {
         id: 'Go',
         name: 'Firebase',
-        color: '#f7c62d',
-      },
+        color: '#f7c62d'
+      }
     ],
     color: '#f2917e',
-    theme: 'dark',
-  },
+    theme: 'dark'
+  }
 ]
 
 export default projects
