@@ -21,7 +21,6 @@ const ControlBar = () => {
 
   function handleKeyDown({ key }) {
     if (key === 'l') {
-      setChecked(prev => !prev)
       setTheme(theme === 'dark' ? 'light' : 'dark')
     }
   }
@@ -41,7 +40,7 @@ const ControlBar = () => {
           id="checkbox"
           type="checkbox"
           className={styles.checkBox}
-          checked={theme === 'dark' ? true : false}
+          checked={theme === 'dark'}
           onChange={handleCheckboxChange}
         />
         <label htmlFor="checkbox" className={styles.toggle}>
