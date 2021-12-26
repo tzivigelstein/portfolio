@@ -5,7 +5,7 @@ export default async (req, res) => {
   const links = [{ url: '/', changefreq: 'weekly', priority: 1 }]
 
   const stream = new SitemapStream({
-    hostname: `https://${req.headers.host}`,
+    hostname: `https://${req.headers.host}`
   })
 
   res.writeHead(200, { 'Content-Type': 'application/xml' })
