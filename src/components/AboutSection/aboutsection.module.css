@@ -3,6 +3,12 @@
   display: grid;
 }
 
+@media (max-width: 480px) {
+  .container {
+    flex-direction: column;
+  }
+}
+
 .title {
   font-size: 1.7rem;
   color: var(--text-color);
@@ -24,6 +30,10 @@
   color: var(--text-secondary-color);
 }
 
+.icon {
+  font-family: 'Segoe UI Emoji';
+}
+
 .goalsContainer {
   display: flex;
   flex-direction: column;
@@ -43,10 +53,4 @@
   align-items: center;
   justify-items: center;
   margin-bottom: 0.5rem;
-}
-
-@media (max-width: 480px) {
-  .container {
-    flex-direction: column;
-  }
 }
