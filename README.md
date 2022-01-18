@@ -35,10 +35,6 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
  - React
  - Next - SSR
  - CSS modules
- - 
-
-## A little bit of the making process
-
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzkxMDMwMjg2XX0=
+eyJoaXN0b3J5IjpbNTQyMjgwODQ3XX0=
 -->
