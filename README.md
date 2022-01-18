@@ -25,10 +25,13 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
+### `npm run start`
+
+Runs `next start` which starts a Next.js production server.
+
 ### `npm run test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Launches the test runner in the interactive watch mode.
 
 
 ## Technologies
@@ -37,5 +40,5 @@ See the section about [running tests](https://facebook.github.io/create-react-ap
  - Next - SSR
  - CSS modules
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU2OTM2ODA2Ml19
+eyJoaXN0b3J5IjpbLTEyMzc0MTY5NDldfQ==
 -->
