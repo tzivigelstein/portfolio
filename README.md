@@ -1,5 +1,7 @@
 # My personal portfolio
-This project is 
+This project heads to be the place where you can watch and follow my learning through my career.
+
+
 
 ## Available Scripts
 
@@ -68,5 +70,5 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY3NTM1MDk2OV19
+eyJoaXN0b3J5IjpbLTI1Nzk2MjY5Nl19
 -->
