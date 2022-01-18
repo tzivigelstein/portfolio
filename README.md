@@ -30,8 +30,15 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
+## Technologies
+
+ - React
+ - Next - SSR
+ - CSS modules
+ - 
+
 ## A little bit of the making process
- It all started with a simple React App project built entirel
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTExODk5MjIwNV19
+eyJoaXN0b3J5IjpbMzkxMDMwMjg2XX0=
 -->
