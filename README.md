@@ -32,7 +32,9 @@ Runs `next start` which starts a Next.js production server.
 ### `npm run test`
 
 Launches the test runner in the interactive watch mode.
-
+### Parameters
+- `watchAll`
+- `verbose`
 
 ## Technologies
 
@@ -40,5 +42,5 @@ Launches the test runner in the interactive watch mode.
  - Next - SSR
  - CSS modules
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyMzc0MTY5NDldfQ==
+eyJoaXN0b3J5IjpbLTg1OTAxMjEzMF19
 -->
