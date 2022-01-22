@@ -14,8 +14,8 @@ const Header = () => {
         <div className={styles.headerTitleContainer}>
           <h1 className={styles.headerTitle}>{t('common:headerTitle')}</h1>
           <div className={styles.headerLinksContainer}>
-            <HeaderLinkButton text="Github" link="https://github.com/tzivigelstein" />
-            <HeaderLinkButton text="Linkedin" link="https://www.linkedin.com/in/tzivigelstein/" />
+            <HeaderLinkButton text='Github' link='https://github.com/tzivigelstein' />
+            <HeaderLinkButton text='Linkedin' link='https://www.linkedin.com/in/tzivigelstein/' />
             <div className={styles.hiddenResumeDownloadContainer}>
               <p
                 onClick={() => setActiveDownloadResume(!activeDownloadResume)}
@@ -28,10 +28,10 @@ const Header = () => {
                   activeDownloadResume && styles.hiddenResumeDownloadActive
                 }`}
               >
-                <a className={styles.hiddenResumeDownloadLinks} href="./resume/Tzivi_Gelstein_CV_EN.pdf">
+                <a className={styles.hiddenResumeDownloadLinks} href='./resume/Tzivi_Gelstein_CV_EN.pdf'>
                   English 🇺🇸
                 </a>
-                <a className={styles.hiddenResumeDownloadLinks} href="./resume/Tzivi_Gelstein_CV_ES.pdf">
+                <a className={styles.hiddenResumeDownloadLinks} href='./resume/Tzivi_Gelstein_CV_ES.pdf'>
                   Spanish 🇪🇸
                 </a>
               </div>
@@ -39,7 +39,7 @@ const Header = () => {
           </div>
         </div>
         <div className={styles.headerImageContainer}>
-          <img className={styles.headerImage} src="images/HeaderImage.webp" alt="Tzivi Gelstein" />
+          <img className={styles.headerImage} src='images/HeaderImage.webp' alt='Tzivi Gelstein' />
         </div>
       </div>
     </header>

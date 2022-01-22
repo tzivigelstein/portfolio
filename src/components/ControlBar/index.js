@@ -19,17 +19,17 @@ const ControlBar = () => {
     return () => isWindowAccessible && window.removeEventListener('keydown', handleKeyDown)
   }, [handleKeyDown])
 
-  function handleKeyDown({ key }) {
+  function handleKeyDown ({ key }) {
     if (key === 'l') {
       setTheme(theme === 'dark' ? 'light' : 'dark')
     }
   }
 
-  function handleCheckboxChange() {
+  function handleCheckboxChange () {
     setTheme(theme === 'dark' ? 'light' : 'dark')
   }
 
-  function handleLanguageChange() {
+  function handleLanguageChange () {
     router.replace('/', undefined, { locale: lang === 'en' ? 'es' : 'en' })
   }
 
@@ -37,13 +37,13 @@ const ControlBar = () => {
     <div className={styles.controlBarContainer}>
       <div>
         <input
-          id="checkbox"
-          type="checkbox"
+          id='checkbox'
+          type='checkbox'
           className={styles.checkBox}
           checked={theme === 'dark'}
           onChange={handleCheckboxChange}
         />
-        <label htmlFor="checkbox" className={styles.toggle}>
+        <label htmlFor='checkbox' className={styles.toggle}>
           <div className={styles.toggleIconContainer}>
             <SunIcon />
             <MoonIcon className={styles.moonIcon} />
