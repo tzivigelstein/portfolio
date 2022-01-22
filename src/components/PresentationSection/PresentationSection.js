@@ -11,7 +11,7 @@ const PresentationSection = () => {
         <p className={styles.text}>{t('common:presentationSectionText')}</p>
       </div>
       <div className={styles.imageContainer}>
-        <img className={styles.image} loading="lazy" src="./images/previewed.webp" alt="Projects preview" />
+        <img className={styles.image} loading='lazy' src='./images/previewed.webp' alt='Projects preview' />
       </div>
     </section>
   )
