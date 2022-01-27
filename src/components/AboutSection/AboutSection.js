@@ -34,8 +34,8 @@ const AboutSection = () => {
             {t('common:professionalTitle')} <span className={styles.icon}>👨‍💻</span>
           </h3>
           <div className={styles.skillsContainer}>
-            {technologies.map(({ id, color, Icon, name, link }) => (
-              <TechIcon key={id} backgroundColor={color} name={name} link={link}>
+            {technologies.map(({ id, Icon, name, link, styles }) => (
+              <TechIcon key={id} name={name} link={link} styles={styles}>
                 <Icon />
               </TechIcon>
             ))}
