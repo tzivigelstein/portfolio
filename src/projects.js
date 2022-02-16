@@ -1,5 +1,22 @@
 const projects = [
   {
+    id: 'Zsu',
+    category: 'web',
+    title: 'Wordle',
+    subtitle: 'Entertainment App',
+    image: './images/Wordle.jpg',
+    mobileImage: './images/Wordle-mobile.jpg',
+    repository: 'https://github.com/tzivigelstein/wordle',
+    site: 'https://thisisnotwordle.vercel.app/',
+    stack: [
+      { id: 'XH', name: 'React', color: '#5ed3f3' },
+      { id: 'Ms', name: 'Node', color: '#7fc728' },
+      { id: '4a', name: 'CSS', color: '#006bb4' }
+    ],
+    color: '#6aaa64',
+    theme: 'dark'
+  },
+  {
     id: 'O1i',
     category: 'web',
     title: 'Minity',
@@ -14,7 +31,6 @@ const projects = [
     ],
     color: '#acc6c6'
   },
-
   {
     id: 'SGE',
     category: 'web',
