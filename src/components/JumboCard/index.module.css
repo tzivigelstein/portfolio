@@ -1,0 +1,127 @@
+.jumboCard {
+  --card-text-primary-color: #1d1d1f;
+  --card-helper-color: #6e6e73;
+  --card-button: #0071e3;
+  --card-button-text: #fff;
+  --card-link-color: #06c;
+}
+
+.jumboCard[data-theme='dark'] {
+  --card-text-primary-color: #fff;
+  --card-helper-color: #f5f5f7;
+  --card-button: #fff;
+  --card-button-text: #000;
+  --card-link-color: #fff;
+}
+
+.jumboCard {
+  border-radius: 1.125rem;
+  padding: 4%;
+  position: relative;
+  box-shadow: 2px 4px 12px rgb(0 0 0 / 8%);
+  transition: transform 0.3s cubic-bezier(0, 0, 0.5, 1), box-shadow 0.3s cubic-bezier(0, 0, 0.5, 1);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  grid-column-start: 1;
+  grid-column-end: -1;
+}
+
+@media (max-width: 480px) {
+  .jumboCard {
+    padding: 8%;
+    aspect-ratio: 1 / 1.2;
+  }
+}
+
+@media (hover) {
+  .jumboCard:hover {
+    transform: scale3d(1.01, 1.01, 1.01);
+    box-shadow: 2px 4px 16px rgb(0 0 0 / 16%);
+  }
+}
+
+.projectLink {
+  text-decoration: none;
+  margin: 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  color: var(--card-text-primary-color);
+}
+
+.title {
+  font-size: 1.75rem;
+  color: var(--card-text-primary-color);
+  font-weight: 600;
+  margin: 0.5rem 0;
+  justify-self: flex-start;
+}
+
+.helper {
+  font-weight: 600;
+  font-size: 0.75rem;
+  justify-self: flex-start;
+  color: var(--card-helper-color);
+  text-transform: uppercase;
+}
+
+.linkContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  z-index: 3;
+}
+
+.cardPicture {
+  flex: 1;
+}
+
+.cardImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cardFooter {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1rem;
+}
+
+.link {
+  align-items: center;
+  color: var(--card-link-color);
+  display: flex;
+  font-size: 1.0625rem;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+@media (hover) {
+  .link:hover {
+    text-decoration: underline;
+  }
+}
+
+.chevronRight {
+  stroke: var(--card-link-color);
+  width: 1.0625rem;
+  aspect-ratio: 1 / 1;
+}
+
+.button {
+  background: var(--card-button);
+  border-radius: 1000rem;
+  color: var(--card-button-text);
+  font-size: 1.0625rem;
+  font-weight: 400;
+  cursor: pointer;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 1rem;
+  line-height: 1.17648;
+}
