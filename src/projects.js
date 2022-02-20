@@ -19,17 +19,18 @@ const projects = [
   {
     id: 'O1i',
     category: 'web',
-    title: 'Minity',
-    subtitle: 'Productivity App',
-    image: './images/Minity.webp',
-    repository: 'https://github.com/tzivigelstein/MERNTasks-Client',
-    site: 'https://minity.vercel.app/',
+    title: 'Adivina palabra',
+    subtitle: 'Entertainment App',
+    image: './images/AdivinaPalabra.png',
+    repository: 'https://github.com/tzivigelstein/guessword',
+    site: 'https://adivina-palabra.vercel.app/',
     stack: [
       { id: 'XH', name: 'React', color: '#5ed3f3' },
       { id: 'Ms', name: 'Node', color: '#7fc728' },
       { id: '4a', name: 'CSS', color: '#006bb4' }
     ],
-    color: '#acc6c6'
+    theme: 'dark',
+    color: '#8cba80'
   },
   {
     id: 'SGE',
