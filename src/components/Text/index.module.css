@@ -1,0 +1,5 @@
+.paragraphText {
+  color: var(--text-secondary-color);
+  line-height: 1.5;
+  letter-spacing: 0.03rem;
+}
