@@ -1,0 +1,31 @@
+.recommendationContainer {
+  position: relative;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  transition: transform 200ms ease;
+}
+
+.recommendationContainer:hover {
+  transform: scale(1.0125);
+}
+
+.recommendationImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  aspect-ratio: 1 / 1;
+}
+
+.recommendationName {
+  display: block;
+  position: absolute;
+  padding: 1rem;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  color: #fff;
+  z-index: 1;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.6));
+  font-weight: 500;
+  pointer-events: none;
+}
