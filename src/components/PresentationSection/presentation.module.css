@@ -1,17 +1,13 @@
 .container {
-  display: flex;
   margin: 2rem 0;
 }
 
-.info {
-  display: flex;
-  flex-direction: column;
-  min-width: 40%;
+.information {
+  display: grid;
 }
 
 .title {
-  color: var(--text-color);
-  font-size: 1.7rem;
+  margin-top: 0;
 }
 
 .text {
@@ -20,24 +16,18 @@
   margin: 0;
 }
 
-.imageContainer {
+.bold {
+  font-weight: bold;
+  color: var(--text-color);
+}
+
+.list {
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.6rem;
+}
+
+.listItem {
   display: flex;
-  justify-content: flex-end;
-  align-items: center;
-}
-
-.image {
-  width: 100%;
-  object-fit: cover;
-  transition: transform 0.3s ease;
-}
-
-@media (max-width: 480px) {
-  .container {
-    flex-direction: column;
-  }
-
-  .imageContainer {
-    justify-content: center;
-  }
 }
