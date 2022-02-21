@@ -54,3 +54,21 @@
   justify-items: center;
   margin-bottom: 0.5rem;
 }
+
+.storyContainer {
+  display: grid;
+}
+
+.textContainer {
+  display: grid;
+  gap: 0.6rem;
+}
+
+.recommendationsContainer {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
