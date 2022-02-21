@@ -30,7 +30,7 @@ const projects = [
       { id: '4a', name: 'CSS', color: '#006bb4' }
     ],
     theme: 'dark',
-    color: '#8cba80'
+    color: '#8ca0d7'
   },
   {
     id: 'SGE',
