@@ -2,4 +2,37 @@
   color: var(--text-secondary-color);
   line-height: 1.5;
   letter-spacing: 0.03rem;
+  font-size: 1.1rem;
+}
+
+.paragraphTextBig {
+  font-size: 1.25rem;
+}
+
+.textBold {
+  font-weight: bold;
+}
+
+.textLink {
+  color: var(--text-color);
+}
+
+.textLink:active {
+  color: var(--text-secondary-color);
+}
+
+.textItalic {
+  color: var(--text-color);
+  font-style: italic;
+}
+
+.textEmoji {
+  color: var(--primary-color);
+}
+
+.textListItem {
+  margin: 0;
+  font-size: 1.1rem;
+  letter-spacing: 0.03rem;
+  color: var(--text-color);
 }
