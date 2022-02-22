@@ -1,0 +1,15 @@
+.storyContainer {
+  display: grid;
+  margin-bottom: 2rem;
+}
+
+.textContainer {
+  display: grid;
+  gap: 0.6rem;
+}
+
+.list {
+  margin: 0;
+  display: grid;
+  gap: 0.6rem;
+}
