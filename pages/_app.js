@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import '../index.css'
+import './styles/index.css'
 import { ThemeProvider } from 'next-themes'
 
 const MyApp = ({ Component, pageProps }) => (

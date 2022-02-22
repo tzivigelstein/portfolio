@@ -1,7 +1,7 @@
 import styles from './index.module.css'
 
 const Container = ({ children }) => {
-  return <main className={styles.container}>{children}</main>
+  return <div className={styles.container}>{children}</div>
 }
 
 export default Container

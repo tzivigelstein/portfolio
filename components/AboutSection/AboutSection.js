@@ -1,12 +1,12 @@
 import styles from './aboutsection.module.css'
-import TechIcon from '../TechIcon/TechIcon'
-import technologies from '../technologies'
+import TechIcon from '@components/TechIcon/TechIcon'
+import technologies from '@data/technologies'
 import useTranslation from 'next-translate/useTranslation'
-import { H2, H5 } from '../Heading'
-import CREATORS from '../../creators'
-import Creator from '../Creator'
-import { ParagraphText } from '../Text'
-import Story from '../Story'
+import { H2, H5 } from '@components/Heading'
+import { ParagraphText, TextEmoji } from '@components/Text'
+import CREATORS from '@data/creators'
+import Creator from '@components/Creator'
+import Story from '@components/Story'
 
 const AboutSection = () => {
   const { t } = useTranslation()
@@ -18,25 +18,27 @@ const AboutSection = () => {
         <div>
           <div>
             <h3 className={styles.subtitle}>
-              {t('common:experienceTitle')} <span className={styles.icon}>👨‍🔬</span>
+              {t('common:experienceTitle')} <TextEmoji>👨‍🔬</TextEmoji>
             </h3>
             <ParagraphText>{t('common:experienceText')}</ParagraphText>
           </div>
           <div>
-            <h3 className={styles.subtitle}>{t('common:goalsTitle')} ✍</h3>
+            <h3 className={styles.subtitle}>
+              {t('common:goalsTitle')} <TextEmoji>✍</TextEmoji>
+            </h3>
             <div className={styles.goalsContainer}>
               <span className={styles.goal}>
-                <span className={styles.icon}>👆</span> {t('common:goalsFirstTip')}
+                <TextEmoji>👆</TextEmoji> {t('common:goalsFirstTip')}
               </span>
               <span className={styles.goal}>
-                <span className={styles.icon}>💡</span> {t('common:goalsSecondTip')}
+                <TextEmoji>💡</TextEmoji> {t('common:goalsSecondTip')}
               </span>
             </div>
           </div>
         </div>
         <div>
           <h3 className={styles.subtitle}>
-            {t('common:professionalTitle')} <span className={styles.icon}>👨‍💻</span>
+            {t('common:professionalTitle')} <TextEmoji>👨‍💻</TextEmoji>
           </h3>
           <div className={styles.skillsContainer}>
             {technologies.map(({ id, Icon, name, link, styles }) => (
@@ -47,14 +49,14 @@ const AboutSection = () => {
           </div>
           <div>
             <h3 className={styles.subtitle}>
-              {t('common:softSkillsTitle')} <span className={styles.icon}>🦸‍♂️</span>
+              {t('common:softSkillsTitle')} <TextEmoji>🦸‍♂️</TextEmoji>
             </h3>
             <div className={styles.goalsContainer}>
               <span className={styles.goal}>
-                <span className={styles.icon}>👉</span> {t('common:softSkillsFirstTip')}
+                <TextEmoji>👉</TextEmoji> {t('common:softSkillsFirstTip')}
               </span>
               <span className={styles.goal}>
-                <span className={styles.icon}>👉</span> {t('common:softSkillsSecondTip')}
+                <TextEmoji>👉</TextEmoji> {t('common:softSkillsSecondTip')}
               </span>
             </div>
           </div>

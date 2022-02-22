@@ -1,4 +1,4 @@
-import styles from './activityindicator.module.css'
+import styles from './index.module.css'
 
 const ActivityIndicator = () => {
   return (

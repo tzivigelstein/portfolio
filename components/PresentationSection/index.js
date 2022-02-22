@@ -1,8 +1,8 @@
-import styles from './presentation.module.css'
+import styles from './index.module.css'
 import useTranslation from 'next-translate/useTranslation'
-import { ParagraphText } from '../Text'
-import { H2, H4 } from '../Heading'
-import { ChevronIcon } from '../UIICons'
+import { H2, H4 } from '@components/Heading'
+import { ParagraphText, TextEmoji } from '@components/Text'
+import { ChevronIcon } from '@components/Icons'
 
 const PresentationSection = () => {
   const { t } = useTranslation()
@@ -19,16 +19,16 @@ const PresentationSection = () => {
               <ChevronIcon />
               <ParagraphText>
                 {/* {t('common:presentationSectionListItem1')} */}
-                <span className={styles.bold}>Optimizar</span> el uso de recursos para mejorar la experiencia del usuario
-                📊
+                <span className={styles.bold}>Optimizar</span> el uso de recursos para mejorar la experiencia del
+                usuario <TextEmoji>📊</TextEmoji>
               </ParagraphText>
             </li>
             <li className={styles.listItem}>
               <ChevronIcon />
               <ParagraphText>
                 {/* {t('common:presentationSectionListItem1')} */}
-                <span className={styles.bold}>Crear</span> diseños y experiencias de usuario que sean amigables y fáciles
-                de utilizar 🎉
+                <span className={styles.bold}>Crear</span> diseños y experiencias de usuario que sean amigables y
+                fáciles de utilizar <TextEmoji>💡</TextEmoji>
               </ParagraphText>
             </li>
             <li className={styles.listItem}>
@@ -36,7 +36,7 @@ const PresentationSection = () => {
               <ParagraphText>
                 {/* {t('common:presentationSectionListItem1')} */}
                 <span className={styles.bold}>Construir</span> aplicaciones escalables que generen un impacto positivo
-                en el usuario 🛠
+                en el usuario <TextEmoji>🛠</TextEmoji>
               </ParagraphText>
             </li>
           </ul>

@@ -30,10 +30,6 @@
   color: var(--text-secondary-color);
 }
 
-.icon {
-  font-family: 'Segoe UI Emoji';
-}
-
 .goalsContainer {
   display: flex;
   flex-direction: column;

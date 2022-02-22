@@ -1,6 +1,6 @@
-import React, { useState } from 'react'
-import styles from './header.module.css'
-import HeaderLinkButton from '../HeaderLinkButton'
+import { useState } from 'react'
+import styles from './index.module.css'
+import HeaderLinkButton from '@components/HeaderLinkButton'
 import useTranslation from 'next-translate/useTranslation'
 
 const Header = () => {

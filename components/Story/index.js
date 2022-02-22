@@ -1,27 +1,29 @@
 import styles from './index.module.css'
-import { H3 } from '../Heading'
-import { ParagraphText, TextBold, TextEmoji, TextItalic, TextLink, TextListItem } from '../Text'
+import { H3 } from '@components/Heading'
+import { ParagraphText, TextEmoji, TextItalic, TextLink, TextListItem } from '@components/Text'
+import useTranslation from 'next-translate/useTranslation'
 
-export default function Story() {
+export default function Story () {
+  const { t } = useTranslation()
+
   return (
     <div className={styles.storyContainer}>
       <H3>My story</H3>
       <div className={styles.textContainer}>
         <ParagraphText>
-          I am Tzivi Gelstein and I was born at{' '}
-          <TextLink href="https://goo.gl/maps/mG91tRZRup2QB25Z6">
-            <TextBold>Béer Sheva, Israel</TextBold>
-          </TextLink>
-          . I grew up there until the age of 3, then my family and I moved back to Argentina where we live happily.
+          {t('common:storyParagraph1Part1')}{' '}
+          <TextLink href='https://goo.gl/maps/mG91tRZRup2QB25Z6'>Béer Sheva, Israel</TextLink>
+          {t('common:storyParagraph1Part2')}
         </ParagraphText>
         <ParagraphText>
-          I’ve been always a tech passionate, since I was young I enjoyed using the computer, gaming mainly{' '}
-          <TextEmoji>😅</TextEmoji>. But for me, the machine I had in front was in fact a whole mystery.
+          {t('common:storyParagraph2Part1')} <TextEmoji>😅</TextEmoji>
+          {t('common:storyParagraph2Part2')}
         </ParagraphText>
         <ParagraphText>
-          A short time later, I started digging into a computer building, <TextItalic>What is a processor?</TextItalic>{' '}
-          <TextItalic>What is a Motherboard?</TextItalic> <TextItalic>Why my data held on my hard disk?</TextItalic>{' '}
-          These are the questions I had that nobody could answer. Nobody but the internet.
+          {t('common:storyParagraph3Part1')} <TextItalic>{t('common:storyParagraph3Part2')}</TextItalic>{' '}
+          <TextItalic>{t('common:storyParagraph3Part3')}</TextItalic>{' '}
+          <TextItalic>Why my data held on my hard disk?</TextItalic> These are the questions I had that nobody could
+          answer. Nobody but the internet.
         </ParagraphText>
         <ParagraphText>
           It was a complete year learning about computers, all about them. From the transistors inside all the
@@ -40,7 +42,7 @@ export default function Story() {
         <ParagraphText>
           During my course in school, when I was 16 exactly I started digging into the coding world, I started partly
           because of the school where we practiced coding with an embedded electronic board called{' '}
-          <TextLink href="https://www.arduino.cc">Arduino</TextLink>, and also because I have a relative that advised me
+          <TextLink href='https://www.arduino.cc'>Arduino</TextLink>, and also because I have a relative that advised me
           to get into this wonderful world. So with my almost 17 years old and all my enthusiasm I started the travel to
           become a web developer.
         </ParagraphText>
@@ -50,7 +52,7 @@ export default function Story() {
         </ParagraphText>
         <ul className={styles.list}>
           <li>
-            <TextListItem>{"I feel great about joining this awesome world and I don't regret a thing."}</TextListItem>
+            <TextListItem>I feel great about joining this awesome world and I don't regret a thing.</TextListItem>
           </li>
           <li>
             <TextListItem>I now know great people that are passionate as well.</TextListItem>
