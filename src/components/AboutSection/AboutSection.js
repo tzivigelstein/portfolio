@@ -6,6 +6,7 @@ import { H2, H3, H5 } from '../Heading'
 import CREATORS from '../../creators'
 import Creator from '../Creator'
 import { ParagraphText } from '../Text'
+import Story from '../Story'
 
 const AboutSection = () => {
   const { t } = useTranslation()
@@ -59,29 +60,7 @@ const AboutSection = () => {
           </div>
         </div>
       </div>
-      <div className={styles.storyContainer}>
-        <H3>My story</H3>
-        <div className={styles.textContainer}>
-          <ParagraphText>
-            I am Tzivi Gelstein and I was born at Béer Sheva, Israel. I grew up there until the age of 3, then my family
-            and I moved back to Argentina where we live happily.
-          </ParagraphText>
-          <ParagraphText>
-            I’ve been always a tech passionate, since I was young I enjoyed using the computer, gaming mainly 😅. But
-            for me, the machine I had in front was in fact a whole mystery.
-          </ParagraphText>
-          <ParagraphText>
-            A short time later, I started digging into a computer building, *What is a processor? What is a Motherboard?
-            Why my data held on my hard disk? These are the questions I had that nobody could answer. Nobody but the
-            internet.
-          </ParagraphText>
-          <ParagraphText>
-            It was a complete year learning about computers, all about them. From the transistors inside all the
-            components to the software. I learnt how to install an O.S. and how to configure it, I learnt (superficially
-            😁) what were the drivers.
-          </ParagraphText>
-        </div>
-      </div>
+      <Story />
       <div>
         <H2>{t('common:recommendationsTitle')}</H2>
         <H5>{t('common:recommendationsSubTitle')}</H5>

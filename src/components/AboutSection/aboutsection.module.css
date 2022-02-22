@@ -55,15 +55,6 @@
   margin-bottom: 0.5rem;
 }
 
-.storyContainer {
-  display: grid;
-}
-
-.textContainer {
-  display: grid;
-  gap: 0.6rem;
-}
-
 .recommendationsContainer {
   list-style: none;
   padding: 0;
