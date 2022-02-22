@@ -13,38 +13,32 @@ const PresentationSection = () => {
       <div className={styles.information}>
         <div>
           <ParagraphText>{t('common:presentationSectionText')}</ParagraphText>
-          <H4>Con mi trabajo yo busco:</H4>
+          <H4>{t('common:presentationSectionListTitle')}</H4>
           <ul className={styles.list}>
             <li className={styles.listItem}>
               <ChevronIcon />
               <ParagraphText>
-                {/* {t('common:presentationSectionListItem1')} */}
-                <span className={styles.bold}>Optimizar</span> el uso de recursos para mejorar la experiencia del
-                usuario <TextEmoji>📊</TextEmoji>
+                <span className={styles.bold}>{t('common:presentationSectionListItemTitle1')}</span>{' '}
+                {t('common:presentationSectionListItem1')} <TextEmoji>📊</TextEmoji>
               </ParagraphText>
             </li>
             <li className={styles.listItem}>
               <ChevronIcon />
               <ParagraphText>
-                {/* {t('common:presentationSectionListItem1')} */}
-                <span className={styles.bold}>Crear</span> diseños y experiencias de usuario que sean amigables y
-                fáciles de utilizar <TextEmoji>💡</TextEmoji>
+                <span className={styles.bold}>{t('common:presentationSectionListItemTitle2')}</span>{' '}
+                {t('common:presentationSectionListItem2')} <TextEmoji>💡</TextEmoji>
               </ParagraphText>
             </li>
             <li className={styles.listItem}>
               <ChevronIcon />
               <ParagraphText>
-                {/* {t('common:presentationSectionListItem1')} */}
-                <span className={styles.bold}>Construir</span> aplicaciones escalables que generen un impacto positivo
-                en el usuario <TextEmoji>🛠</TextEmoji>
+                <span className={styles.bold}>{t('common:presentationSectionListItemTitle3')}</span>{' '}
+                {t('common:presentationSectionListItem3')} <TextEmoji>🛠</TextEmoji>
               </ParagraphText>
             </li>
           </ul>
         </div>
       </div>
-      {/*  <div className={styles.imageContainer}>
-        <img className={styles.image} loading="lazy" src="./images/previewed.webp" alt="Projects preview" />
-      </div> */}
     </section>
   )
 }
