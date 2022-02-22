@@ -1,0 +1,8 @@
+.container {
+  padding: 2rem;
+}
+
+.homeLink {
+  font-size: 1.25rem;
+  color: var(--color-primary);
+}

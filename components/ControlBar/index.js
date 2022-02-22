@@ -1,6 +1,6 @@
-import React, { useEffect } from 'react'
+import { useEffect } from 'react'
 import styles from './index.module.css'
-import { SunIcon, MoonIcon, LanguageIcon } from '../UIICons'
+import { SunIcon, MoonIcon, LanguageIcon } from '@components/Icons'
 import { useRouter } from 'next/router'
 import useTranslation from 'next-translate/useTranslation'
 import { useTheme } from 'next-themes'

@@ -1,4 +1,13 @@
-import { CSSIcon, GitIcon, HTMLIcon, JavaScriptIcon, MongoIcon, NextJSIcon, NodeJSIcon, ReactIcon } from './TechIcons'
+import {
+  CSSIcon,
+  GitIcon,
+  HTMLIcon,
+  JavaScriptIcon,
+  MongoIcon,
+  NextJSIcon,
+  NodeJSIcon,
+  ReactIcon
+} from '@components/Icons'
 
 const technologies = [
   {

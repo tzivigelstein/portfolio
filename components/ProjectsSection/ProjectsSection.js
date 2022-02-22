@@ -1,7 +1,7 @@
 import styles from './projectsection.module.css'
-import projects from '../../projects'
-import Card from '../Card'
-import JumboCard from '../JumboCard'
+import projects from '@data/projects'
+import Card from '@components/Card'
+import JumboCard from '@components/JumboCard'
 import useTranslation from 'next-translate/useTranslation'
 
 const ProjectsSection = () => {
