@@ -4,6 +4,13 @@
 
   "presentationSectionTitle": "My projects",
   "presentationSectionText": "Over the course of 2 years I have worked on different personal projects such as web applications, mobile applications and web designs, in order to practice the skills learned during my learning.",
+  "presentationSectionListTitle": "With my work I seek to:",
+  "presentationSectionListItemTitle1": "Optimize",
+  "presentationSectionListItem1": "the use of resources to improve user experience",
+  "presentationSectionListItemTitle2": "Create",
+  "presentationSectionListItem2": "user-friendly designs and user experiences.",
+  "presentationSectionListItemTitle3": "Build",
+  "presentationSectionListItem3": "scalable applications that generate a positive impact on the user.",
 
   "projectsSectionWebTitle": "Web Projects",
   "projectsSectionAppTitle": "App Projects",
