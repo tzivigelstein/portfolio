@@ -2,14 +2,14 @@ import styles from './index.module.css'
 import { H3 } from '../Heading'
 import { ParagraphText, TextBold, TextEmoji, TextItalic, TextLink, TextListItem } from '../Text'
 
-export default function Story () {
+export default function Story() {
   return (
     <div className={styles.storyContainer}>
       <H3>My story</H3>
       <div className={styles.textContainer}>
         <ParagraphText>
           I am Tzivi Gelstein and I was born at{' '}
-          <TextLink href='https://goo.gl/maps/mG91tRZRup2QB25Z6'>
+          <TextLink href="https://goo.gl/maps/mG91tRZRup2QB25Z6">
             <TextBold>Béer Sheva, Israel</TextBold>
           </TextLink>
           . I grew up there until the age of 3, then my family and I moved back to Argentina where we live happily.
@@ -40,7 +40,7 @@ export default function Story () {
         <ParagraphText>
           During my course in school, when I was 16 exactly I started digging into the coding world, I started partly
           because of the school where we practiced coding with an embedded electronic board called{' '}
-          <TextLink href='https://www.arduino.cc'>Arduino</TextLink>, and also because I have a relative that advised me
+          <TextLink href="https://www.arduino.cc">Arduino</TextLink>, and also because I have a relative that advised me
           to get into this wonderful world. So with my almost 17 years old and all my enthusiasm I started the travel to
           become a web developer.
         </ParagraphText>
@@ -50,7 +50,7 @@ export default function Story () {
         </ParagraphText>
         <ul className={styles.list}>
           <li>
-            <TextListItem>I feel great about joining this awesome world and I don't regret a thing.</TextListItem>
+            <TextListItem>{"I feel great about joining this awesome world and I don't regret a thing."}</TextListItem>
           </li>
           <li>
             <TextListItem>I now know great people that are passionate as well.</TextListItem>
