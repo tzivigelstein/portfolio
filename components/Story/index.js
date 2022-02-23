@@ -3,7 +3,7 @@ import { H3 } from '@components/Heading'
 import { ParagraphText, TextEmoji, TextItalic, TextLink, TextListItem } from '@components/Text'
 import useTranslation from 'next-translate/useTranslation'
 
-export default function Story() {
+export default function Story () {
   const { t } = useTranslation()
 
   return (
@@ -12,7 +12,7 @@ export default function Story() {
       <div className={styles.textContainer}>
         <ParagraphText>
           {t('common:storyParagraph1Part1')}{' '}
-          <TextLink href="https://goo.gl/maps/mG91tRZRup2QB25Z6">Béer Sheva, Israel</TextLink>
+          <TextLink href='https://goo.gl/maps/mG91tRZRup2QB25Z6'>Béer Sheva, Israel</TextLink>
           {t('common:storyParagraph1Part2')}
         </ParagraphText>
         <ParagraphText>
@@ -28,7 +28,7 @@ export default function Story() {
         <ParagraphText>{t('common:storyParagraph5Part1')}</ParagraphText>
         <ParagraphText>{t('common:storyParagraph6Part1')}</ParagraphText>
         <ParagraphText>
-          {t('common:storyParagraph7Part1')} <TextLink href="https://www.arduino.cc">Arduino</TextLink>
+          {t('common:storyParagraph7Part1')} <TextLink href='https://www.arduino.cc'>Arduino</TextLink>
           {t('common:storyParagraph7Part2')}
         </ParagraphText>
         <ParagraphText>{t('common:storyParagraph8Part1')}</ParagraphText>
