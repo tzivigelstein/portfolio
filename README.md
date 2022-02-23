@@ -25,11 +25,11 @@ Runs `next start` which starts a Next.js production server.
 
 ### `npm run lint`
 
-Runs `standard ./` which logs all the files that have warnings or errors.
+Runs `standard 'root'` which logs all the files that have warnings or errors.
 
 ### `npm run lint-fix`
 
-Runs `standard . --fix` which fixes all the files that have warnings or errors.
+Runs `standard 'root' --fix` which fixes all the files that have warnings or errors.
 
 ## Technologies
 
