@@ -1,7 +1,7 @@
 import styles from './index.module.css'
-import PresentationSection from '../PresentationSection'
-import ProjectsSection from '../ProjectsSection/ProjectsSection'
-import AboutSection from '../AboutSection/AboutSection'
+import PresentationSection from '@components/PresentationSection'
+import ProjectsSection from '@components/ProjectsSection'
+import AboutSection from '@components/AboutSection'
 
 const SectionsContainer = () => {
   return (
