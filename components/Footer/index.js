@@ -1,4 +1,4 @@
-import styles from './footer.module.css'
+import styles from './index.module.css'
 import { GithubIcon, LinkedinIcon, TwitterIcon, WhatsAppIcon, Resume, TelegramIcon } from '@components/Icons'
 import useTranslation from 'next-translate/useTranslation'
 

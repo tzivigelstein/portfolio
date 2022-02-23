@@ -1,4 +1,4 @@
-import styles from './projectsection.module.css'
+import styles from './index.module.css'
 import projects from '@data/projects'
 import Card from '@components/Card'
 import JumboCard from '@components/JumboCard'

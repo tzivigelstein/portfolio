@@ -1,4 +1,4 @@
-import styles from './aboutsection.module.css'
+import styles from './index.module.css'
 import TechIcon from '@components/TechIcon/TechIcon'
 import technologies from '@data/technologies'
 import useTranslation from 'next-translate/useTranslation'
