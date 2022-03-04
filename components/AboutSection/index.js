@@ -8,7 +8,7 @@ import CREATORS from '@data/creators'
 import Creator from '@components/Creator'
 import Story from '@components/Story'
 
-const AboutSection = () => {
+const AboutSection = ({ post }) => {
   const { t } = useTranslation()
 
   return (
@@ -62,7 +62,7 @@ const AboutSection = () => {
           </div>
         </div>
       </div>
-      <Story />
+      <Story post={post} />
       <div>
         <H2>{t('common:recommendationsTitle')}</H2>
         <H5>{t('common:recommendationsSubTitle')}</H5>
