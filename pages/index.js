@@ -4,7 +4,7 @@ import Sections from '@components/SectionsContainer'
 import Footer from '@components/Footer'
 import ControlBar from '@components/ControlBar'
 
-const Home = () => {
+export default function Home() {
   return (
     <Container>
       <ControlBar />
@@ -14,5 +14,3 @@ const Home = () => {
     </Container>
   )
 }
-
-export default Home
