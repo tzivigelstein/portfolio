@@ -7,8 +7,8 @@ export const ParagraphTextBig = ({ children, ...props }) => (
 
 export const TextBold = ({ children, ...props }) => <span className={styles.textBold}>{children}</span>
 
-export const TextLink = ({ children, ...props }) => (
-  <a rel='noopener noreferrer' target='_blank' className={styles.textLink} {...props}>
+export const TextLink = ({ children, href, ...props }) => (
+  <a rel="noopener noreferrer" target="_blank" className={styles.textLink} href={href}>
     {children}
   </a>
 )
@@ -21,4 +21,12 @@ export const TextItalic = ({ children, ...props }) => (
 
 export const TextEmoji = ({ children, ...props }) => <span className={styles.textEmoji}>{children}</span>
 
-export const TextListItem = ({ children, ...props }) => <p className={styles.textListItem}>{children}</p>
+export const TextListItem = ({ children }) => {
+  return (
+    <li>
+      <span className={styles.textListItem}>{children}</span>
+    </li>
+  )
+}
+
+export const List = ({ children }) => <ul className={styles.list}>{children}</ul>
