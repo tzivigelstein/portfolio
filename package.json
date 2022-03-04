@@ -2,7 +2,9 @@
   "name": "portfolio",
   "version": "0.1.0",
   "dependencies": {
+    "gray-matter": "4.0.3",
     "next": "12.0.7",
+    "next-mdx-remote": "4.0.0",
     "next-themes": "0.0.15",
     "next-translate": "1.2.0",
     "react": "17.0.2",
