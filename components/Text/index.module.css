@@ -36,3 +36,8 @@
   letter-spacing: 0.03rem;
   color: var(--text-color);
 }
+
+.list {
+  display: grid;
+  gap: 0.6rem;
+}
