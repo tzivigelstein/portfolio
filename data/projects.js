@@ -17,22 +17,6 @@ const projects = [
     theme: 'dark'
   },
   {
-    id: 'Oai',
-    category: 'web',
-    title: 'Minity',
-    subtitle: 'Productivity App',
-    image: './images/Minity.webp',
-    repository: 'https://github.com/tzivigelstein/minity',
-    site: 'https://minity.vercel.app/',
-    stack: [
-      { id: 'XH', name: 'React', color: '#5ed3f3' },
-      { id: 'Ms', name: 'NextJS', color: '#7fc728' },
-      { id: '4a', name: 'CSS', color: '#006bb4' }
-    ],
-    theme: 'dark',
-    color: '#3f92d4'
-  },
-  {
     id: 'O1i',
     category: 'web',
     title: 'Adivina palabra',
