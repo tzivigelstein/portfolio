@@ -22,7 +22,7 @@ const projects = [
     title: 'Minity',
     subtitle: 'Productivity App',
     image: './images/Minity.webp',
-    repository: 'https://github.com/tzivigelstein/guessword',
+    repository: 'https://github.com/tzivigelstein/minity',
     site: 'https://minity.vercel.app/',
     stack: [
       { id: 'XH', name: 'React', color: '#5ed3f3' },
