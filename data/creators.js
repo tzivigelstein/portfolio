@@ -2,7 +2,7 @@ export default [
   {
     id: 0,
     name: 'Miguel Ángel Durán',
-    image: 'https://pbs.twimg.com/profile_images/1083714591752941568/Q7LnIANs_400x400.jpg',
+    image: 'https://avatars.githubusercontent.com/u/1561955?v=4',
     website: 'https://www.midu.dev'
   },
   {
@@ -48,7 +48,7 @@ export default [
     website: 'https://github.com/juanortiz10'
   },
   {
-    id: 6,
+    id: 8,
     name: 'Kevin Powell',
     image: 'https://d33wubrfki0l68.cloudfront.net/554ca802d12f9823e5449ae62bc6bc2775c5c67a/a52fd/img/f21b00ed-600.avif',
     website: 'https://www.kevinpowell.co/'
