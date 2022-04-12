@@ -8,7 +8,7 @@ export const ParagraphTextBig = ({ children, ...props }) => (
 export const TextBold = ({ children, ...props }) => <span className={styles.textBold}>{children}</span>
 
 export const TextLink = ({ children, href, ...props }) => (
-  <a rel="noopener noreferrer" target="_blank" className={styles.textLink} href={href}>
+  <a rel='noopener noreferrer' target='_blank' className={styles.textLink} href={href}>
     {children}
   </a>
 )
