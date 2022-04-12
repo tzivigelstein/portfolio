@@ -4,8 +4,8 @@ const projects = [
     category: 'web',
     title: 'Wordle',
     subtitle: 'Entertainment App',
-    image: './images/Wordle.jpg',
-    mobileImage: './images/Wordle-mobile.jpg',
+    image: '/images/Wordle.jpg',
+    mobileImage: '/images/Wordle-mobile.jpg',
     repository: 'https://github.com/tzivigelstein/wordle',
     site: 'https://thisisnotwordle.vercel.app/',
     stack: [
@@ -21,7 +21,7 @@ const projects = [
     category: 'web',
     title: 'Minity',
     subtitle: 'Productivity App',
-    image: './images/Minity.webp',
+    image: '/images/Minity.webp',
     repository: 'https://github.com/tzivigelstein/minity',
     site: 'https://minity.vercel.app/',
     stack: [
@@ -37,7 +37,7 @@ const projects = [
     category: 'web',
     title: 'Adivina palabra',
     subtitle: 'Entertainment App',
-    image: './images/AdivinaPalabra.png',
+    image: '/images/AdivinaPalabra.png',
     repository: 'https://github.com/tzivigelstein/guessword',
     site: 'https://adivina-palabra.vercel.app/',
     stack: [
@@ -53,7 +53,7 @@ const projects = [
     category: 'web',
     title: 'Tidify Web',
     subtitle: 'Food App',
-    image: './images/TidifyFlyerWeb.webp',
+    image: '/images/TidifyFlyerWeb.webp',
     repository: 'https://github.com/tzivigelstein/Tidify-Host',
     site: 'https://tidify-app.vercel.app/',
     stack: [
@@ -68,7 +68,7 @@ const projects = [
     category: 'web',
     title: 'Product Hunt',
     subtitle: 'Social App',
-    image: './images/PHuntFlyer.webp',
+    image: '/images/PHuntFlyer.webp',
     repository: 'https://github.com/tzivigelstein/Product-Hunt-Clone',
     site: 'https://producthunt-cl.vercel.app/',
     stack: [
@@ -84,7 +84,7 @@ const projects = [
     category: 'web',
     title: 'Twitter',
     subtitle: 'Social App',
-    image: './images/TwitterCloneFlyer.webp',
+    image: '/images/TwitterCloneFlyer.webp',
     repository: 'https://github.com/tzivigelstein/Twitter-Clone',
     site: 'https://twitter-cl.vercel.app/login',
     stack: [
@@ -100,7 +100,7 @@ const projects = [
     category: 'web',
     title: 'Lyric it',
     subtitle: 'Entertainment App',
-    image: './images/LyricItFlyer.webp',
+    image: '/images/LyricItFlyer.webp',
     repository: 'https://github.com/tzivigelstein/Lyric-it',
     site: 'https://lyric-it.netlify.app/',
     stack: [
@@ -115,7 +115,7 @@ const projects = [
     category: 'web',
     title: 'Binast',
     subtitle: 'Productivity App',
-    image: './images/BinastWeb.webp',
+    image: '/images/BinastWeb.webp',
     repository: 'https://github.com/tzivigelstein/Binast',
     site: 'https://binast.vercel.app/',
     stack: [
@@ -130,7 +130,7 @@ const projects = [
     category: 'app',
     title: 'Minity App',
     subtitle: 'Productivity App',
-    image: './images/MinityApp.webp',
+    image: '/images/MinityApp.webp',
     repository: 'https://github.com/tzivigelstein/Minity-app',
     site: 'https://tzivi.site/android/minity-app.apk/',
     stack: [
@@ -146,7 +146,7 @@ const projects = [
     category: 'app',
     title: 'Crypto',
     subtitle: 'Productivity App',
-    image: './images/CryptoFlyerApp.webp',
+    image: '/images/CryptoFlyerApp.webp',
     repository: 'https://github.com/tzivigelstein/Crypto-App',
     site: 'https://tzivi.site/android/crypto-app.apk/',
     apk: 'Crypto',
@@ -164,7 +164,7 @@ const projects = [
     category: 'app',
     title: 'Tidify App',
     subtitle: 'Food App',
-    image: './images/TidifyFlyerApp.webp',
+    image: '/images/TidifyFlyerApp.webp',
     repository: 'https://github.com/tzivigelstein/Tidify-Client',
     site: 'https://tzivi.site/android/tidify-app.apk/',
     stack: [
