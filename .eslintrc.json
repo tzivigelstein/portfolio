@@ -16,7 +16,7 @@
   "rules": {
     "react/react-in-jsx-scope": "off",
     "react/prop-types": "off",
-    "space-before-function-paren": "off",
+    "space-before-function-paren": ["error", "never"],
     "react/no-unescaped-entities": "off"
   }
 }
