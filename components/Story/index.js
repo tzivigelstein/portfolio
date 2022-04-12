@@ -4,7 +4,7 @@ import useTranslation from 'next-translate/useTranslation'
 import { MDXRemote } from 'next-mdx-remote'
 import MDXComponents from '@components/MDXComponents'
 
-export default function Story({ post }) {
+export default function Story ({ post }) {
   const { t } = useTranslation()
 
   const { source } = post

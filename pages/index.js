@@ -5,7 +5,7 @@ import Footer from '@components/Footer'
 import ControlBar from '@components/ControlBar'
 import { getFileBySlug } from 'lib/mdx'
 
-export default function Home({ post }) {
+export default function Home ({ post }) {
   return (
     <Container>
       <ControlBar />
@@ -16,7 +16,7 @@ export default function Home({ post }) {
   )
 }
 
-export async function getStaticProps(context) {
+export async function getStaticProps (context) {
   const { locale } = context
   const post = await getFileBySlug({ slug: `my-story-${locale === 'es' ? 'es' : 'en'}` })
 
