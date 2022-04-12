@@ -1,5 +1,6 @@
 import styles from './index.module.css'
 import useTranslation from 'next-translate/useTranslation'
+import Image from 'next/image'
 
 const Card = ({ project }) => {
   const { t } = useTranslation()
@@ -13,9 +14,7 @@ const Card = ({ project }) => {
           <span className={styles.helper}>{subtitle}</span>
           <p className={styles.title}>{title}</p>
         </header>
-        <picture className={styles.cardPicture}>
-          <img alt={`${title} preview`} loading='lazy' className={styles.cardImage} src={image} />
-        </picture>
+        <Image src={image} alt={`${title} preview`} layout='responsive' width='100%' height='100%' objectFit='cover' />
       </a>
       <footer className={styles.cardFooter}>
         <a className={styles.link} href={repository} target='_blank' rel='noopener noreferrer'>
