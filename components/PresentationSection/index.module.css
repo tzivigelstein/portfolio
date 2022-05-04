@@ -16,18 +16,9 @@
   margin: 0;
 }
 
-.bold {
-  font-weight: bold;
-  color: var(--text-color);
-}
-
 .list {
   margin: 0;
   padding: 0;
   display: grid;
   gap: 0.6rem;
-}
-
-.listItem {
-  display: flex;
 }
