@@ -9,7 +9,6 @@
   padding: 0.5rem 1rem;
   text-decoration: none;
   transition: 0.3s ease-in-out background-color, 0.3s ease-in-out color;
-  letter-spacing: 0.09375rem;
 }
 
 @media (hover) {
