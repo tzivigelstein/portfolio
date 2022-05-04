@@ -39,15 +39,9 @@
   --language-indicator-color: rgba(0, 0, 0, 0.8);
 }
 
-@font-face {
-  font-family: 'SF Pro Display';
-  src: url('/fonts/SFProDisplay_Regular.ttf') format('truetype');
-  font-display: swap;
-}
-
 * {
   box-sizing: border-box;
-  font-family: 'SF Pro Display', sans-serif;
+  font-family: sans-serif;
 }
 
 #__next {
