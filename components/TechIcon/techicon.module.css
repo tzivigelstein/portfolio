@@ -1,3 +1,7 @@
+.iconLink {
+  position: relative;
+}
+
 .skill {
   align-items: center;
   border-radius: 50%;
