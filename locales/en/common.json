@@ -4,7 +4,7 @@
 
   "presentationSectionTitle": "My projects",
   "presentationSectionText": "Over the course of 2 years I have worked on different personal projects such as web applications, mobile applications and web designs, in order to practice the skills learned during my learning.",
-  "presentationSectionListTitle": "With my work I seek to:",
+  "presentationSectionListTitle": "With my work, I seek to:",
   "presentationSectionListItemTitle1": "Optimize",
   "presentationSectionListItem1": "the use of resources to improve user experience",
   "presentationSectionListItemTitle2": "Create",
@@ -19,9 +19,9 @@
   "cardSiteLink": "Visit",
   "cardDownloadLink": "Download",
 
-  "aboutSectionTitle": "A little bit about me",
-  "experienceTitle": "Carrer and experience",
-  "experienceText": "I am a self-taught web development student focused on the MERN stack. I have already had two years of experience in mostly personal projects 🚀. I adapt easily to collaborative environments; I like to learn new things and work in high-performance teams. I want to continue growing professionally to give the best of me every working day.",
+  "aboutSectionTitle": "A bit about me",
+  "experienceTitle": "Career and experience",
+  "experienceText": "I am a self-taught web development student focused on the MERN stack. I have already had two years of experience in mostly personal projects 🚀. Furthermore, I adapt easily to collaborative environments; I like to learn new things and work in high-performance teams. I want to continue growing professionally to give the best of me every working day.",
   "goalsTitle": "Goals and objectives",
   "goalsFirstTip": "Improve our workspace",
   "goalsSecondTip": "Learn something new every day",
@@ -31,7 +31,7 @@
   "softSkillsSecondTip": "Love to learn new things",
 
   "storyTitle": "My story",
-  "storyParagraph1Part1": "I am Tzivi Gelstein and I was born at",
+  "storyParagraph1Part1": "I am Tzivi Gelstein, and I was born at",
   "storyParagraph1Part2": ". I grew up there until the age of 3, then my family and I moved back to Argentina where we live happily.",
   "storyParagraph2Part1": "I’ve been always a tech passionate, since I was young I enjoyed using the computer, gaming mainly",
   "storyParagraph2Part2": ". But for me, the machine I had in front was in fact a whole mystery.",
