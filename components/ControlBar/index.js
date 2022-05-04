@@ -34,7 +34,7 @@ const ControlBar = () => {
   }
 
   return (
-    <div className={styles.controlBarContainer}>
+    <nav className={styles.controlBarContainer}>
       <div>
         <input
           id='checkbox'
@@ -50,15 +50,15 @@ const ControlBar = () => {
           </div>
         </label>
       </div>
-      <div onClick={handleLanguageChange} className={styles.barToggle}>
+      <button onClick={handleLanguageChange} className={styles.barToggle}>
         <div className={styles.iconContainer}>
           <LanguageIcon className={styles.languageIcon} />
           <div className={styles.languageIndicator}>
             <span className={styles.languageIndicatorText}>{lang}</span>
           </div>
         </div>
-      </div>
-    </div>
+      </button>
+    </nav>
   )
 }
 

@@ -23,6 +23,8 @@
   box-shadow: 0 2px 5px rgb(64 67 62 / 16%);
   cursor: pointer;
   transition: 0.3s ease-in-out filter;
+  border: none;
+  outline: none;
 }
 
 .iconContainer {
