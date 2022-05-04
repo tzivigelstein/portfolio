@@ -2,7 +2,12 @@ import styles from './techicon.module.css'
 
 const TechIcon = ({ children, name, link, styles: iconStyles }) => {
   return (
-    <a href={link} target='_blank' rel='noopener noreferrer' style={{ position: 'relative' }}>
+    <a
+      href={link}
+      target='_blank'
+      rel='noopener noreferrer'
+      className={styles.iconLink}
+    >
       <div style={iconStyles} className={styles.skill}>
         {children}
       </div>
