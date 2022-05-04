@@ -1,0 +1,9 @@
+.bold {
+  font-weight: bold;
+  color: var(--text-color);
+  margin-right: 0.5ch;
+}
+
+.listItem {
+  display: flex;
+}
