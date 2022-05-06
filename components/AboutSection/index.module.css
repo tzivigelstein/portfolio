@@ -40,22 +40,3 @@
   color: var(--text-secondary-color);
   margin-bottom: 0.6rem;
 }
-
-.skillsContainer {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  gap: 1rem;
-  align-items: center;
-  justify-items: center;
-  margin-bottom: 0.5rem;
-}
-
-.recommendationsContainer {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1rem;
-}
