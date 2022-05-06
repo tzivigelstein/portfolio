@@ -9,7 +9,8 @@ module.exports = nextTranslate({
       'avatars.githubusercontent.com',
       'yt3.ggpht.com',
       'img-c.udemycdn.com',
-      'd33wubrfki0l68.cloudfront.net'
+      'd33wubrfki0l68.cloudfront.net',
+      'instagram.faep9-3.fna.fbcdn.net'
     ]
   }
 })
