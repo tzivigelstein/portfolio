@@ -1,0 +1,15 @@
+.subtitle {
+  font-size: 1.15rem;
+  color: var(--text-color);
+}
+
+.goalsContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.goal {
+  font-size: 1rem;
+  color: var(--text-secondary-color);
+  margin-bottom: 0.6rem;
+}
