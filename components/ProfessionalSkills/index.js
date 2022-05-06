@@ -21,7 +21,7 @@ export default function ProfessionalSkills () {
         ))}
       </div>
       <h3 className={styles.subtitle}>
-        Currently learning <TextEmoji>🤓</TextEmoji>
+        {t('common:currentlyLearningTitle')} <TextEmoji>🤓</TextEmoji>
       </h3>
       <div className={styles.skillsContainer}>
         <TechIcon name='TypeScript' link='https://www.typescriptlang.org/' styles={{ backgroundColor: '#3178c6' }}>
