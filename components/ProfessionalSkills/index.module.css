@@ -1,0 +1,14 @@
+.subtitle {
+  font-size: 1.15rem;
+  color: var(--text-color);
+}
+
+.skillsContainer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 1rem;
+  align-items: center;
+  justify-items: center;
+  margin-bottom: 0.5rem;
+}
