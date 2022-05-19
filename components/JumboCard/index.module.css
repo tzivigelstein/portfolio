@@ -30,7 +30,7 @@
 @media (max-width: 480px) {
   .jumboCard {
     padding: 8%;
-    aspect-ratio: 1 / 1.2;
+    aspect-ratio: 1 / 1.5;
   }
 }
 
