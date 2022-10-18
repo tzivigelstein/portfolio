@@ -38,7 +38,7 @@ export default [
   {
     id: 6,
     name: 'Los apuntes de Majo',
-    image: 'https://instagram.faep9-3.fna.fbcdn.net/v/t51.2885-19/211480957_324143639430589_4310398745041051629_n.jpg?stp=dst-jpg_s150x150&_nc_ht=instagram.faep9-3.fna.fbcdn.net&_nc_cat=101&_nc_ohc=W_rjPM7bMlMAX89Zj5B&edm=ABfd0MgBAAAA&ccb=7-4&oh=00_AT8wjrzM8vlFE3t_TbOSwqwW1TZLVwqimrkBxAy5S4M16A&oe=627B6F12&_nc_sid=7bff83',
+    image: 'https://losapuntesdemajo.vercel.app/images/lam_logo.png',
     website: 'https://losapuntesdemajo.vercel.app/'
   },
   {
