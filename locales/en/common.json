@@ -1,6 +1,6 @@
 {
-  "headerTitle": "Hello! I'm Tzivi. React developer.",
-  "headerResumeLink": "Resume",
+  "headline": "I'm Tzivi",
+  "subHeadline": "React developer.",
 
   "presentationSectionTitle": "My projects",
   "presentationSectionText": "Over the course of 2 years I have worked on different personal projects such as web applications, mobile applications and web designs, in order to practice the skills learned during my learning.",
