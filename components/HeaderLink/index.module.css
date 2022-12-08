@@ -1,0 +1,9 @@
+.headerLink {
+  color: var(--link);
+  cursor: pointer;
+  font-size: 17px;
+  margin: 0.5rem;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  transition: 0.3s ease-in-out color;
+}
