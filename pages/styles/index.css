@@ -19,11 +19,17 @@
   --language-indicator-color: rgba(0, 0, 0, 0.8);
 }
 
-[data-theme='dark'] {
-  --header-background-color: #202c39;
+[data-theme="dark"] {
+  --background-primary: #0e0e0e;
+  --background-secondary: #1d1d1f;
+  --background-tertiary: #fbfbfd;
+
+  --link: #3087ee;
+
+  --header-background-color: var(--background-secondary);
   --primary-color: #6ec2f7;
   --secondary-color: #f7b457;
-  --background-primary-color: hsl(211, 28%, 12%);
+  --background-primary-color: var(--background-primary);
   --background-secondary-color: hsl(211, 28%, 25%);
   --card-shadow: none;
   --tooltip-text-color: rgba(255, 255, 255, 0.87);
