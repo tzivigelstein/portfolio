@@ -1,41 +1,19 @@
-import { useState } from 'react'
 import styles from './index.module.css'
-import HeaderLinkButton from '@components/HeaderLinkButton'
+import HeaderLink from '@components/HeaderLink'
 import useTranslation from 'next-translate/useTranslation'
 
 const Header = () => {
-  const [activeDownloadResume, setActiveDownloadResume] = useState(false)
-
   const { t } = useTranslation()
 
   return (
     <header className={styles.header}>
       <div className={styles.headerMain}>
         <div className={styles.headerTitleContainer}>
-          <h1 className={styles.headerTitle}>{t('common:headerTitle')}</h1>
+          <h1 className={styles.headline}>{t('common:headline')}</h1>
+          <h2 className={styles.subHeadline}>{t('common:subHeadline')}</h2>
           <div className={styles.headerLinksContainer}>
-            <HeaderLinkButton text='Github' link='https://github.com/tzivigelstein' />
-            <HeaderLinkButton text='Linkedin' link='https://www.linkedin.com/in/tzivigelstein/' />
-            <div className={styles.hiddenResumeDownloadContainer}>
-              <p
-                onClick={() => setActiveDownloadResume(!activeDownloadResume)}
-                className={styles.headerLinkButtonResume}
-              >
-                {t('common:headerResumeLink')}
-              </p>
-              <div
-                className={`${styles.hiddenResumeDownload} ${
-                  activeDownloadResume && styles.hiddenResumeDownloadActive
-                }`}
-              >
-                <a className={styles.hiddenResumeDownloadLinks} href='./resume/Tzivi_Gelstein_CV_EN.pdf'>
-                  English 🇺🇸
-                </a>
-                <a className={styles.hiddenResumeDownloadLinks} href='./resume/Tzivi_Gelstein_CV_ES.pdf'>
-                  Spanish 🇪🇸
-                </a>
-              </div>
-            </div>
+            <HeaderLink text='Github' link='https://github.com/tzivigelstein' />
+            <HeaderLink text='Linkedin' link='https://www.linkedin.com/in/tzivigelstein/' />
           </div>
         </div>
         <div className={styles.headerImageContainer}>
