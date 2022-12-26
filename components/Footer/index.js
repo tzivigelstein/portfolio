@@ -1,105 +1,117 @@
-import styles from './index.module.css'
-import { GithubIcon, LinkedinIcon, TwitterIcon, WhatsAppIcon, Resume, TelegramIcon } from '@components/Icons'
-import useTranslation from 'next-translate/useTranslation'
+import styles from "./index.module.css";
+import {
+  GithubIcon,
+  LinkedinIcon,
+  TwitterIcon,
+  WhatsAppIcon,
+  TelegramIcon,
+} from "@components/Icons";
+import useTranslation from "next-translate/useTranslation";
+import ThemeSwitcher from "@components/ThemeSwitcher";
+import LanguageSwitcher from "@components/LanguageSwitcher";
 
 const Footer = () => {
-  const { t } = useTranslation()
+  const { t } = useTranslation();
 
   return (
     <footer className={styles.wrapper}>
       <div className={styles.container}>
         <div className={styles.infoContainer}>
-          <h4>{t('common:footerFirstSubtitle')}</h4>
+          <h4 className={styles.labelTitle}>
+            {t("common:footerFirstSubtitle")}
+          </h4>
           <ul className={styles.socialList}>
             <li>
               <a
-                target='_blank'
-                rel='noopener noreferrer'
-                href='https://www.linkedin.com/in/tzivigelstein/'
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://www.linkedin.com/in/tzivigelstein/"
                 className={styles.socialLink}
               >
-                <LinkedinIcon className={styles.icon} fill='' />
+                <LinkedinIcon className={styles.icon} width={16} height={16} />
                 Linkedin
               </a>
             </li>
             <li>
               <a
-                target='_blank'
-                rel='noopener noreferrer'
-                href='https://github.com/tzivigelstein'
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://github.com/tzivigelstein"
                 className={styles.socialLink}
               >
-                <GithubIcon className={styles.icon} fill='' />
+                <GithubIcon className={styles.icon} width={16} height={16} />
                 Github
               </a>
             </li>
             <li>
               <a
-                target='_blank'
-                rel='noopener noreferrer'
-                href='https://twitter.com/tzivigelstein'
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://twitter.com/tzivigelstein"
                 className={styles.socialLink}
               >
-                <TwitterIcon className={styles.icon} fill='' />
+                <TwitterIcon className={styles.icon} width={16} height={16} />
                 Twitter
               </a>
             </li>
           </ul>
         </div>
         <div className={styles.infoContainer}>
-          <h4>{t('common:footerSecondSubtitle')}</h4>
+          <h4 className={styles.labelTitle}>
+            {t("common:footerSecondSubtitle")}
+          </h4>
           <ul className={styles.socialList}>
             <li>
-              <p className={styles.socialLink}>
-                <Resume className={styles.icon} />
-                {t('common:footerResumeLink')}
-              </p>
-              <div className={styles.resumesContainer}>
-                <a
-                  target='_blank'
-                  rel='noopener noreferrer'
-                  className={styles.resumeLink}
-                  href='./resume/Tzivi_Gelstein_CV_EN.pdf'
-                >
-                  English 🇺🇸
-                </a>
-                <a
-                  target='_blank'
-                  rel='noopener noreferrer'
-                  className={styles.resumeLink}
-                  href='./resume/Tzivi_Gelstein_CV_ES.pdf'
-                >
-                  Spanish 🇪🇸
-                </a>
-              </div>
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="./resume/Tzivi_Gelstein_CV_EN.pdf"
+                className={styles.socialLink}
+              >
+                {t("common:footerResumeEnglishLink")}
+              </a>
             </li>
             <li>
               <a
-                target='_blank'
-                rel='noopener noreferrer'
-                href='https://wa.me/541169708476'
+                target="_blank"
+                rel="noopener noreferrer"
+                href="./resume/Tzivi_Gelstein_CV_ES.pdf"
                 className={styles.socialLink}
               >
-                <WhatsAppIcon className={styles.icon} fill='' />
+                {t("common:footerResumeSpanishLink")}
+              </a>
+            </li>
+            <li>
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://wa.me/541169708476"
+                className={styles.socialLink}
+              >
+                <WhatsAppIcon className={styles.icon} width={16} height={16} />
                 Whatsapp
               </a>
             </li>
             <li>
               <a
-                target='_blank'
-                rel='noopener noreferrer'
-                href='https://t.me/tzivigelstein'
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://t.me/tzivigelstein"
                 className={styles.socialLink}
               >
-                <TelegramIcon className={styles.icon} />
+                <TelegramIcon className={styles.icon} width={16} height={16} />
                 Telegram
               </a>
             </li>
           </ul>
         </div>
+        <div className={styles.bottom}>
+          <ThemeSwitcher />
+          <LanguageSwitcher />
+        </div>
       </div>
     </footer>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;
