@@ -27,6 +27,8 @@
 }
 
 :root {
+  --link: #3087ee;
+
   --header-background-color: #f5f5f7;
   --header-text-color: #1d1d1f;
   --primary-color: #6ec2f7;
