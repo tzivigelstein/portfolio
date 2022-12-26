@@ -12,3 +12,10 @@
   justify-items: center;
   margin-bottom: 0.5rem;
 }
+
+@media (max-width: 480px) {
+  .skillsContainer {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+  }
+}
