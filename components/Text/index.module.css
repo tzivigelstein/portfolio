@@ -1,12 +1,13 @@
 .paragraphText {
-  color: var(--text-secondary-color);
-  line-height: 1.5;
-  letter-spacing: 0.03rem;
-  font-size: 1.1rem;
+  color: var(--text-color);
+  margin: 0;
+  font-size: 17px;
+  line-height: 1.6;
 }
 
 .paragraphTextBig {
   font-size: 1.25rem;
+  line-height: 1.4;
 }
 
 .textBold {
@@ -18,16 +19,12 @@
 }
 
 .textLink:active {
-  color: var(--text-secondary-color);
+  color: var(--text-color);
 }
 
 .textItalic {
   color: var(--text-color);
   font-style: italic;
-}
-
-.textEmoji {
-  color: var(--primary-color);
 }
 
 .textListItem {
