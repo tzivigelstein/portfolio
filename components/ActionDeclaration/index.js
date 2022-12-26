@@ -1,17 +1,15 @@
-import { ChevronIcon } from '@components/Icons'
-import { ParagraphText, TextEmoji } from '@components/Text'
-import styles from './index.module.css'
+import { H3, H4 } from "@components/Heading";
+import styles from "./index.module.css";
 
-export default function ActionDeclaration ({ action }) {
-  const { title, text, emoji } = action
+export default function ActionDeclaration({ action }) {
+  const { title, text, icon } = action;
+  const sharedStyles = { textAlign: "center", margin: 0, color: "inherit" };
+
   return (
     <li className={styles.listItem}>
-      <ChevronIcon />
-      <ParagraphText>
-        <span className={styles.bold}>{title}</span>
-        {text}
-        <TextEmoji>{emoji}</TextEmoji>
-      </ParagraphText>
+      <H4 style={{ ...sharedStyles, textTransform: "uppercase" }}>{title}</H4>
+      <H3 style={{ ...sharedStyles, marginBottom: 32 }}>{text}</H3>
+      {icon && <div className={styles.icon}>{icon}</div>}
     </li>
-  )
+  );
 }
