@@ -12,13 +12,37 @@
 
 .text {
   font-size: 1rem;
-  color: var(--text-secondary-color);
+  color: var(--text-color);
   margin: 0;
 }
 
 .list {
   margin: 0;
-  padding: 0;
+  padding: 2rem 2rem 2rem 1rem;
   display: grid;
-  gap: 0.6rem;
+  gap: 1rem;
+  list-style: disc;
+  display: flex;
+  justify-content: space-between;
+  overflow-x: auto;
+}
+
+.list::-webkit-scrollbar {
+  background-color: transparent;
+  width: 10px;
+}
+
+.list {
+  scrollbar-width: thin;
+  scrollbar-color: var(--dark-blue) var(--custom-white);
+}
+
+.list::-webkit-scrollbar-track {
+  background-color: var(--custom-white);
+}
+
+.list::-webkit-scrollbar-thumb {
+  background-color: var(--dark-blue);
+  border-radius: 20px;
+  border: 3px solid var(--custom-white);
 }
