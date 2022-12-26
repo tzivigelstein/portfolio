@@ -1,0 +1,56 @@
+.content {
+  --toggle-border-radius-outer: 12px;
+  --toggle-border-radius-inner: 10px;
+  --toggle-color-fill: #0071e3;
+  --toggle-color-text: #2997ff;
+  flex-shrink: 0;
+}
+
+.colorSchemeToggle {
+  font-size: 12px;
+  line-height: 1.33337;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  font-family: sans-serif;
+  border: 1px solid var(--toggle-color-fill);
+  border-radius: var(--toggle-border-radius-outer, 2px);
+  display: inline-flex;
+  padding: 1px;
+}
+
+.input {
+  position: absolute;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(0px 0px 99.9% 99.9%);
+  overflow: hidden;
+  height: 1px;
+  width: 1px;
+  padding: 0;
+  border: 0;
+  appearance: none;
+}
+
+.input:checked + .text {
+  --toggle-color-text: #fff;
+  background: var(--toggle-color-fill);
+  border-color: var(--toggle-color-fill);
+}
+
+.text {
+  box-sizing: border-box;
+  display: inline-block;
+  padding: 1px 6px;
+  min-width: 42px;
+  border: 1px solid transparent;
+  border-radius: var(--toggle-border-radius-inner, 2px);
+  text-align: center;
+  color: var(--toggle-color-text);
+  background-color: transparent;
+  border-color: none;
+}
+
+@media (hover) {
+  .text:hover {
+    cursor: pointer;
+  }
+}
