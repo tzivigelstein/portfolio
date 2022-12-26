@@ -1,9 +1,28 @@
-.bold {
-  font-weight: bold;
+.listItem {
+  --text-color: #1d1d1f;
+
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 1rem;
+  gap: 1rem;
+  background-color: var(--background-tertiary);
   color: var(--text-color);
-  margin-right: 0.5ch;
+  padding: 2rem;
 }
 
-.listItem {
-  display: flex;
+.icon {
+  margin-top: auto;
+  transform: scale(90%);
+}
+
+@media (max-width: 768px) {
+  .listItem {
+    padding: 2rem 3rem;
+  }
+}
+
+html[data-theme="light"] .listItem {
+  box-shadow: 0 0.188rem 1.25rem 0.125rem rgb(64 62 67 / 8%);
 }
