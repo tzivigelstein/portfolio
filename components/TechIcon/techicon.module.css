@@ -1,54 +1,27 @@
 .iconLink {
-  position: relative;
+  width: 100%;
 }
 
 .skill {
   align-items: center;
-  border-radius: 50%;
+  aspect-ratio: 1.5 / 1;
+  border-radius: 8px;
   display: flex;
-  height: max-content;
   justify-content: center;
   padding: 0.6rem;
-  position: relative;
   transition: filter 0.3s ease;
-  width: max-content;
+  width: 100%;
   color: var(--text-color);
   text-decoration: none;
+  border: 1px solid transparent;
 }
 
-.skillTooltip {
-  backdrop-filter: saturate(180%) blur(20px);
-  background-color: rgba(0, 0, 0, 0.6);
-  border-radius: 0.5rem;
-  position: absolute;
-  padding: 0.5rem;
-  bottom: -1.3rem;
-  left: 50%;
-  transform: translateX(-50%);
-  opacity: 0;
-  color: var(--tooltip-text-color);
-  transition: 0.2s ease opacity;
-  z-index: 10;
-  pointer-events: none;
-}
-
-.skillTooltip::after {
-  content: '';
-  backdrop-filter: saturate(180%) blur(20px);
-  border: 0.5rem solid transparent;
-  border-bottom: 0.5rem solid rgba(0, 0, 0, 0.7);
-  left: 50%;
-  position: absolute;
-  top: -24%;
-  transform: translate(-50%, -50%);
+.skill > * {
+  transition: transform 200ms ease-out;
 }
 
 @media (hover) {
-  .skill:hover {
-    filter: brightness(1.1);
-  }
-
-  .skill:hover + .skillTooltip {
-    opacity: 1;
+  .iconLink:hover .skill > * {
+    transform: scale(1.2);
   }
 }
