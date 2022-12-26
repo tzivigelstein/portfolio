@@ -7,7 +7,7 @@ export default function Creator ({ creator }) {
   return (
     <li className={styles.recommendationContainer}>
       <a rel='noopener noreferrer' target='_blank' href={website}>
-        <Image src={image} title={name} alt={name} layout='responsive' width='100%' height='100%' objectFit='cover' />
+        <Image src={image} title={name} alt={name} className={styles.image} layout='responsive' width='100%' height='100%' objectFit='cover' />
       </a>
       <span className={styles.recommendationName}>{name}</span>
     </li>
