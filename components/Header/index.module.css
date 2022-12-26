@@ -1,16 +1,19 @@
 .header {
   background-color: var(--header-background-color);
   display: flex;
+  height: 80vh;
+  overflow: hidden;
   flex-direction: column;
-  padding: 6rem 0 0.3rem 0;
+  padding: 5rem 0 0.3rem 0;
   transition: 0.3s ease-in-out background-color;
 }
 
 .headerMain {
-  display: grid;
-  place-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin: 0 auto;
-  width: 100%;
+  flex: 1;
   max-width: 1000px;
   height: 100%;
 }
@@ -22,7 +25,7 @@
 }
 
 .headline {
-  color: var(--text-color);
+  color: var(--header-text-color);
   font-size: 56px;
   font-weight: 600;
   transition: 0.3s ease-in-out color;
@@ -30,7 +33,7 @@
 }
 
 .subHeadline {
-  color: var(--text-color);
+  color: var(--header-text-color);
   font-size: 28px;
   font-weight: 400;
   transition: 0.3s ease-in-out color;
@@ -51,12 +54,13 @@
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  height: 100%;
   padding: 1rem;
+  width: 70%;
+  height: 100%;
 }
 
 .headerImage {
   width: 100%;
-  height: auto;
+  height: 100%;
   object-fit: cover;
 }
