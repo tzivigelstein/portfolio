@@ -7,6 +7,7 @@ const TechIcon = ({ children, name, link, styles: iconStyles }) => {
       target="_blank"
       rel="noopener noreferrer"
       className={styles.iconLink}
+      aria-label={`Visit ${name} website`}
     >
       <div
         style={
