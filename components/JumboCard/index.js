@@ -15,7 +15,7 @@ export default function JumboCard ({ project }) {
           <p className={styles.title}>{title}</p>
         </header>
         <picture className={styles.cardPicture}>
-          <source aria-label='media-source' media='(max-width: 480px)' srcSet={mobileImage} />
+          <source role="presentation" media='(max-width: 480px)' srcSet={mobileImage} />
           <img alt={`${title} preview`} loading='lazy' className={styles.cardImage} src={image} />
         </picture>
       </a>
