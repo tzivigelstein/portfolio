@@ -15,8 +15,8 @@ const ProjectsSection = () => {
     <section className={styles.container}>
       <section className={styles.secondarySection}>
         <h2 className={styles.sectionTitle}>{t('common:projectsSectionWebTitle')}</h2>
+        <JumboCard jumbo key={jumbo.id} project={jumbo} />
         <ul className={styles.projectList}>
-          <JumboCard jumbo key={jumbo.id} project={jumbo} />
           {webs.map(project => (
             <Card key={project.id} project={project} />
           ))}

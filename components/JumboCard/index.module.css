@@ -6,7 +6,7 @@
   --card-link-color: #06c;
 }
 
-.jumboCard[data-theme='dark'] {
+.jumboCard[data-theme="dark"] {
   --card-text-primary-color: #fff;
   --card-helper-color: #f5f5f7;
   --card-button: #fff;
@@ -19,12 +19,14 @@
   padding: 4%;
   position: relative;
   box-shadow: 2px 4px 12px rgb(0 0 0 / 8%);
-  transition: transform 0.3s cubic-bezier(0, 0, 0.5, 1), box-shadow 0.3s cubic-bezier(0, 0, 0.5, 1);
+  transition: transform 0.3s cubic-bezier(0, 0, 0.5, 1),
+    box-shadow 0.3s cubic-bezier(0, 0, 0.5, 1);
   cursor: pointer;
   display: flex;
   flex-direction: column;
   grid-column-start: 1;
   grid-column-end: -1;
+  margin-bottom: 1.5rem;
 }
 
 @media (max-width: 480px) {
