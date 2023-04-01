@@ -54,7 +54,7 @@ describe('Jumbo Card', () => {
 
   test('Should have source with srcSet and media query', () => {
     render(<JumboCard project={data} />)
-    const source = screen.getByLabelText('media-source')
+    const source = screen.getByRole('presentation')
 
     expect(source).toBeInTheDocument()
     expect(source).toHaveAttribute('srcset', data.mobileImage)
