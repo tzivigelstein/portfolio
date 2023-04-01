@@ -1,31 +1,3 @@
-@font-face {
-  font-family: "Helvetica";
-  src: url("../../public/fonts/Helvetica_Regular.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Helvetica";
-  src: url("../../public/fonts/Helvetica_Medium.ttf") format("truetype");
-  font-weight: 600;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Helvetica";
-  src: url("../../public/fonts/Helvetica_Italic.ttf") format("truetype");
-  font-weight: normal;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: "Helvetica";
-  src: url("../../public/fonts/Helvetica_Medium_Italic.ttf") format("truetype");
-  font-weight: 600;
-  font-style: italic;
-}
-
 :root {
   --link: #3087ee;
 
@@ -80,7 +52,7 @@
 
 * {
   box-sizing: border-box;
-  font-family: "Helvetica", sans-serif;
+  font-family: "Inter", sans-serif;
 }
 
 #__next {
