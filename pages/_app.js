@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import './styles/index.css'
 import { ThemeProvider } from 'next-themes'
+import { Analytics } from "@vercel/analytics"
 
 const MyApp = ({ Component, pageProps }) => (
   <>
@@ -40,6 +41,7 @@ const MyApp = ({ Component, pageProps }) => (
     </Head>
     <ThemeProvider>
       <Component {...pageProps} />
+      <Analytics />
     </ThemeProvider>
   </>
 )
