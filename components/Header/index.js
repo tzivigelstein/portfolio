@@ -1,6 +1,7 @@
 import styles from './index.module.css'
 import HeaderLink from '@components/HeaderLink'
 import useTranslation from 'next-translate/useTranslation'
+import Image from 'next/image'
 
 const Header = () => {
   const { t } = useTranslation()
@@ -17,7 +18,14 @@ const Header = () => {
           </div>
         </div>
         <div className={styles.headerImageContainer}>
-          <img className={styles.headerImage} src='images/HeaderImage.webp' alt='Tzivi Gelstein' loading='eager' />
+          <Image
+            src="/images/HeaderImage.webp"
+            alt="Tzivi Gelstein"
+            layout="fill"
+            quality={100}
+            priority
+            objectFit="cover"
+          />
         </div>
       </div>
     </header>
