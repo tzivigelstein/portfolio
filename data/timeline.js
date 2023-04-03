@@ -72,14 +72,14 @@ export default class Timeline {
   computeEndDate(date) {
     let result = "";
     if (date === Infinity) {
-      result = "No expiry date";
+      result = this.translations("timeline:noExpiryDate");
     } else if (this.isDateToday(date)) {
-      result = this.translations("present");
+      result = this.translations("timeline:present");
     } else {
       result = this.formatDate(date);
     }
 
-    return result
+    return result;
   }
 
   formatDate(date) {
