@@ -9,6 +9,7 @@
   },
 
   "present": "present",
+  "noExpiryDate": "No expiry date",
 
   "title1": "React/Node developer",
   "description1": "Backend Development, API Development, Manual Testing, Performance, Optimization, Accessibility Improvement",
