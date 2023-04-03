@@ -2,13 +2,15 @@
   "headline": "I'm Tzivi",
   "subHeadline": "React developer.",
 
+  "presentationSectionTitleTimeline": "Work and certifications",
+
   "presentationSectionTitle": "What I do",
   "presentationSectionListItemTitle1": "Optimize",
   "presentationSectionListItem1": "Resources to improve user experience.",
   "presentationSectionListItemTitle2": "Create",
-  "presentationSectionListItem2": "Create and design experiences.",
+  "presentationSectionListItem2": "Engaging experiences.",
   "presentationSectionListItemTitle3": "Build",
-  "presentationSectionListItem3": "Create scalable and impactful apps.",
+  "presentationSectionListItem3": "Scalable and impactful apps.",
 
   "projectsSectionWebTitle": "Web Projects",
   "projectsSectionAppTitle": "App Projects",
