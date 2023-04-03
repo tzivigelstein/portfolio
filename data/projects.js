@@ -10,6 +10,7 @@ const projects = [
     site: "https://thisisnotwordle.vercel.app/",
     color: "#6aaa64",
     theme: "dark",
+    active: true,
   },
   {
     id: "Oai",
@@ -21,6 +22,7 @@ const projects = [
     site: "https://minity.vercel.app/",
     theme: "dark",
     color: "#3f92d4",
+    active: true,
   },
   {
     id: "O1i",
@@ -32,6 +34,7 @@ const projects = [
     site: "https://adivina-palabra.vercel.app/",
     theme: "dark",
     color: "#8ca0d7",
+    active: true,
   },
   {
     id: "SGE",
@@ -42,6 +45,7 @@ const projects = [
     repository: "https://github.com/tzivigelstein/Tidify-Host",
     site: "https://tidify-app.vercel.app/",
     color: "#ccff97",
+    active: false,
   },
   {
     id: "2Jp",
@@ -52,6 +56,7 @@ const projects = [
     repository: "https://github.com/tzivigelstein/Product-Hunt-Clone",
     site: "https://producthunt-cl.vercel.app/",
     color: "linear-gradient(90deg, #feaf04, #fa9814)",
+    active: true,
   },
   {
     id: "gCh",
@@ -62,6 +67,7 @@ const projects = [
     repository: "https://github.com/tzivigelstein/Twitter-Clone",
     site: "https://twitter-cl.vercel.app/login",
     color: "#fff",
+    active: true,
   },
   {
     id: "0T9",
@@ -73,6 +79,7 @@ const projects = [
     site: "https://lyric-it.netlify.app/",
     color: "#ef476f",
     theme: "dark",
+    active: false,
   },
   {
     id: "2NB",
@@ -84,6 +91,7 @@ const projects = [
     site: "https://binast.vercel.app/",
     color: "linear-gradient(90deg, #977EF1, #623CEA)",
     theme: "dark",
+    active: true,
   },
   {
     id: "jyO",
@@ -92,9 +100,10 @@ const projects = [
     subtitle: "Productivity App",
     image: "/images/MinityApp.webp",
     repository: "https://github.com/tzivigelstein/Minity-app",
-    site: "https://tzivi.site/android/minity-app.apk/",
+    site: "https://tzivi.com/android/minity-app.apk/",
     color: "linear-gradient(90deg, #005893, #0081bf)",
     theme: "dark",
+    active: false,
   },
   {
     id: "lt4",
@@ -102,10 +111,12 @@ const projects = [
     title: "Crypto",
     subtitle: "Productivity App",
     image: "/images/CryptoFlyerApp.webp",
+    jumboImage: "/images/CryptoFlyerAppJumbo.jpg",
     repository: "https://github.com/tzivigelstein/Crypto-App",
-    site: "https://tzivi.site/android/crypto-app.apk/",
+    site: "https://tzivi.com/android/crypto-app.apk/",
     apk: "Crypto",
     color: "#8efdf3",
+    active: true,
   },
   {
     id: "lKc",
@@ -114,9 +125,10 @@ const projects = [
     subtitle: "Food App",
     image: "/images/TidifyFlyerApp.webp",
     repository: "https://github.com/tzivigelstein/Tidify-Client",
-    site: "https://tzivi.site/android/tidify-app.apk/",
+    site: "https://tzivi.com/android/tidify-app.apk/",
     color: "#f2917e",
     theme: "dark",
+    active: false,
   },
 ];
 
