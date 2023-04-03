@@ -1,4 +1,5 @@
 import {
+  BashScripting,
   DockerIcon,
   GitIcon,
   Linux,
@@ -57,6 +58,13 @@ const technologies = [
     styles: { backgroundColor: "#007ACC" },
     name: "TypeScript",
     Icon: () => <TypeScript width={27} height={27} />,
+  },
+  {
+    id: "XA",
+    link: "https://www.gnu.org/software/bash/",
+    styles: { backgroundColor: "#848484" },
+    name: "Bash scripting",
+    Icon: () => <BashScripting widht={27} height={27} />,
   },
 ];
 
