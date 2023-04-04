@@ -53,6 +53,8 @@
 }
 
 .title {
+  all: unset;
+  display: block;
   font-size: 1.75rem;
   color: var(--card-text-primary-color);
   font-weight: 600;
@@ -61,6 +63,8 @@
 }
 
 .helper {
+  all: unset;
+  display: block;
   font-weight: 600;
   font-size: 0.75rem;
   justify-self: flex-start;
