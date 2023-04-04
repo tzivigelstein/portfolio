@@ -11,7 +11,7 @@ describe('Jumbo Card', () => {
     image: 'https://via.placeholder.com/300x200',
     mobileImage: 'https://via.placeholder.com/200x200',
     repository: 'https://www.github.com/tzivigelstein/tzivigelstein',
-    site: 'https://www.tzivi.site/',
+    site: 'https://www.tzivi.com/',
     category: 'web'
   }
 
