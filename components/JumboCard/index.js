@@ -32,8 +32,8 @@ export default function JumboCard({ project }) {
         rel="noopener noreferrer"
       >
         <header className={styles.cardHeader}>
-          <span className={styles.helper}>{subtitle}</span>
-          <p className={styles.title}>{title}</p>
+          <h4 className={styles.helper}>{subtitle}</h4>
+          <h3 className={styles.title}>{title}</h3>
         </header>
         <picture className={styles.cardPicture}>
           <source
