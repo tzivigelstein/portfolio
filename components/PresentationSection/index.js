@@ -6,9 +6,9 @@ import TimelineBuilder from "@data/timeline";
 import Timeline from "@components/Timeline";
 
 const PresentationSection = () => {
-  const { t } = useTranslation(["common", "timeline"]);
+  const { t, lang } = useTranslation(["common", "timeline"]);
 
-  const timeline = new TimelineBuilder(t);
+  const timeline = new TimelineBuilder(t, lang);
 
   const ACTIONS_DECLARATIONS = [
     {
