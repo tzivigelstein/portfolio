@@ -39,7 +39,7 @@ export default function JumboCard({ project }) {
           <source
             role="presentation"
             media="(max-width: 480px)"
-            srcSet={mobileImage ?? jumboImage ?? image}
+            srcSet={mobileImage ?? image ?? jumboImage}
           />
           <img
             alt={`${title} preview`}
