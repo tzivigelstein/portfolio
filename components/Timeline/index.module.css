@@ -1,0 +1,16 @@
+.date {
+  color: var(--text-color);
+}
+
+.link {
+  color: #ffcc33;
+  margin-top: 1.5rem;
+  display: block;
+  transition: 150ms ease-out color;
+}
+
+@media (hover) {
+  .link:hover {
+    color: #e69458;
+  }
+}
