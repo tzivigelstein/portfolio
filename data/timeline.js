@@ -1,9 +1,17 @@
 import { Briefcase, Certification } from "@components/Icons";
 
 export default class Timeline {
-  constructor(translations) {
+  constructor(translations, lang) {
     this.translations = translations;
+    this.language = lang;
     this.events = [
+      {
+        id: "2",
+        title: this.translations("timeline:title3"),
+        description: <p>{this.translations("timeline:description3")}</p>,
+        icon: <Certification />,
+        date: this.getFromTo(new Date("09/04/2020"), Infinity),
+      },
       {
         id: "0",
         title: this.translations("timeline:title1"),
@@ -15,16 +23,12 @@ export default class Timeline {
       {
         id: "1",
         title: this.translations("timeline:title2"),
-        description: (
-          <>
-            <p>{this.translations("timeline:description2")}</p>
-          </>
-        ),
+        description: <p>{this.translations("timeline:description2")}</p>,
         icon: <Certification />,
         link: "https://www.efset.org/cert/TmYxdQ",
         date: this.getFromTo(new Date("01/01/2023"), Infinity),
       },
-    ];
+    ].reverse();
   }
 
   getDiff(startDate, endDate = new Date()) {
@@ -84,7 +88,7 @@ export default class Timeline {
 
   formatDate(date) {
     const options = { year: "numeric", month: "short" };
-    return new Intl.DateTimeFormat("en-US", options).format(date);
+    return new Intl.DateTimeFormat(this.language, options).format(date);
   }
 
   isDateToday(date) {
