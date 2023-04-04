@@ -15,32 +15,32 @@ const MyApp = ({ Component, pageProps }) => (
       <meta name="title" content="Tzivi | Portfolio" />
       <meta
         name="description"
-        content="I'm Tzivi and this is my portfolio 👨‍💻. Come on in and find out more about me 🤗."
+        content="As a React/Node developer and Platzi student, I'm dedicated to delivering frontend technologies that prioritize performant user experiences. With critical thinking and a focus on quality assurance, I collaborate with teams to develop high-performing API features."
       />
 
       <meta property="og:type" content="website" />
-      <meta property="og:url" content="https://www.tzivi.site/" />
+      <meta property="og:url" content="https://www.tzivi.com/" />
       <meta property="og:title" content="Tzivi | Portfolio" />
       <meta
         property="og:description"
-        content="I'm Tzivi and this is my portfolio 👨‍💻. Come on in and find out more about me 🤗."
+        content="As a React/Node developer and Platzi student, I'm dedicated to delivering frontend technologies that prioritize performant user experiences. With critical thinking and a focus on quality assurance, I collaborate with teams to develop high-performing API features."
       />
       <meta
         property="og:image"
-        content="https://www.tzivi.site/images/SocialCover.png"
+        content="https://www.tzivi.com/images/SocialCover.png"
       />
 
       <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:url" content="https://www.tzivi.site/" />
+      <meta name="twitter:url" content="https://www.tzivi.com/" />
       <meta name="twitter:title" content="Tzivi | Portfolio" />
       <meta name="twitter:creator" content="@tzivigelstein" />
       <meta
         name="twitter:description"
-        content="I'm Tzivi and this is my portfolio 👨‍💻. Come on in and find out more about me 🤗."
+        content="As a React/Node developer and Platzi student, I'm dedicated to delivering frontend technologies that prioritize performant user experiences. With critical thinking and a focus on quality assurance, I collaborate with teams to develop high-performing API features."
       />
       <meta
         name="twitter:image"
-        content="https://www.tzivi.site/images/SocialCover.png"
+        content="https://www.tzivi.com/images/SocialCover.png"
       />
       <link rel="apple-touch-icon" href="/favicon.png" />
       <link rel="manifest" href="/manifest.json" />
