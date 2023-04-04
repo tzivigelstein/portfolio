@@ -10,7 +10,7 @@ describe('Project Card', () => {
     subtitle: 'Project Subtitle',
     image: 'https://via.placeholder.com/300x200',
     repository: 'https://www.github.com/tzivigelstein/tzivigelstein',
-    site: 'https://www.tzivi.site/',
+    site: 'https://www.tzivi.com/',
     category: 'web'
   }
 
