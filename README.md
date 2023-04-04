@@ -1,8 +1,8 @@
 # My personal portfolio
 
-This project heads to be the place where you can watch and follow my learning through my career.
+This project heads to be the place where you can watch and follow my work and learning through my career.
 
-[Portfolio](https://www.tzivi.site)
+[Portfolio](https://www.tzivi.com)
 
 ## Available Scripts
 
@@ -36,6 +36,3 @@ Runs `standard 'root' --fix` which fixes all the files that have warnings or err
 - React
 - Next - SSR
 - CSS modules
-<!--stackedit_data:
-eyJoaXN0b3J5IjpbLTcyMjQ4MTMyMl19
--->
