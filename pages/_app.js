@@ -11,6 +11,9 @@ const MyApp = ({ Component, pageProps }) => (
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <meta name="theme-color" content="#fff" />
 
+      <link rel="alternate" hreflang="es" href="https://www.tzivi.com/es" />
+      <link rel="alternate" hreflang="en" href="https://www.tzivi.com/" />
+
       <title>Tzivi Gelstein | React developer</title>
       <meta name="title" content="Tzivi | Portfolio" />
       <meta
