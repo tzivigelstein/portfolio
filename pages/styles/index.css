@@ -59,7 +59,7 @@
 
 * {
   box-sizing: border-box;
-  font-family: sans-serif;
+  font-family: system-ui, -apple-system, "Inter", sans-serif;
 }
 
 #__next {
