@@ -16,18 +16,21 @@ const PresentationSection = () => {
       title: t("common:presentationSectionListItemTitle1"),
       text: t("common:presentationSectionListItem1"),
       icon: "💡",
+      slug: "lightbulb",
     },
     {
       id: 1,
       title: t("common:presentationSectionListItemTitle2"),
       text: t("common:presentationSectionListItem2"),
       icon: "🎮",
+      slug: "gamepad",
     },
     {
       id: 2,
       title: t("common:presentationSectionListItemTitle3"),
       text: t("common:presentationSectionListItem3"),
       icon: "🚀",
+      slug: "rocket",
     },
   ];
 
