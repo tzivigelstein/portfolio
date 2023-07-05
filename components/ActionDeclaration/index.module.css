@@ -1,7 +1,12 @@
+html[data-theme="light"] .listItem {
+  box-shadow: 0 0.188rem 1.25rem 0.125rem rgb(64 62 67 / 8%);
+}
+
 .listItem {
   --text-color: #1d1d1f;
 
   width: 100%;
+  min-width: 300px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -9,13 +14,7 @@
   gap: 1rem;
   background-color: var(--background-tertiary);
   color: var(--text-color);
-  padding: 2rem;
-}
-
-.icon {
-  margin-top: auto;
-  padding-top: 1rem;
-  font-size: 8rem;
+  padding: 3rem;
 }
 
 @media (max-width: 768px) {
@@ -24,6 +23,50 @@
   }
 }
 
-html[data-theme="light"] .listItem {
-  box-shadow: 0 0.188rem 1.25rem 0.125rem rgb(64 62 67 / 8%);
+.icon {
+  margin-top: auto;
+  padding-top: 1rem;
+  font-size: 8rem;
+  cursor: default;
+}
+
+.icon[id="rocket"] {
+  --transition: 300ms;
+  transition: transform var(--transition) ease-out,
+    opacity var(--transition) ease-out;
+}
+
+@media (hover) {
+  .icon[id="rocket"]:hover {
+    transform: scale(1.03) rotate(-10deg) translateY(-1rem);
+    opacity: 0.8;
+    text-shadow: 0 0 100px rgba(255, 120, 0, 0.5);
+  }
+}
+
+.icon[id="lightbulb"] {
+  --transition: 300ms;
+  transition: transform var(--transition) ease-out,
+    opacity var(--transition) ease-out, box-shadow var(--transition) ease-out;
+}
+
+@media (hover) {
+  .icon[id="lightbulb"]:hover {
+    transform: scale(1.05) translateY(-10px);
+    opacity: 0.9;
+    text-shadow: 0 0 100px rgba(255, 255, 0, 0.5);
+  }
+}
+
+.icon[id="gamepad"] {
+  --transition: 300ms;
+  transition: transform var(--transition) ease-out,
+    opacity var(--transition) ease-out;
+}
+
+@media (hover) {
+  .icon[id="gamepad"]:hover {
+    transform: rotate(10deg) scale(0.95);
+    opacity: 0.8;
+  }
 }
