@@ -19,8 +19,6 @@
   --text-color: #1d1d1f;
   --text-color-inverted: #f5f5f7;
   --footer-background-color: #f5f5f7;
-  --scrollbar-thumb: hsl(203, 90%, 80%);
-  --scrollbar-thumb-hover: hsl(203, 90%, 70%);
   --language-indicator-background: #f7b457;
   --language-indicator-color: rgba(0, 0, 0, 0.8);
 }
@@ -51,8 +49,6 @@
   --label-color: #a1a1a6;
   --footer-background-color: #1d1d1f;
   --footer-text-color: rgba(255, 255, 255, 0.87);
-  --scrollbar-thumb: hsl(211, 28%, 25%);
-  --scrollbar-thumb-hover: hsl(211, 28%, 35%);
   --language-indicator-background: #f7b457;
   --language-indicator-color: rgba(0, 0, 0, 0.8);
 }
@@ -81,20 +77,4 @@ body {
 
 p {
   margin: 0;
-}
-
-@media (min-width: 480px) {
-  body::-webkit-scrollbar {
-    width: 0.7rem;
-  }
-
-  body::-webkit-scrollbar-thumb {
-    transition: 0.3s ease-in-out background-color;
-    background-color: var(--scrollbar-thumb);
-    border-radius: 1000rem;
-  }
-
-  body::-webkit-scrollbar-thumb:hover {
-    background-color: var(--scrollbar-thumb-hover);
-  }
 }
