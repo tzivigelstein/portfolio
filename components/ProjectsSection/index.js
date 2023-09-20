@@ -28,20 +28,22 @@ const ProjectsSection = () => {
           ))}
         </ul>
       </section>
-      <section className={styles.secondarySection}>
-        <h2 className={styles.sectionTitle}>
-          {t("common:projectsSectionAppTitle")}
-        </h2>
-        {apps.length === 1 ? (
-          <JumboCard project={apps[0]} />
-        ) : (
-          <ul className={styles.projectList}>
-            {apps.map((project) => (
-              <Card key={project.id} project={project} />
-            ))}
-          </ul>
-        )}
-      </section>
+      {apps.length !== 0 && (
+        <section className={styles.secondarySection}>
+          <h2 className={styles.sectionTitle}>
+            {t("common:projectsSectionAppTitle")}
+          </h2>
+          {apps.length === 1 ? (
+            <JumboCard project={apps[0]} />
+          ) : (
+            <ul className={styles.projectList}>
+              {apps.map((project) => (
+                <Card key={project.id} project={project} />
+              ))}
+            </ul>
+          )}
+        </section>
+      )}
     </section>
   );
 };
