@@ -26,35 +26,39 @@ html[data-theme="light"] .listItem {
 .icon {
   margin-top: auto;
   padding-top: 1rem;
-  font-size: 8rem;
+  max-width: 10rem;
   cursor: default;
+}
+
+.icon img {
+  width: 100%;
 }
 
 .icon[id="rocket"] {
   --transition: 300ms;
   transition: transform var(--transition) ease-out,
-    opacity var(--transition) ease-out;
+    opacity var(--transition) ease-out, filter var(--transition) ease-out;
 }
 
 @media (hover) {
   .icon[id="rocket"]:hover {
     transform: scale(1.03) rotate(-10deg) translateY(-1rem);
     opacity: 0.8;
-    text-shadow: 0 0 100px rgba(255, 120, 0, 0.5);
+    filter: drop-shadow(0 0 80px rgba(255, 120, 0, 0.7));
   }
 }
 
 .icon[id="lightbulb"] {
   --transition: 300ms;
   transition: transform var(--transition) ease-out,
-    opacity var(--transition) ease-out, box-shadow var(--transition) ease-out;
+    opacity var(--transition) ease-out, filter var(--transition) ease-out;
 }
 
 @media (hover) {
   .icon[id="lightbulb"]:hover {
     transform: scale(1.05) translateY(-10px);
     opacity: 0.9;
-    text-shadow: 0 0 100px rgba(255, 255, 0, 0.5);
+    filter: drop-shadow(0 0 80px rgba(255, 255, 0, 0.7));
   }
 }
 
