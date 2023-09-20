@@ -116,7 +116,7 @@ const projects = [
     site: "https://tzivi.com/android/crypto-app.apk/",
     apk: "Crypto",
     color: "#8efdf3",
-    active: true,
+    active: false,
   },
   {
     id: "lKc",
