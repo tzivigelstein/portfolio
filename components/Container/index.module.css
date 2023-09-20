@@ -1,22 +1,4 @@
 .container {
   transition: 0.3s ease-in-out background-color;
   background-color: var(--background-primary-color);
-  overflow-y: scroll;
-  height: 100%;
-}
-
-@media (min-width: 480px) {
-  .container::-webkit-scrollbar {
-    width: 0.7rem;
-  }
-
-  .container::-webkit-scrollbar-thumb {
-    transition: 0.3s ease-in-out background-color;
-    background-color: var(--scrollbar-thumb);
-    border-radius: 1000rem;
-  }
-
-  .container::-webkit-scrollbar-thumb:hover {
-    background-color: var(--scrollbar-thumb-hover);
-  }
 }
