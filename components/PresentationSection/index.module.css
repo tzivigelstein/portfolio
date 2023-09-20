@@ -23,9 +23,15 @@
   gap: 1rem;
   list-style: none;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  overflow-x: auto;
   scrollbar-width: thin;
   scrollbar-color: var(--dark-blue) var(--custom-white);
+}
+
+@media (max-width: 695px) {
+  .list {
+    display: flex;
+    overflow-x: auto;
+  }
 }
 
 .list::-webkit-scrollbar {
