@@ -31,6 +31,7 @@
 @media (max-width: 695px) {
   .list {
     display: flex;
+    padding: 1rem;
     overflow-x: auto;
   }
 }
