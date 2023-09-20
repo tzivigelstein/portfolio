@@ -63,25 +63,38 @@
 }
 
 #__next {
-  height: 100%;
-  overflow: hidden;
+  min-height: 100%;
 }
 
 html {
   box-sizing: inherit;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  height: 100%;
-  overflow: hidden;
+  min-height: 100%;
 }
 
 body {
   all: unset;
   margin: 0;
-  height: 100%;
-  overflow: hidden;
+  min-height: 100%;
 }
 
 p {
   margin: 0;
+}
+
+@media (min-width: 480px) {
+  body::-webkit-scrollbar {
+    width: 0.7rem;
+  }
+
+  body::-webkit-scrollbar-thumb {
+    transition: 0.3s ease-in-out background-color;
+    background-color: var(--scrollbar-thumb);
+    border-radius: 1000rem;
+  }
+
+  body::-webkit-scrollbar-thumb:hover {
+    background-color: var(--scrollbar-thumb-hover);
+  }
 }
