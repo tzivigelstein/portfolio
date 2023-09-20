@@ -25,6 +25,7 @@
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   scrollbar-width: thin;
   scrollbar-color: var(--dark-blue) var(--custom-white);
+  overflow: visible;
 }
 
 @media (max-width: 695px) {
