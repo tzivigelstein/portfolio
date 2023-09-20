@@ -11,7 +11,7 @@ export default function ActionDeclaration({ action }) {
       <H3 style={{ ...sharedStyles, marginBottom: 32 }}>{text}</H3>
       {icon && (
         <div className={styles.icon} id={slug}>
-          {icon}
+          <img src={icon} alt={slug} />
         </div>
       )}
     </li>
