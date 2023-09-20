@@ -18,23 +18,19 @@
 
 .list {
   margin: 0;
-  padding: 2rem 2rem 2rem 1rem;
+  padding: 0;
   display: grid;
   gap: 1rem;
-  list-style: disc;
-  display: flex;
-  justify-content: space-between;
+  list-style: none;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   overflow-x: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--dark-blue) var(--custom-white);
 }
 
 .list::-webkit-scrollbar {
   background-color: transparent;
   width: 10px;
-}
-
-.list {
-  scrollbar-width: thin;
-  scrollbar-color: var(--dark-blue) var(--custom-white);
 }
 
 .list::-webkit-scrollbar-track {
