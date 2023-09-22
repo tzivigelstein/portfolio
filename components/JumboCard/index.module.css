@@ -27,11 +27,13 @@
   grid-column-start: 1;
   grid-column-end: -1;
   margin-bottom: 1.5rem;
+  padding-bottom: 0;
 }
 
 @media (max-width: 480px) {
   .jumboCard {
-    padding: 8%;
+    padding: 8% 1rem;
+    padding-bottom: 0;
     aspect-ratio: 1 / 1.5;
   }
 }
@@ -40,6 +42,21 @@
   .jumboCard:hover {
     transform: scale3d(1.01, 1.01, 1.01);
     box-shadow: 2px 4px 16px rgb(0 0 0 / 16%);
+  }
+}
+
+.cardHeader {
+  width: max-content;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+@media (max-width: 770px) {
+  .cardHeader {
+    width: 100%;
   }
 }
 
@@ -54,12 +71,18 @@
 
 .title {
   all: unset;
-  display: block;
+  max-width: 50%;
   font-size: 1.75rem;
   color: var(--card-text-primary-color);
   font-weight: 600;
-  margin: 0.5rem 0;
+  margin: 0.5rem auto;
   justify-self: flex-start;
+}
+
+@media (max-width: 770px) {
+  .title {
+    max-width: 80%;
+  }
 }
 
 .helper {
@@ -81,19 +104,32 @@
 }
 
 .cardPicture {
+  margin-top: auto;
   flex: 1;
+  max-height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  overflow: hidden;
 }
 
 .cardImage {
-  width: 100%;
-  height: 100%;
+  width: 350px;
   object-fit: cover;
 }
 
-.cardFooter {
+@media (max-width: 480px) {
+  .cardImage {
+    width: 280px;
+  }
+}
+
+.cardLinks {
   display: flex;
-  justify-content: space-between;
   padding-top: 1rem;
+  width: max-content;
+  gap: 2rem;
+  margin: 0 auto;
 }
 
 .link {
