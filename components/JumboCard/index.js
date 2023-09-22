@@ -1,12 +1,14 @@
 import styles from "./index.module.css";
 import useTranslation from "next-translate/useTranslation";
 import { ChevronIcon } from "@components/Icons";
+import useMediaQueries from "hooks/useMediaQueries";
 
 export default function JumboCard({ project }) {
   const {
     theme,
     color,
     title,
+    shortTitle,
     subtitle,
     image,
     jumboImage,
@@ -17,6 +19,7 @@ export default function JumboCard({ project }) {
   } = project;
 
   const { t } = useTranslation();
+  const { isMobile } = useMediaQueries();
 
   return (
     <article
@@ -33,7 +36,32 @@ export default function JumboCard({ project }) {
       >
         <header className={styles.cardHeader}>
           <h4 className={styles.helper}>{subtitle}</h4>
-          <h3 className={styles.title}>{title}</h3>
+          <h3 className={styles.title}>
+            {isMobile && shortTitle ? shortTitle : title}
+          </h3>
+          <div className={styles.cardLinks}>
+            <a
+              aria-label="action-link"
+              href={site}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.button}
+            >
+              {category === "web"
+                ? t("common:cardSiteLink")
+                : t("common:cardDownloadLink")}
+            </a>
+            <a
+              aria-label="repository-link"
+              className={styles.link}
+              href={repository}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {t("common:cardRepositoryLink")}
+              <ChevronIcon />
+            </a>
+          </div>
         </header>
         <picture className={styles.cardPicture}>
           <source
@@ -49,29 +77,6 @@ export default function JumboCard({ project }) {
           />
         </picture>
       </a>
-      <footer className={styles.cardFooter}>
-        <a
-          aria-label="repository-link"
-          className={styles.link}
-          href={repository}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          {t("common:cardRepositoryLink")}
-          <ChevronIcon />
-        </a>
-        <a
-          aria-label="action-link"
-          href={site}
-          target="_blank"
-          rel="noopener noreferrer"
-          className={styles.button}
-        >
-          {category === "web"
-            ? t("common:cardSiteLink")
-            : t("common:cardDownloadLink")}
-        </a>
-      </footer>
     </article>
   );
 }
