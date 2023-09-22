@@ -3,7 +3,7 @@
   height: 80vh;
   overflow: hidden;
   flex-direction: column;
-  padding: 5rem 0 0.3rem 0;
+  padding: 5rem 0 0 0;
   transition: 0.3s ease-in-out background-color;
   backdrop-filter: var(--header-backdrop-filter);
 }
