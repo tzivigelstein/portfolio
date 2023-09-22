@@ -12,8 +12,15 @@ export default function Story({ post }) {
   return (
     <div className={styles.storyContainer}>
       <H2>{t("common:storyTitle")}</H2>
-      <div className={styles.textContainer}>
-        <MDXRemote {...source} components={MDXComponents} />
+      <div className={styles.container}>
+        <div className={styles.textContainer}>
+          <MDXRemote {...source} components={MDXComponents} />
+        </div>
+        <img
+          className={styles.image}
+          src="/images/memojis/memoji_wave.png"
+          alt="Tzivi's Memoji waving and smiling"
+        />
       </div>
     </div>
   );
