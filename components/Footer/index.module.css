@@ -1,6 +1,6 @@
 .wrapper {
   min-height: 500px;
-  background-color: var(--footer-background-color);
+  backdrop-filter: invert(10%);
   transition: 0.3s ease-in-out background-color;
   position: relative;
   display: flex;
