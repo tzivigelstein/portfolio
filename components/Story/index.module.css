@@ -26,7 +26,7 @@
   top: 0;
 }
 
-@media (max-width: 1368px) {
+@media (max-width: 1000px) {
   .container {
     grid-template-columns: 1fr;
   }
