@@ -8,6 +8,7 @@ const TechIcon = ({ children, name, link, styles: iconStyles }) => {
       rel="noopener noreferrer"
       className={styles.iconLink}
       aria-label={`Visit ${name} website`}
+      title={name}
     >
       <div
         style={
