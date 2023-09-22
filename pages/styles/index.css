@@ -5,6 +5,11 @@
   --timeline-accent: rgb(33, 150, 243);
   --timeline-secondary: rgba(33, 150, 243, 0.4);
 
+  --body-background-primary: #ffefba;
+  --body-background-secondary: #fff8e2;
+  --body-background-accent: #fdce94;
+  --header-backdrop-filter: brightness(120%);
+
   --header-background-color: #f5f5f7;
   --header-text-color: #1d1d1f;
   --primary-color: #6ec2f7;
@@ -28,10 +33,15 @@
   --background-secondary: #1d1d1f;
   --background-tertiary: #fbfbfd;
 
-  --link: #1051a2;
+  --link: #6ba8f3;
   --timeline-main: #1051a2;
   --timeline-secondary: #fefefe;
   --timeline-accent: rgb(33, 150, 243);
+
+  --body-background-primary: #001045;
+  --body-background-secondary: rgb(2, 10, 36);
+  --body-background-accent: #420c59;
+  --header-backdrop-filter: brightness(150%);
 
   --header-background-color: var(--background-tertiary);
   --header-text-color: #1d1d1f;
