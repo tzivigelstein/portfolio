@@ -14,7 +14,7 @@ const MyApp = ({ Component, pageProps }) => (
       <link rel="alternate" hrefLang="es" href="https://www.tzivi.com/es" />
       <link rel="alternate" hrefLang="en" href="https://www.tzivi.com/" />
 
-      <title>Tzivi Gelstein | React developer</title>
+      <title>Tzivi Gelstein | Software developer</title>
       <meta name="title" content="Tzivi | Portfolio" />
       <meta
         name="description"
