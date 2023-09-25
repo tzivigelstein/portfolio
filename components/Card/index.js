@@ -26,6 +26,29 @@ const Card = ({ project }) => {
           <header className={styles.cardHeader}>
             <h4 className={styles.helper}>{subtitle}</h4>
             <h3 className={styles.title}>{title}</h3>
+            <div className={styles.cardLinks}>
+              <a
+                aria-label="action-link"
+                href={site}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.button}
+              >
+                {category === "web"
+                  ? t("common:cardSiteLink")
+                  : t("common:cardDownloadLink")}
+              </a>
+              <a
+                aria-label="repository-link"
+                className={styles.link}
+                href={repository}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {t("common:cardRepositoryLink")}
+                <ChevronIcon />
+              </a>
+            </div>
           </header>
           <Image
             src={image}
@@ -36,29 +59,6 @@ const Card = ({ project }) => {
             objectFit="cover"
           />
         </a>
-        <footer className={styles.cardFooter}>
-          <a
-            aria-label="repository-link"
-            className={styles.link}
-            href={repository}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            {t("common:cardRepositoryLink")}
-            <ChevronIcon />
-          </a>
-          <a
-            aria-label="action-link"
-            href={site}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.button}
-          >
-            {category === "web"
-              ? t("common:cardSiteLink")
-              : t("common:cardDownloadLink")}
-          </a>
-        </footer>
       </article>
     </li>
   );
