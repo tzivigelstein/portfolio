@@ -10,8 +10,9 @@
   );
   background: linear-gradient(
     var(--inclination),
-    var(--body-background-secondary) 0%,
-    var(--body-background-accent) 35%,
+    var(--body-background-accent) 0%,
+    var(--body-background-secondary) 35%,
+    var(--body-background-accent) 70%,
     var(--body-background-primary) 100%
   );
 }
