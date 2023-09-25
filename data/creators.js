@@ -15,7 +15,7 @@ export default [
     id: 2,
     name: "Daniel Shiffman",
     image:
-      "https://tisch.nyu.edu/content/dam/tisch/itp/GeneralPics/DanielShiffman1.png",
+      "https://pbs.twimg.com/profile_images/1553384187805171712/xjOdl5bz_400x400.jpg",
     website: "https://shiffman.net",
   },
   {
@@ -40,7 +40,8 @@ export default [
   {
     id: 6,
     name: "Los apuntes de Majo",
-    image: "https://losapuntesdemajo.vercel.app/images/lam_logo.png",
+    image:
+      "https://pbs.twimg.com/profile_images/1694146566393585664/z2ia5POd_400x400.jpg",
     website: "https://losapuntesdemajo.vercel.app/",
   },
   {
@@ -53,7 +54,7 @@ export default [
     id: 8,
     name: "Kevin Powell",
     image:
-      "https://d33wubrfki0l68.cloudfront.net/554ca802d12f9823e5449ae62bc6bc2775c5c67a/a52fd/img/f21b00ed-600.avif",
+      "https://pbs.twimg.com/profile_images/1506979715919364119/zibgmk12_400x400.jpg",
     website: "https://www.kevinpowell.co/",
   },
 ];
