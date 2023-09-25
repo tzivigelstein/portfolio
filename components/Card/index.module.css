@@ -34,6 +34,10 @@
   }
 }
 
+.cardHeader {
+  text-align: center;
+}
+
 .projectLink {
   text-decoration: none;
   margin: 0;
@@ -81,9 +85,10 @@
   object-fit: cover;
 }
 
-.cardFooter {
+.cardLinks {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 2rem;
   padding-top: 1rem;
 }
 
