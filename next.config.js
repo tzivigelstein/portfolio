@@ -4,13 +4,11 @@ module.exports = nextTranslate({
   images: {
     domains: [
       "gndx.dev",
-      "tisch.nyu.edu",
+      "pbs.twimg.com",
       "freddyvega.com",
       "avatars.githubusercontent.com",
       "yt3.ggpht.com",
       "img-c.udemycdn.com",
-      "d33wubrfki0l68.cloudfront.net",
-      "losapuntesdemajo.vercel.app",
     ],
   },
 });
