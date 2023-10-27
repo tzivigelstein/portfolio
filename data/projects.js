@@ -53,7 +53,7 @@ const projects = [
     category: "web",
     title: "Product Hunt",
     subtitle: "Social App",
-    image: "/images/PHuntFlyer.webp",
+    image: "/images/PHuntFlyer.png",
     repository: "https://github.com/tzivigelstein/Product-Hunt-Clone",
     site: "https://producthunt-cl.vercel.app/",
     color: "linear-gradient(90deg, #feaf04, #fa9814)",
