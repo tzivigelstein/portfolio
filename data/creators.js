@@ -8,15 +8,15 @@ export default [
   {
     id: 1,
     name: "Oscar Barajas",
-    image: "https://gndx.dev/_astro/gndx-512_2vy8H4.webp",
+    image: "/images/creators/oscar-barajas.webp",
     website: "https://gndx.dev",
   },
   {
     id: 2,
     name: "Daniel Shiffman",
     image:
-      "https://pbs.twimg.com/profile_images/1553384187805171712/xjOdl5bz_400x400.jpg",
-    website: "https://shiffman.net",
+      "/images/creators/daniel-shiffman.jpg",
+    website: "https://thecodingtrain.com/",
   },
   {
     id: 3,
@@ -39,9 +39,9 @@ export default [
   },
   {
     id: 6,
-    name: "Los apuntes de Majo",
+    name: "majoledes",
     image:
-      "https://pbs.twimg.com/profile_images/1694146566393585664/z2ia5POd_400x400.jpg",
+      "/images/creators/majo-ledes.jpg",
     website: "https://losapuntesdemajo.vercel.app/",
   },
   {
