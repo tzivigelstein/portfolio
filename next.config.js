@@ -3,7 +3,6 @@ const nextTranslate = require("next-translate");
 module.exports = nextTranslate({
   images: {
     domains: [
-      "gndx.dev",
       "pbs.twimg.com",
       "freddyvega.com",
       "avatars.githubusercontent.com",
