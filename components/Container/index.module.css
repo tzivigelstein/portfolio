@@ -1,5 +1,6 @@
 .container {
   --inclination: 30deg;
+  position: relative;
 
   transition: 0.3s ease-in-out background-color;
   background: var(--body-background-primary);
