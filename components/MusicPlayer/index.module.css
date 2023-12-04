@@ -1,0 +1,109 @@
+.wrapper {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  display: flex;
+  gap: 0.3rem;
+  flex-direction: column;
+  z-index: 5;
+}
+
+.container {
+  border-radius: 1rem 1rem 0.2rem 0.2rem;
+  background-color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(5px);
+  padding: 0.8rem;
+  display: flex;
+  align-items: center;
+  box-shadow: 5px 0px 12px 5px rgba(0, 0, 0, 0.1);
+  z-index: 4;
+  min-width: 400px;
+  justify-content: space-between;
+  transition: 200ms ease background-color;
+}
+
+@media (max-width: 480px) {
+  .wrapper {
+    width: calc(100% - 2rem);
+    justify-content: space-between;
+  }
+
+  .container {
+    min-width: 0;
+  }
+}
+
+@media (hover) {
+  .container:hover {
+    background-color: white;
+  }
+}
+
+.info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-right: 0.5rem;
+  overflow: hidden;
+}
+
+.title {
+  color: var(--header-text-color);
+  font-size: 1.1rem;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.preview {
+  width: 3rem;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 0.5rem;
+}
+
+.controls {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.togglePlaying,
+.nextSong {
+  background-color: transparent;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+.nextSong {
+  padding-left: 0;
+}
+
+.togglePlaying img {
+  width: 22px;
+  padding-right: 0;
+}
+
+.stopSnowfallContainer {
+  border-radius: 0.2rem 0.2rem 1rem 1rem;
+  background-color: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(5px);
+}
+
+@media (hover) {
+  .stopSnowfallContainer:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+}
+
+.stopSnowfallButton {
+  background-color: transparent;
+  color: var(--header-text-color);
+  font-size: 1rem;
+  padding: 0.5rem;
+  width: 100%;
+  outline: none;
+  border: none;
+  padding: 0.8rem;
+  cursor: pointer;
+}
