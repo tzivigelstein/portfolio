@@ -73,15 +73,49 @@
   border: none;
   padding: 0.5rem 1rem;
   cursor: pointer;
+  transform: scale(1);
+  transition: 50ms ease transform;
 }
 
 .nextSong {
   padding-left: 0;
 }
 
+.animateNextSong {
+  animation: 99ms nextSong forwards ease;
+}
+
+@keyframes nextSong {
+  25% {
+    opacity: 0.3;
+    transform: translateX(50%);
+  }
+
+  26% {
+    opacity: 0;
+  }
+
+  49% {
+    opacity: 0.3;
+  }
+
+  50% {
+    transform: translateX(-50%);
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
 .togglePlaying img {
   width: 22px;
   padding-right: 0;
+}
+
+.togglePlaying:active {
+  transform: scale(0.3);
 }
 
 .stopSnowfallContainer {

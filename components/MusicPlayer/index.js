@@ -11,8 +11,15 @@ const MusicPlayer = ({ songs, stopSnowfall, setStopSnowfall }) => {
     Math.floor(Math.random() * songs.length)
   );
   const [playing, setPlaying] = useState(false);
+  const [animateNextSong, setAnimateNextSong] = useState(false);
 
   const playNextSong = () => {
+    setAnimateNextSong(true);
+
+    setTimeout(() => {
+      setAnimateNextSong(false);
+    }, 100);
+
     setCurrentSongIndex((prevIndex) => (prevIndex + 1) % songs.length);
   };
 
@@ -49,7 +56,12 @@ const MusicPlayer = ({ songs, stopSnowfall, setStopSnowfall }) => {
               <PlayIcon style={{ transform: "scale(2, 2.4)" }} />
             )}
           </button>
-          <button onClick={playNextSong} className={styles.nextSong}>
+          <button
+            onClick={playNextSong}
+            className={`${styles.nextSong} ${
+              animateNextSong ? styles.animateNextSong : ""
+            }`}
+          >
             <DoubleArrow width={22} height={22} />
           </button>
         </div>
