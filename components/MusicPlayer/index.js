@@ -12,18 +12,25 @@ const MusicPlayer = ({ songs, stopSnowfall, setStopSnowfall }) => {
   );
   const [playing, setPlaying] = useState(false);
   const [animateNextSong, setAnimateNextSong] = useState(false);
+  const [toggleDownscaleMobile, setToggleDownscaleMobile] = useState(false);
 
   const playNextSong = () => {
     setAnimateNextSong(true);
 
     setTimeout(() => {
       setAnimateNextSong(false);
-    }, 100);
+    }, 410);
 
     setCurrentSongIndex((prevIndex) => (prevIndex + 1) % songs.length);
   };
 
   const togglePlaying = () => {
+    setToggleDownscaleMobile(true);
+
+    setTimeout(() => {
+      setToggleDownscaleMobile(false);
+    }, 410);
+
     setPlaying((prev) => !prev);
   };
 
@@ -49,7 +56,12 @@ const MusicPlayer = ({ songs, stopSnowfall, setStopSnowfall }) => {
           <p className={styles.title}>{songs[currentSongIndex].title}</p>
         </div>
         <div className={styles.controls}>
-          <button onClick={togglePlaying} className={styles.togglePlaying}>
+          <button
+            onClick={togglePlaying}
+            className={`${styles.togglePlaying} ${
+              toggleDownscaleMobile ? styles.togglePlayingDownScale : ""
+            }`}
+          >
             {playing ? (
               <PauseIcon style={{ transform: "scale(1.5, 1.5)" }} />
             ) : (
