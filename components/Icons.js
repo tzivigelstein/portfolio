@@ -475,20 +475,5 @@ export const DoubleArrow = (props) => (
 		L641.777,44.227z"
       />
     </g>
-    <g></g>
-    <g></g>
-    <g></g>
-    <g></g>
-    <g></g>
-    <g></g>
-    <g></g>
-    <g></g>
-    <g></g>
-    <g></g>
-    <g></g>
-    <g></g>
-    <g></g>
-    <g></g>
-    <g></g>
   </svg>
 );
