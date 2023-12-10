@@ -13,14 +13,12 @@ export default function Home({ post }) {
   const [isChristmasSeason, setIsChristmasSeason] = useState(false);
 
   useEffect(() => {
-    // Get the current date
     const currentDate = new Date();
 
-    // Check if the current date is within the specified range (December 1st to January 8th)
     const isWithinDateRange =
-      currentDate.getMonth() === 11 && // 11 corresponds to December (months are 0-indexed)
-      currentDate.getDate() >= 1 &&
-      currentDate.getDate() <= 8;
+      (currentDate.getMonth() === 11 && currentDate.getDate() >= 1) ||
+      (currentDate.getMonth() === 0 && currentDate.getDate() <= 8);
+
 
     setIsChristmasSeason(isWithinDateRange);
   }, []);
