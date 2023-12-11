@@ -4,9 +4,9 @@ const DEFAULT_MAX_SNOW_FLAKES = 50;
 
 const useSnowfall = (stopSnowfallFlag = false) => {
   const windowExists = typeof window !== "undefined";
-  const maxSnowflakes = windowExists
-    ? Math.floor(window.innerWidth / 25)
-    : DEFAULT_MAX_SNOW_FLAKES;
+  const max_snowflakes_by_window = windowExists ? Math.floor(window.innerWidth / 25) : DEFAULT_MAX_SNOW_FLAKES
+
+  const maxSnowflakes = max_snowflakes_by_window > DEFAULT_MAX_SNOW_FLAKES ? DEFAULT_MAX_SNOW_FLAKES : max_snowflakes_by_window
 
   const [snowflakes, setSnowflakes] = useState([]);
 
@@ -29,7 +29,7 @@ const useSnowfall = (stopSnowfallFlag = false) => {
       return {
         top: Math.floor(Math.random() * (-1000 - -25 + 1)) + -25,
         left,
-        fallSpeed: Math.random() * 2 + 1,
+        fallSpeed: Math.random() * (width > 15 ? 1.75 : 3.25) + 1,
         width,
         height,
         zIndex: Math.floor(Math.random() * (10 - -1 + 1)) + -1,
@@ -81,16 +81,28 @@ const useSnowfall = (stopSnowfallFlag = false) => {
         return prevSnowflakes.map((flake) => {
           return {
             ...flake,
-            top: flake.top + flake.fallSpeed,
-            opacity: 0,
+            transition: "opacity 1.5s ease",
           };
         });
       });
 
+
+      setTimeout(() => {
+        setSnowflakes((prevSnowflakes) => {
+          return prevSnowflakes.map((flake) => {
+            return {
+              ...flake,
+              top: flake.top + flake.fallSpeed,
+              opacity: 0,
+            };
+          });
+        });
+      }, 200)
+
       setTimeout(() => {
         setSnowflakes([]);
         clearInterval(updateInterval);
-      }, 1700);
+      }, 1900);
     };
   }, [maxSnowflakes, stopSnowfallFlag]);
 
