@@ -1,7 +1,7 @@
 import React from "react";
 
 const Snowflake = ({ style }) => {
-  const { top, left, width, height, opacity, rotate } = style;
+  const { top, left, width, height, opacity, rotate, transition } = style;
 
   return (
     <div
@@ -16,7 +16,7 @@ const Snowflake = ({ style }) => {
         backgroundSize: "cover",
         opacity,
         pointerEvents: "none",
-        transition: "opacity 1.5s ease",
+        transition,
         transform: `rotate(${rotate}deg)`,
       }}
     />
