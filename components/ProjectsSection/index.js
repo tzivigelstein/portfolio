@@ -3,6 +3,7 @@ import projects from "@data/projects";
 import Card from "@components/Card";
 import JumboCard from "@components/JumboCard";
 import useTranslation from "next-translate/useTranslation";
+import { H2 } from "@components/Heading";
 
 const ProjectsSection = () => {
   const { t } = useTranslation();
@@ -18,9 +19,9 @@ const ProjectsSection = () => {
   return (
     <section className={styles.container}>
       <section className={styles.secondarySection}>
-        <h2 className={styles.sectionTitle}>
+        <H2>
           {t("common:projectsSectionWebTitle")}
-        </h2>
+        </H2>
         <JumboCard project={jumbo} />
         <ul className={styles.projectList}>
           {webs.map((project) => (
