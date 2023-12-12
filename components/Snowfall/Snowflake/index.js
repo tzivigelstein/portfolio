@@ -1,25 +1,25 @@
-import React from "react";
+import styles from './index.module.css'
 
 const Snowflake = ({ style }) => {
-  const { top, left, width, height, opacity, rotate, transition } = style;
+  const { type, top, left, blur, width, height, rotate, opacity, transition } = style;
 
   return (
     <div
+      className={styles.snowflake}
       style={{
-        position: "fixed",
         top,
         left,
-        zIndex: 1,
         width: `${width}px`,
         height: `${height}px`,
-        backgroundImage: "url(snowflake.png)",
-        backgroundSize: "cover",
         opacity,
-        pointerEvents: "none",
         transition,
-        transform: `rotate(${rotate}deg)`,
+        filter: `blur(${blur}px)`
       }}
-    />
+    >
+      <img style={{
+        transform: `rotate(${rotate}deg)`,
+      }} className={styles.icon} src={`/snowflake${type}.svg`} alt="Snowflake" />
+    </div>
   );
 };
 
