@@ -1,0 +1,8 @@
+.snowflake {
+  position: fixed;
+  pointer-events: none;
+}
+
+.icon {
+  max-width: 100%;
+}

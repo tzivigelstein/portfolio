@@ -15,6 +15,8 @@ const useSnowfall = (stopSnowfallFlag = false) => {
       const maxWidth = 24;
       const minWidth = 12;
 
+      const differenceMiddle = (maxWidth - minWidth) / 2 + minWidth
+
       const width =
         Math.floor(Math.random() * (maxWidth - minWidth + 1)) + minWidth;
 
@@ -26,35 +28,46 @@ const useSnowfall = (stopSnowfallFlag = false) => {
 
       const initialOpacity = width < 18 ? 0.5 : 1;
 
+      const MAX_OFFSET_TOP = -1000
+      const MIN_OFFSET_TOP = -25
+
+      const MIN_FALL_SPEED_RATE = 1.75
+      const MAX_FALL_SPEED_RATE = 3.25
+
+      const fallSpeedRate = width > differenceMiddle ? MIN_FALL_SPEED_RATE : MAX_FALL_SPEED_RATE
+      const blur = width > differenceMiddle ? .7 : 1
+
       return {
-        top: Math.floor(Math.random() * (-1000 - -25 + 1)) + -25,
+        type: Math.floor(Math.random() * (4)),
+        top: Math.floor(Math.random() * (MAX_OFFSET_TOP - MIN_OFFSET_TOP + 1)) + MIN_OFFSET_TOP,
         left,
-        fallSpeed: Math.random() * (width > 15 ? 1.75 : 3.25) + 1,
+        fallSpeed: Math.random() * fallSpeedRate + 1,
         width,
         height,
-        zIndex: Math.floor(Math.random() * (10 - -1 + 1)) + -1,
         opacity: initialOpacity,
         rotate: Math.floor(Math.random() * (360 + 1)),
+        blur
       };
     };
 
     const updateSnowflakes = () => {
       setSnowflakes((prevSnowflakes) => {
-        // Check if the number of snowflakes is less than the maximum allowed
         if (prevSnowflakes.length < maxSnowflakes) {
-          // If so, generate a new snowflake and add it to the array
-          return [...prevSnowflakes, generateSnowflake()];
+          return [...updateSnowflake(prevSnowflakes), generateSnowflake()];
         }
 
-        // If the maximum allowed number is reached, just update the existing snowflakes
-        return prevSnowflakes.map((flake) => {
-          return {
-            ...flake,
-            top: flake.top + flake.fallSpeed,
-          };
-        });
+        return updateSnowflake(prevSnowflakes);
       });
     };
+
+    const updateSnowflake = (prevSnowflakes) => {
+      return prevSnowflakes.map((flake) => {
+        return {
+          ...flake,
+          top: flake.top + flake.fallSpeed,
+        };
+      })
+    }
 
     const removeOutOfBoundsSnowflakes = () => {
       setSnowflakes((prevSnowflakes) =>
@@ -73,7 +86,7 @@ const useSnowfall = (stopSnowfallFlag = false) => {
       } else if (stopSnowfallFlag && snowflakes.length === 0) {
         clearInterval(updateInterval);
       }
-    }, 30);
+    }, 20);
 
     // Cleanup function to clear the interval when the component unmounts or when the flag is set to true
     return () => {
