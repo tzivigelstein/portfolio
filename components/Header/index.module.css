@@ -1,41 +1,72 @@
 .header {
   display: flex;
   height: 80vh;
-  overflow: hidden;
-  flex-direction: column;
-  padding: 5rem 0 0 0;
+  padding-top: 5rem;
+  padding-bottom: 3rem;
   transition: 0.3s ease-in-out background-color;
   backdrop-filter: var(--header-backdrop-filter);
+  overflow: hidden;
+}
+@media (max-width: 1300px) {
+  .header {
+    height: max-content;
+    padding-top: 3rem;
+    padding-bottom: 2rem;
+  }
 }
 
 .headerMain {
   display: flex;
-  flex-direction: column;
+  flex-direction: row-reverse;
   align-items: center;
   margin: 0 auto;
   flex: 1;
-  max-width: 1000px;
+  max-width: 1200px;
   height: 100%;
+  gap: 4rem;
+}
+
+@media (max-width: 1300px) {
+  .headerMain {
+    flex-direction: column;
+    padding: 1rem;
+  }
 }
 
 .headerTitleContainer {
-  width: max-content;
-  display: grid;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 1300px) {
+  .headerTitleContainer {
+    text-align: center;
+  }
+}
+
+.headline {
+  padding-left: 1.2rem;
+}
+@media (max-width: 1300px) {
+  .headline {
+    padding-left: 0rem;
+  }
 }
 
 .headline {
   color: var(--text-color);
-  font-size: 56px;
-  font-weight: 600;
+  font-size: clamp(22px, 5vw, 56px);
+  font-weight: 400;
   transition: 0.3s ease-in-out color;
   margin: 0;
+  display: flex;
+  flex-direction: column;
 }
 
 .subHeadline {
   color: var(--text-color);
-  font-size: 28px;
-  font-weight: 400;
+  font-size: clamp(42px, 10vw, 120px);
+  font-weight: 600;
   transition: 0.3s ease-in-out color;
   margin: 0;
   margin-top: 5px;
@@ -44,17 +75,32 @@
 .headerLinksContainer {
   display: flex;
   align-items: center;
-  width: max-content;
   flex-wrap: wrap;
   width: 100%;
   margin-top: 1rem;
 }
 
+@media (max-width: 1300px) {
+  .headerLinksContainer {
+    justify-content: center;
+  }
+}
+
 .headerImageContainer {
+  aspect-ratio: 0.75;
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  width: 100%;
-  height: 100%;
+  margin: 0 auto;
+  width: 50%;
   position: relative;
+  border-radius: 1rem;
+  overflow: hidden;
+  transform: rotate(2deg);
+}
+
+@media (max-width: 1300px) {
+  .headerImageContainer {
+    width: 70%;
+  }
 }
