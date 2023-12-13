@@ -7,7 +7,7 @@
   backdrop-filter: var(--header-backdrop-filter);
   overflow: hidden;
 }
-@media (max-width: 1300px) {
+@media (max-width: 768px) {
   .header {
     height: max-content;
     padding-top: 3rem;
@@ -26,7 +26,13 @@
   gap: 4rem;
 }
 
-@media (max-width: 1300px) {
+@media (min-width: 770px) and (max-width: 1199px) {
+  .headerMain {
+    padding-left: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
   .headerMain {
     flex-direction: column;
     padding: 1rem;
@@ -38,7 +44,7 @@
   flex-direction: column;
 }
 
-@media (max-width: 1300px) {
+@media (max-width: 768px) {
   .headerTitleContainer {
     text-align: center;
   }
@@ -47,7 +53,8 @@
 .headline {
   padding-left: 1.2rem;
 }
-@media (max-width: 1300px) {
+
+@media (max-width: 768px) {
   .headline {
     padding-left: 0rem;
   }
@@ -80,7 +87,7 @@
   margin-top: 1rem;
 }
 
-@media (max-width: 1300px) {
+@media (max-width: 768px) {
   .headerLinksContainer {
     justify-content: center;
   }
@@ -99,7 +106,7 @@
   transform: rotate(2deg);
 }
 
-@media (max-width: 1300px) {
+@media (max-width: 480px) {
   .headerImageContainer {
     width: 70%;
   }
