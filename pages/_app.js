@@ -2,7 +2,7 @@ import Head from "next/head";
 import "./styles/index.css";
 import { ThemeProvider } from "next-themes";
 import { Analytics } from "@vercel/analytics/react";
-import { SpeedInsights } from "@vercel/speed-insights/next"
+import { SpeedInsights } from "@vercel/speed-insights/react"
 
 const MyApp = ({ Component, pageProps }) => (
   <>
