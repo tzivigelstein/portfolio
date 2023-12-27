@@ -4,6 +4,7 @@ import {
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
 import styles from "./index.module.css";
+import { ExternalLink } from "@components/Icons";
 
 export default function Timeline({ timeline }) {
   return (
@@ -35,12 +36,14 @@ export default function Timeline({ timeline }) {
               {link && !linkText && (
                 <a target="_blank" rel="noopener noreferrer" className={styles.link} href={link}>
                   {link}
+                  <ExternalLink width={16} />
                 </a>
               )}
               {
                 link && linkText && (
                   <a target="_blank" rel="noopener noreferrer" className={styles.link} href={link}>
                     {linkText}
+                    <ExternalLink width={16} />
                   </a>
                 )
               }
