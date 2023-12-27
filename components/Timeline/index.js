@@ -9,7 +9,7 @@ export default function Timeline({ timeline }) {
   return (
     <VerticalTimeline animate={false} lineColor="var(--timeline-secondary)">
       {timeline.map(
-        ({ id, title, description, date, icon, timeSpan, link }) => {
+        ({ id, title, description, date, icon, timeSpan, link, linkText }) => {
           return (
             <VerticalTimelineElement
               key={id}
@@ -32,11 +32,18 @@ export default function Timeline({ timeline }) {
             >
               <h3 className="vertical-timeline-element-title">{title}</h3>
               {description}
-              {link && (
+              {link && !linkText && (
                 <a target="_blank" rel="noopener noreferrer" className={styles.link} href={link}>
                   {link}
                 </a>
               )}
+              {
+                link && linkText && (
+                  <a target="_blank" rel="noopener noreferrer" className={styles.link} href={link}>
+                    {linkText}
+                  </a>
+                )
+              }
             </VerticalTimelineElement>
           );
         }

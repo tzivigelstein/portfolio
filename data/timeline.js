@@ -26,6 +26,7 @@ export default class Timeline {
         description: <p>{this.translations("timeline:description2")}</p>,
         icon: <Certification />,
         link: "https://www.efset.org/cert/TmYxdQ",
+        linkText: "Certificate",
         date: this.getFromTo(new Date("01/01/2023"), Infinity),
       },
     ].reverse();
