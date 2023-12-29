@@ -64,7 +64,6 @@ export default class Timeline {
 
   getFromTo(startDate, endDate = new Date()) {
     const start = this.formatDate(startDate);
-    console.log({ endDate })
     const end = this.computeEndDate(endDate);
 
     return `${start} - ${end}`;
