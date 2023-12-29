@@ -20,7 +20,7 @@ export default class Timeline {
         to,
         icon,
         date: this.getFromTo(from, to),
-        timeSpan: to !== Infinity && to !== undefined && this.getDiff(from),
+        timeSpan: to !== Infinity && to !== undefined && this.getDiff(from, to),
         title: this.translations(title),
         description: <p>{this.translations(description)}</p>
       })
