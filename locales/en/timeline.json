@@ -9,13 +9,16 @@
   },
 
   "present": "present",
-  "noExpiryDate": "No expiry date",
-
-  "title1": "React/Node developer",
-  "description1": "Backend Development, API Development, Manual Testing, Performance, Optimization, and Accessibility Improvement",
+  "noExpiryDate": "no expiry date",
 
   "title2": "EF Standard English Test (EF SET)",
   "description2": "EF SET English Certificate 75/100 (C2 Proficient)",
+
+  "title4": "Python developer",
+  "description4": "Backend Development with Flask, Django, and FastAPI, API Development, Manual and Programmatic Testing, Performance, Optimization, and Accessibility Improvement",
+
+  "title1": "React & Node developer",
+  "description1": "Backend Development, API Development, Manual Testing, Performance, Optimization, and Accessibility Improvement",
 
   "title3": "'I can program' from Junior Achievement and Microsoft Argentina.",
   "description3": "I have successfully completed the 'I can program' course at the Virtual Campus of Junior Achievement and Microsoft Argentina."

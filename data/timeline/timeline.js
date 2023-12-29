@@ -1,35 +1,30 @@
 import { Briefcase, Certification } from "@components/Icons";
+import events from "./events";
+
+const ICONS = {
+  "certification": <Certification />,
+  "work": <Briefcase />
+}
 
 export default class Timeline {
   constructor(translations, lang) {
+    events.sort((a, b) => b.from - a.from)
     this.translations = translations;
     this.language = lang;
-    this.events = [
-      {
-        id: "2",
-        title: this.translations("timeline:title3"),
-        description: <p>{this.translations("timeline:description3")}</p>,
-        icon: <Certification />,
-        date: this.getFromTo(new Date("09/04/2020"), Infinity),
-      },
-      {
-        id: "0",
-        title: this.translations("timeline:title1"),
-        description: <p>{this.translations("timeline:description1")}</p>,
-        date: this.getFromTo(new Date("06/03/2022")),
-        timeSpan: this.getDiff(new Date("06/03/2022")),
-        icon: <Briefcase />,
-      },
-      {
-        id: "1",
-        title: this.translations("timeline:title2"),
-        description: <p>{this.translations("timeline:description2")}</p>,
-        icon: <Certification />,
-        link: "https://www.efset.org/cert/TmYxdQ",
-        linkText: "Certificate",
-        date: this.getFromTo(new Date("01/01/2023"), Infinity),
-      },
-    ].reverse();
+    this.events = events.map(({ title, description, from, to, iconType, ...rest }) => {
+      const icon = ICONS[iconType]
+
+      return ({
+        ...rest,
+        from,
+        to,
+        icon,
+        date: this.getFromTo(from, to),
+        timeSpan: to !== Infinity && to !== undefined && this.getDiff(from),
+        title: this.translations(title),
+        description: <p>{this.translations(description)}</p>
+      })
+    })
   }
 
   getDiff(startDate, endDate = new Date()) {
@@ -69,6 +64,7 @@ export default class Timeline {
 
   getFromTo(startDate, endDate = new Date()) {
     const start = this.formatDate(startDate);
+    console.log({ endDate })
     const end = this.computeEndDate(endDate);
 
     return `${start} - ${end}`;

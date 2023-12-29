@@ -2,7 +2,7 @@ import styles from "./index.module.css";
 import useTranslation from "next-translate/useTranslation";
 import { H2 } from "@components/Heading";
 import ActionDeclaration from "@components/ActionDeclaration";
-import TimelineBuilder from "@data/timeline";
+import TimelineBuilder from "@data/timeline/timeline";
 import Timeline from "@components/Timeline";
 
 const PresentationSection = () => {
