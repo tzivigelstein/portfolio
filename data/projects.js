@@ -14,6 +14,18 @@ const projects = [
     active: true,
   },
   {
+    id: "lKu",
+    category: "web",
+    title: "Perfect Pick",
+    subtitle: "AI Media matcher",
+    image: "/images/PerfectPick.png",
+    repository: "https://github.com/tzivigelstein/perfect-pick",
+    site: "https://perfect-pick.vercel.app/",
+    color: "#d6dbdc",
+    theme: "ligth",
+    active: true,
+  },
+  {
     id: "2Jp",
     category: "web",
     title: "Product Hunt",
@@ -143,6 +155,7 @@ const projects = [
     theme: "dark",
     active: false,
   },
+
 ];
 
 export default projects;
