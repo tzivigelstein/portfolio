@@ -6,8 +6,11 @@ import { ChevronIcon } from "@components/Icons";
 const Card = ({ project }) => {
   const { t } = useTranslation();
 
-  const { theme, color, title, subtitle, image, repository, site, category } =
+  const { theme, color, title, subtitle, repository, site, category } =
     project;
+
+  const image = project?.image
+  const component = project.component
 
   return (
     <li>
@@ -50,14 +53,15 @@ const Card = ({ project }) => {
               </a>
             </div>
           </header>
-          <Image
+          {image && <Image
             src={image}
             alt={`${title} preview`}
             layout="responsive"
             width="100%"
             height="100%"
             objectFit="cover"
-          />
+          />}
+          {!image && component ? component : null}
         </a>
       </article>
     </li>
