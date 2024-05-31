@@ -2,7 +2,7 @@ import styles from "./index.module.css";
 import {
   GithubIcon,
   LinkedinIcon,
-  TwitterIcon,
+  XIcon,
   WhatsAppIcon,
   TelegramIcon,
 } from "@components/Icons";
@@ -47,11 +47,11 @@ const Footer = () => {
               <a
                 target="_blank"
                 rel="noopener noreferrer"
-                href="https://twitter.com/tzivigelstein"
+                href="https://x.com/tzivigelstein"
                 className={styles.socialLink}
               >
-                <TwitterIcon className={styles.icon} width={16} height={16} />
-                Twitter
+                <XIcon className={styles.icon} width={16} height={16} />
+                X (Formerly Twitter)
               </a>
             </li>
           </ul>
