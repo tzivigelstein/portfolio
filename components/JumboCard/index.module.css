@@ -6,7 +6,7 @@
   --card-link-color: #06c;
 }
 
-.jumboCard[data-theme="dark"] {
+.jumboCard[data-theme='dark'] {
   --card-text-primary-color: #fff;
   --card-helper-color: #f5f5f7;
   --card-button: #fff;
@@ -166,4 +166,59 @@
   justify-content: center;
   padding: 0.5rem 1rem;
   line-height: 1.17648;
+}
+
+.wipBadge {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 0.375rem 0.75rem;
+  border-radius: 1000rem;
+  z-index: 3;
+}
+
+.card[data-theme='dark'] .wipBadge {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.wipDot {
+  width: 0.5rem;
+  height: 0.5rem;
+  background-color: #4ade80;
+  border-radius: 50%;
+  animation: pulse 2s cubic-bezier(0, 0, 0.5, 1) infinite;
+}
+
+.wipText {
+  color: var(--card-button-text);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(74, 222, 128, 0.7);
+  }
+
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 4px rgba(74, 222, 128, 0);
+  }
+
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(74, 222, 128, 0);
+  }
+}
+
+@media (hover) {
+  .card:hover .wipBadge {
+    transform: scale3d(1.01, 1.01, 1.01);
+  }
 }
