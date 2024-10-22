@@ -6,6 +6,19 @@ import "react-vertical-timeline-component/style.min.css";
 import styles from "./index.module.css";
 import { ExternalLink } from "@components/Icons";
 
+
+const Description = ({ text }) => {
+  return (
+    <div>
+      {text.split('\n').map((line, index) => (
+        <div key={index} style={{ marginBottom: '0.5rem' }}>
+          {line.trim().startsWith('-') ? line : `• ${line.trim()}`}
+        </div>
+      ))}
+    </div>
+  );
+};
+
 export default function Timeline({ timeline }) {
   return (
     <VerticalTimeline animate={false} lineColor="var(--timeline-secondary)">
@@ -32,7 +45,7 @@ export default function Timeline({ timeline }) {
               icon={icon ?? null}
             >
               <h3 className="vertical-timeline-element-title">{title}</h3>
-              {description}
+              <Description text={description.props.children} />
               {link && !linkText && (
                 <a target="_blank" rel="noopener noreferrer" className={styles.link} href={link}>
                   {link}
