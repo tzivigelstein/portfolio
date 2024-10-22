@@ -1,5 +1,6 @@
 .sectionsContainer {
   width: 65%;
+  max-width: 1280px;
   margin: 0 auto;
 }
 
