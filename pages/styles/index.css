@@ -17,6 +17,7 @@
   --background-color: #fff;
   --background-primary-color: #fff;
   --background-secondary-color: #fff;
+  --card-subtitle-color: #ffa500;
   --card-shadow: 0 0.188rem 1.25rem 0.125rem rgb(64 62 67 / 16%);
   --tooltip-text-color: rgba(255, 255, 255, 0.87);
   --hard-black: #222;
@@ -28,7 +29,7 @@
   --language-indicator-color: rgba(0, 0, 0, 0.8);
 }
 
-[data-theme="dark"] {
+[data-theme='dark'] {
   --background-primary: #0e0e0e;
   --background-secondary: #1d1d1f;
   --background-tertiary: #fbfbfd;
@@ -49,6 +50,7 @@
   --secondary-color: #f7b457;
   --background-primary-color: var(--background-primary);
   --background-secondary-color: hsl(211, 28%, 25%);
+  --card-subtitle-color: #4c67e0;
   --card-shadow: none;
   --tooltip-text-color: rgba(255, 255, 255, 0.87);
   --hard-black: #eee;
@@ -65,7 +67,7 @@
 
 * {
   box-sizing: border-box;
-  font-family: system-ui, -apple-system, "Inter", sans-serif;
+  font-family: system-ui, -apple-system, 'Inter', sans-serif;
 }
 
 #__next {

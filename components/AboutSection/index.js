@@ -5,7 +5,7 @@ import Story from "@components/Story";
 import ProfessionalSkills from "@components/ProfessionalSkills";
 import SoftSkills from "@components/SoftSkills";
 import Recommendations from "@components/Recommendations";
-import { H2, H4 } from "@components/Heading";
+import { H2, H3 } from "@components/Heading";
 
 const AboutSection = ({ post }) => {
   const { t } = useTranslation();
@@ -16,18 +16,17 @@ const AboutSection = ({ post }) => {
       <div className={styles.aboutInfoContainer}>
         <div>
           <div>
-            <H4>{t("common:experienceTitle")}</H4>
+            <H3>{t("common:experienceTitle")}</H3>
             <ParagraphText>{t("common:experienceText")}</ParagraphText>
           </div>
           <div>
-            <H4>{t("common:goalsTitle")}</H4>
+            <H3>{t("common:goalsTitle")}</H3>
             <div className={styles.goalsContainer}>
-              <span className={styles.goal}>{t("common:goalsFirstTip")}</span>
-              <span className={styles.goal}>{t("common:goalsSecondTip")}</span>
+              <ParagraphText>{t("common:goals")}</ParagraphText>
             </div>
           </div>
         </div>
-        <div>
+        <div style={{ display: "flex", flexDirection: "column", gap: "1.4rem" }}>
           <ProfessionalSkills />
           <SoftSkills />
         </div>

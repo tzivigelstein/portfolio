@@ -75,6 +75,7 @@
   transition: 0.3s ease-in-out color;
   margin: 0;
   margin-top: 5px;
+  line-height: 1;
 }
 
 .headerLinksContainer {

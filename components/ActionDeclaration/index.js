@@ -7,8 +7,28 @@ export default function ActionDeclaration({ action }) {
 
   return (
     <li className={styles.listItem}>
-      <H4 style={{ ...sharedStyles, textTransform: "uppercase" }}>{title}</H4>
-      <H3 style={{ ...sharedStyles, marginBottom: 32 }}>{text}</H3>
+      <H4
+        className={styles.customTitle}
+        style={{
+          ...sharedStyles,
+          fontFamily: "Caveat",
+          fontWeight: 500,
+          fontSize: 32,
+          lineHeight: 1,
+        }}
+      >
+        {title}
+      </H4>
+      <H3
+        style={{
+          ...sharedStyles,
+          marginBottom: 28,
+          lineHeight: 1,
+          fontWeight: 500,
+        }}
+      >
+        {text}
+      </H3>
       {icon && (
         <div className={styles.icon} id={slug}>
           <img src={icon} alt={slug} />
