@@ -6,7 +6,8 @@ const projects = [
     title: 'Overvoltz: Build a PC that fits your needs.',
     subtitle: 'Productivity App',
     image: '/images/overvoltz.png',
-    mobileImage: 'https://www.csl-computer.com/en/media/catalog/product/cache/4/image_product_feed/1000x1000/9df78eab33525d08d6e5fb8d27136e95/c/s/csl_vitrum_schwarz-ww_ring_gk_7l_3000px_4.png',
+    mobileImage:
+      'https://www.csl-computer.com/en/media/catalog/product/cache/4/image_product_feed/1000x1000/9df78eab33525d08d6e5fb8d27136e95/c/s/csl_vitrum_schwarz-ww_ring_gk_7l_3000px_4.png',
     site: 'https://overvoltz.vercel.app/',
     color: 'white',
     theme: 'light',
@@ -59,7 +60,7 @@ const projects = [
     site: 'https://perfect-pick.vercel.app/',
     color: '#2dd4bf',
     theme: 'dark',
-    active: true,
+    active: false,
   },
   {
     id: '2Jp',
