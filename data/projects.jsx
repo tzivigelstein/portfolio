@@ -82,7 +82,7 @@ const projects = [
     repository: 'https://github.com/tzivigelstein/Twitter-Clone',
     site: 'https://twitter-cl.vercel.app/login',
     color: '#fff',
-    active: true,
+    active: false,
   },
   {
     id: 'Obi',
