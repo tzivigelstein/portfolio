@@ -8,6 +8,7 @@ module.exports = nextTranslate({
       "avatars.githubusercontent.com",
       "yt3.ggpht.com",
       "img-c.udemycdn.com",
+      "substackcdn.com"
     ],
   },
 });
