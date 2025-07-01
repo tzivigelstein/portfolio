@@ -85,17 +85,6 @@ const Footer = () => {
               <a
                 target="_blank"
                 rel="noopener noreferrer"
-                href="https://wa.me/541169708476"
-                className={styles.socialLink}
-              >
-                <WhatsAppIcon className={styles.icon} width={16} height={16} />
-                Whatsapp
-              </a>
-            </li>
-            <li>
-              <a
-                target="_blank"
-                rel="noopener noreferrer"
                 href="https://t.me/tzivigelstein"
                 className={styles.socialLink}
               >
