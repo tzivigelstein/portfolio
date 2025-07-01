@@ -11,7 +11,7 @@ const projects = [
     site: 'https://overvoltz.vercel.app/',
     color: 'white',
     theme: 'light',
-    active: true,
+    active: false,
     wip: true,
   },
   {
