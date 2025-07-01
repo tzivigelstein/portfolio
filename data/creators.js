@@ -21,7 +21,7 @@ export default [
   {
     id: 3,
     name: "Freddy Vega",
-    image: "https://freddyvega.com/content/images/2020/08/freddy-vega-2.jpg",
+    image: "https://substackcdn.com/image/fetch/$s_!MxQh!,w_600,h_400,c_fill,f_webp,q_auto:good,fl_progressive:steep,g_center/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F84f8410a-bb6f-41ff-a30e-8735ce7aa80e_2049x2049.jpeg",
     website: "https://freddyvega.com",
   },
   {
