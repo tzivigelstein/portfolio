@@ -81,17 +81,6 @@ const Footer = () => {
                 {t("common:footerResumeSpanishLink")}
               </a>
             </li>
-            <li>
-              <a
-                target="_blank"
-                rel="noopener noreferrer"
-                href="https://t.me/tzivigelstein"
-                className={styles.socialLink}
-              >
-                <TelegramIcon className={styles.icon} width={16} height={16} />
-                Telegram
-              </a>
-            </li>
           </ul>
         </div>
         <div className={styles.bottom}>
