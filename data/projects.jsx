@@ -1,5 +1,19 @@
 const projects = [
   {
+    id: 'Sc7',
+    category: 'web',
+    shortTitle: 'Scooch',
+    title: 'Scooch: Fit more on every sheet you print.',
+    subtitle: 'Productivity App',
+    image: '/images/Scooch.webp',
+    mobileImage: '/images/Scooch.webp',
+    repository: 'https://github.com/tzivigelstein/scooch',
+    site: 'https://scooch-nine.vercel.app/',
+    color: '#eef1f6',
+    theme: 'light',
+    active: true,
+  },
+  {
     id: 'Z3u',
     category: 'web',
     shortTitle: 'Overvoltz',
