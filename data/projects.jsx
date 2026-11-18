@@ -117,7 +117,7 @@ const projects = [
     site: 'https://movies-finder-alpha.vercel.app/',
     theme: 'dark',
     color: '#89b2f1',
-    active: true,
+    active: false,
   },
   {
     id: 'Oai',
@@ -129,7 +129,7 @@ const projects = [
     site: 'https://minity.vercel.app/',
     theme: 'dark',
     color: '#3f92d4',
-    active: true,
+    active: false,
   },
   {
     id: 'O1i',
@@ -141,7 +141,7 @@ const projects = [
     site: 'https://adivina-palabra.vercel.app/',
     theme: 'dark',
     color: '#8ca0d7',
-    active: true,
+    active: false,
   },
   {
     id: '2NB',
