@@ -2,12 +2,16 @@ import styles from './index.module.css'
 import useTranslation from 'next-translate/useTranslation'
 import Image from 'next/image'
 import { ChevronIcon } from '@components/Icons'
+import localize from '../../lib/localize'
 
 const Card = ({ project }) => {
-  const { t } = useTranslation()
+  const { t, lang } = useTranslation()
 
-  const { theme, color, shortTitle, title, subtitle, repository, site, category, wip } =
-    project
+  const { theme, color, repository, site, category, wip } = project
+
+  const title = localize(project.title, lang)
+  const shortTitle = localize(project.shortTitle, lang)
+  const subtitle = localize(project.subtitle, lang)
 
   const image = project?.image
   const component = project.component

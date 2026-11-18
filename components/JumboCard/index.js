@@ -2,14 +2,12 @@ import styles from './index.module.css'
 import useTranslation from 'next-translate/useTranslation'
 import { ChevronIcon } from '@components/Icons'
 import useMediaQueries from 'hooks/useMediaQueries'
+import localize from '../../lib/localize'
 
 export default function JumboCard({ project }) {
   const {
     theme,
     color,
-    title,
-    shortTitle,
-    subtitle,
     image,
     jumboImage,
     mobileImage,
@@ -19,7 +17,11 @@ export default function JumboCard({ project }) {
     wip
   } = project
 
-  const { t } = useTranslation()
+  const { t, lang } = useTranslation()
+
+  const title = localize(project.title, lang)
+  const shortTitle = localize(project.shortTitle, lang)
+  const subtitle = localize(project.subtitle, lang)
   const { isMobile } = useMediaQueries()
 
   return (
