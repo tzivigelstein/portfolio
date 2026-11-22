@@ -16,18 +16,33 @@ const Header = () => {
         <ThemeSwitcher />
       </div>
       <div className={styles.headerMain}>
+        {/* Wider screens: portrait next to the text. */}
         <div className={styles.photo}>
           <Image
             src="/images/HeaderImage.webp"
             alt="Tzivi Gelstein"
             layout="fill"
-            priority
+            sizes="176px"
             objectFit="cover"
           />
         </div>
         <div className={styles.text}>
           <h1 className={styles.headline}>
-            <span className={styles.hello}>{t('common:headline')}</span>{' '}
+            <span className={styles.helloRow}>
+              {/* Phones: small avatar on the same line as the greeting. */}
+              <span className={styles.avatar}>
+                <Image
+                  src="/images/HeaderImage.webp"
+                  alt=""
+                  layout="fill"
+                  sizes="48px"
+                  priority
+                  objectFit="cover"
+                  objectPosition="50% 35%"
+                />
+              </span>
+              <span className={styles.hello}>{t('common:headline')}</span>
+            </span>{' '}
             <span className={styles.role}>{t('common:subHeadline')}</span>
           </h1>
           <p className={styles.intro}>{t('common:headerIntro')}</p>

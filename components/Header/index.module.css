@@ -17,10 +17,27 @@
 }
 
 .photo {
+  display: none;
   position: relative;
-  width: 5.5rem;
   aspect-ratio: 0.8;
   border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.helloRow {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.avatar {
+  position: relative;
+  flex: none;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
   overflow: hidden;
   box-shadow: var(--shadow);
 }
@@ -74,7 +91,16 @@
   }
 
   .photo {
+    display: block;
     order: 2;
     width: 100%;
+  }
+
+  .helloRow {
+    margin-bottom: 0;
+  }
+
+  .avatar {
+    display: none;
   }
 }
