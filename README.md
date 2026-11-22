@@ -26,7 +26,13 @@ I started this repo in 2021 as a place to practice. It has been rewritten a few 
 
 ## Getting started
 
-You need Node 24 and [Yarn](https://classic.yarnpkg.com/).
+You need Node 24. The project uses [Yarn](https://yarnpkg.com/) 4 through Corepack, which ships with Node; enable it once with
+
+```bash
+corepack enable
+```
+
+Then
 
 ```bash
 yarn install
