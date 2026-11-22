@@ -55,8 +55,8 @@ Most changes to the site are content changes, and content is kept apart from the
 | I want to change… | Edit |
 | --- | --- |
 | Headline, intro, section titles, about text | `locales/en/common.json` and `locales/es/common.json` |
-| Projects (text, links, image) | `data/projects.jsx` |
-| Work and certifications | `data/timeline/events.js` for dates and links, `locales/*/timeline.json` for text |
+| Projects (text, links, image) | `data/projects.js` |
+| Experience and education | `data/timeline/events.js` for dates and links, `locales/*/timeline.json` for text |
 | Skills | `data/technologies.js` |
 | My story | `posts/my-story-en.mdx` and `posts/my-story-es.mdx` |
 | Résumés | `public/resume/` (keep the file names) |
