@@ -5,6 +5,7 @@ import Header from "@components/Header";
 import Sections from "@components/SectionsContainer";
 import Footer from "@components/Footer";
 import { getFileBySlug } from "lib/mdx";
+import useTranslation from "next-translate/useTranslation";
 
 // Loaded on demand, only during the season (snowfall and music player).
 const ChristmasSeason = dynamic(() => import("@components/ChristmasSeason"), {
@@ -12,6 +13,7 @@ const ChristmasSeason = dynamic(() => import("@components/ChristmasSeason"), {
 });
 
 export default function Home({ post }) {
+  const { t } = useTranslation();
   const [isChristmasSeason, setIsChristmasSeason] = useState(false);
 
   useEffect(() => {
@@ -23,6 +25,9 @@ export default function Home({ post }) {
 
   return (
     <Container>
+      <a href="#main" className="skipLink">
+        {t("common:skipToContent")}
+      </a>
       <Header />
       <Sections post={post} />
       <Footer />

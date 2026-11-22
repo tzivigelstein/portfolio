@@ -26,6 +26,7 @@
 }
 
 .labelTitle {
+  margin: 1.33em 0;
   font-size: 15px;
   color: var(--text-color);
 }

@@ -39,7 +39,8 @@ const PresentationSection = () => {
       <H2>{t("common:presentationSectionTitleTimeline")}</H2>
       <Timeline timeline={timeline.events} />
       <H2>{t("common:presentationSectionTitle")}</H2>
-      <ul className={styles.list}>
+      {/* Scrolls sideways on small screens: focusable so the keyboard can scroll it. */}
+      <ul className={styles.list} tabIndex={0}>
         {ACTIONS_DECLARATIONS.map(({ id, ...rest }) => (
           <ActionDeclaration key={id} action={rest} />
         ))}

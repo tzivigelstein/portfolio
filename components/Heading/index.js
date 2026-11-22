@@ -18,8 +18,9 @@ export const H3 = ({ children, ...props }) => (
   </h3>
 );
 
-export const H4 = ({ children, ...props }) => (
-  <h4 className={styles.h4} {...props}>
+// `as` keeps the look of a heading on text that is not one (e.g. a subtitle).
+export const H4 = ({ children, as: Tag = "h4", ...props }) => (
+  <Tag className={styles.h4} {...props}>
     {children}
-  </h4>
+  </Tag>
 );

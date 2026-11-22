@@ -22,14 +22,9 @@ describe('Project Card', () => {
     expect(component.container.querySelector('article[data-theme="dark"]')).toBeInTheDocument()
   })
 
-  test('Should have anchor with href, target, and rel', () => {
+  test('Should not nest links inside other links', () => {
     const component = render(<Card project={data} />)
-    const link = component.getByLabelText('main-link')
-
-    expect(link).toBeInTheDocument()
-    expect(link).toHaveAttribute('href', data.site)
-    expect(link).toHaveAttribute('target', blankTarget)
-    expect(link).toHaveAttribute('rel', rel)
+    expect(component.container.querySelector('a a')).not.toBeInTheDocument()
   })
 
   test('Should have title', () => {
@@ -55,7 +50,7 @@ describe('Project Card', () => {
 
   test('Should have repository link with href, target, and rel', () => {
     const component = render(<Card project={data} />)
-    const link = component.getByLabelText('repository-link')
+    const link = component.getByTestId('repository-link')
     expect(link).toBeInTheDocument()
     expect(link).toHaveAttribute('href', data.repository)
     expect(link).toHaveAttribute('target', blankTarget)
@@ -65,7 +60,7 @@ describe('Project Card', () => {
 
   test('Should have action link with href, target, and rel', () => {
     const component = render(<Card project={data} />)
-    const link = component.getByLabelText('action-link')
+    const link = component.getByTestId('action-link')
     expect(link).toBeInTheDocument()
     expect(link).toHaveAttribute('href', data.site)
     expect(link).toHaveAttribute('target', blankTarget)

@@ -17,7 +17,7 @@
   --background-color: #fff;
   --background-primary-color: #fff;
   --background-secondary-color: #fff;
-  --card-subtitle-color: #ffa500;
+  --card-subtitle-color: #b45309;
   --card-shadow: 0 0.188rem 1.25rem 0.125rem rgb(64 62 67 / 16%);
   --tooltip-text-color: rgba(255, 255, 255, 0.87);
   --hard-black: #222;
@@ -119,4 +119,22 @@ body {
 
 p {
   margin: 0;
+}
+
+/* Keyboard users can jump straight to the content. Visible only on focus. */
+.skipLink {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  z-index: 10;
+  padding: 0.6rem 1rem;
+  border-radius: 0.5rem;
+  background-color: #1d1d1f;
+  color: #fff;
+  text-decoration: none;
+  transform: translateY(-200%);
+}
+
+.skipLink:focus {
+  transform: translateY(0);
 }

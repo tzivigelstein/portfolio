@@ -16,6 +16,11 @@ const Card = ({ project }) => {
   const image = project?.image
   const component = project.component
 
+  const name = shortTitle || title
+  // The action link covers the whole card (see .button::after), so the
+  // card is clickable without nesting links inside each other.
+  const actionText =
+    category === 'web' ? t('common:cardSiteLink') : t('common:cardDownloadLink')
 
   return (
     <li>
@@ -30,31 +35,25 @@ const Card = ({ project }) => {
             <span className={styles.wipText}>{t('common:wipLabel')}</span>
           </div>
         )}
-        <a
-          aria-label="main-link"
-          className={styles.projectLink}
-          href={site}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <div className={styles.projectLink}>
           <header className={styles.cardHeader}>
-            <h4 className={styles.helper}>{subtitle}</h4>
+            <p className={styles.helper}>{subtitle}</p>
             <h3 className={styles.title}>{shortTitle || title}</h3>
             <div className={styles.cardLinks}>
               <a
-                aria-label="action-link"
+                data-testid="action-link"
+                aria-label={`${actionText} ${name}`}
                 href={site}
                 target="_blank"
                 rel="noopener noreferrer"
                 className={styles.button}
               >
-                {category === 'web'
-                  ? t('common:cardSiteLink')
-                  : t('common:cardDownloadLink')}
+                {actionText}
               </a>
               {repository && (
                 <a
-                  aria-label="repository-link"
+                  data-testid="repository-link"
+                  aria-label={`${t('common:cardRepositoryLink')} ${name}`}
                   className={styles.link}
                   href={repository}
                   target="_blank"
@@ -77,7 +76,7 @@ const Card = ({ project }) => {
             />
           )}
           {!image && component ? component : null}
-        </a>
+        </div>
       </article>
     </li>
   )

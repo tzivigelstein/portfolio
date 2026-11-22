@@ -10,7 +10,7 @@ const Header = () => {
     <header className={styles.header}>
       <div className={styles.headerMain}>
         <div className={styles.headerTitleContainer}>
-          <h1 className={styles.headline}>{t('common:headline')}
+          <h1 className={styles.headline}>{t('common:headline')}{' '}
             <span className={styles.subHeadline}>{t('common:subHeadline')}</span>
           </h1>
           <p className={styles.intro}>{t('common:headerIntro')}</p>

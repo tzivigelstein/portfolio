@@ -1,6 +1,9 @@
 .container {
   margin: 2rem 0 6rem 0;
   display: grid;
+  /* Without this the column grows to fit its widest child and
+     the section overflows on narrow screens. */
+  grid-template-columns: minmax(0, 1fr);
 }
 
 @media (max-width: 480px) {
@@ -12,7 +15,7 @@
 .aboutInfoContainer {
   display: grid;
   gap: 3rem;
-  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(20rem, 100%), 1fr));
 }
 
 .subtitle {

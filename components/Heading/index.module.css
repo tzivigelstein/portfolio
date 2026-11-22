@@ -7,7 +7,9 @@
 
 .h2 {
   color: var(--text-color);
-  font-size: 42px;
+  /* Scales down on phones so long titles don't overflow the screen. */
+  font-size: clamp(30px, 9vw, 42px);
+  overflow-wrap: break-word;
   font-weight: 600;
   margin-top: 3rem;
   line-height: 1;

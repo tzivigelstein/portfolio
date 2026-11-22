@@ -1,4 +1,4 @@
-import { H3, H4 } from "@components/Heading";
+import { H3 } from "@components/Heading";
 import styles from "./index.module.css";
 
 export default function ActionDeclaration({ action }) {
@@ -7,7 +7,7 @@ export default function ActionDeclaration({ action }) {
 
   return (
     <li className={styles.listItem}>
-      <H4
+      <p
         className={styles.customTitle}
         style={{
           ...sharedStyles,
@@ -18,7 +18,7 @@ export default function ActionDeclaration({ action }) {
         }}
       >
         {title}
-      </H4>
+      </p>
       <H3
         style={{
           ...sharedStyles,
@@ -31,7 +31,7 @@ export default function ActionDeclaration({ action }) {
       </H3>
       {icon && (
         <div className={styles.icon} id={slug}>
-          <img src={icon} alt={slug} />
+          <img src={icon} alt="" />
         </div>
       )}
     </li>

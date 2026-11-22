@@ -4,5 +4,6 @@
   "textShowfallButton": "snowfall",
   "playButton": "Play",
   "pauseButton": "Pause",
-  "nextSongButton": "Next song"
+  "nextSongButton": "Next song",
+  "playerLabel": "Music player"
 }

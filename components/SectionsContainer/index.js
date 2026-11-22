@@ -5,7 +5,7 @@ import AboutSection from '@components/AboutSection'
 
 const SectionsContainer = ({ post }) => {
   return (
-    <main className={styles.sectionsContainer}>
+    <main id="main" className={styles.sectionsContainer}>
       <PresentationSection />
       <ProjectsSection />
       <AboutSection post={post} />

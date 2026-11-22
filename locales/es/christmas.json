@@ -4,5 +4,6 @@
   "textShowfallButton": "nevada",
   "playButton": "Reproducir",
   "pauseButton": "Pausar",
-  "nextSongButton": "Siguiente canción"
+  "nextSongButton": "Siguiente canción",
+  "playerLabel": "Reproductor de música"
 }

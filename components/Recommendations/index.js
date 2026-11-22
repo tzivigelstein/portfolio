@@ -10,7 +10,9 @@ export default function Recommendations () {
   return (
     <div>
       <H2>{t('common:recommendationsTitle')}</H2>
-      <H4>{t('common:recommendationsSubTitle')}</H4>
+      <H4 as='p' style={{ margin: '1.33em 0' }}>
+        {t('common:recommendationsSubTitle')}
+      </H4>
       <ul className={styles.recommendationsContainer}>
         {CREATORS.map(creator => (
           <Creator key={creator.id} creator={creator} />

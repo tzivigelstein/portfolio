@@ -26,6 +26,12 @@ export default function JumboCard({ project }) {
   const hasImage = Boolean(jumboImage ?? image)
   const { isMobile } = useMediaQueries()
 
+  const name = shortTitle || title
+  // The action link covers the whole card (see .button::after), so the
+  // card is clickable without nesting links inside each other.
+  const actionText =
+    category === 'web' ? t('common:cardSiteLink') : t('common:cardDownloadLink')
+
   return (
     <article
       data-theme={theme}
@@ -38,34 +44,28 @@ export default function JumboCard({ project }) {
           <span className={styles.wipText}>{t('common:wipLabel')}</span>
         </div>
       )}
-      <a
-        aria-label="main-link"
-        className={styles.projectLink}
-        href={site}
-        target="_blank"
-        rel="noopener noreferrer"
-      >
+      <div className={styles.projectLink}>
         <header className={styles.cardHeader}>
-          <h4 className={styles.helper}>{subtitle}</h4>
+          <p className={styles.helper}>{subtitle}</p>
           <h3 className={styles.title}>
             {isMobile && shortTitle ? shortTitle : title}
           </h3>
           {description && <p className={styles.description}>{description}</p>}
           <div className={styles.cardLinks}>
             <a
-              aria-label="action-link"
+              data-testid="action-link"
+              aria-label={`${actionText} ${name}`}
               href={site}
               target="_blank"
               rel="noopener noreferrer"
               className={styles.button}
             >
-              {category === 'web'
-                ? t('common:cardSiteLink')
-                : t('common:cardDownloadLink')}
+              {actionText}
             </a>
             {repository && (
               <a
-                aria-label="repository-link"
+                data-testid="repository-link"
+                aria-label={`${t('common:cardRepositoryLink')} ${name}`}
                 className={styles.link}
                 href={repository}
                 target="_blank"
@@ -80,7 +80,6 @@ export default function JumboCard({ project }) {
         {hasImage && (
           <picture className={styles.cardPicture}>
             <source
-              role="presentation"
               media="(max-width: 480px)"
               srcSet={mobileImage ?? image ?? jumboImage}
             />
@@ -92,7 +91,7 @@ export default function JumboCard({ project }) {
             />
           </picture>
         )}
-      </a>
+      </div>
     </article>
   )
 }

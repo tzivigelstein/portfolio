@@ -1,13 +1,18 @@
 import Link from 'next/link'
+import useTranslation from 'next-translate/useTranslation'
 import styles from './styles/404.module.css'
 
-export default function NotFound (props) {
+export default function NotFound () {
+  const { t } = useTranslation()
+
   return (
-    <div className={styles.container}>
-      <h1>Oooooops... That page couldn't be found 🔎</h1>
+    <main className={styles.container}>
+      <h1>
+        {t('common:notFoundTitle')} <span aria-hidden='true'>🔎</span>
+      </h1>
       <Link href='/' replace>
-        <a className={styles.homeLink}>Go back to home</a>
+        <a className={styles.homeLink}>{t('common:notFoundLink')}</a>
       </Link>
-    </div>
+    </main>
   )
 }

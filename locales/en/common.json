@@ -5,6 +5,11 @@
 
   "metaTitle": "Tzivi Gelstein | Backend developer",
   "metaDescription": "Tzivi Gelstein, backend developer from Argentina. Data pipelines, search and recommendation systems and web platforms with Python and Go. Creator of AC Hub.",
+  "metaJobTitle": "Backend developer",
+  "skipToContent": "Skip to content",
+  "notFoundMetaTitle": "Page not found | Tzivi Gelstein",
+  "notFoundTitle": "Oooooops... That page couldn't be found",
+  "notFoundLink": "Go back to home",
 
   "presentationSectionTitleTimeline": "Work and certifications",
 

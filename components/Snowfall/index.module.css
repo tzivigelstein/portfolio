@@ -39,3 +39,9 @@
     transform: translate3d(0, calc(100vh + 40px), 0);
   }
 }
+
+@media (prefers-reduced-motion: reduce) {
+  .container {
+    display: none;
+  }
+}

@@ -17,9 +17,9 @@ const Footer = () => {
     <footer className={styles.wrapper}>
       <div className={styles.container}>
         <div className={styles.infoContainer}>
-          <h4 className={styles.labelTitle}>
+          <h2 className={styles.labelTitle}>
             {t("common:footerFirstSubtitle")}
-          </h4>
+          </h2>
           <ul className={styles.socialList}>
             <li>
               <a
@@ -57,9 +57,9 @@ const Footer = () => {
           </ul>
         </div>
         <div className={styles.infoContainer}>
-          <h4 className={styles.labelTitle}>
+          <h2 className={styles.labelTitle}>
             {t("common:footerSecondSubtitle")}
-          </h4>
+          </h2>
           <ul className={styles.socialList}>
             <li>
               <a

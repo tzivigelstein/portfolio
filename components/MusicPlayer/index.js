@@ -126,7 +126,7 @@ const MusicPlayer = ({ songs, stopSnowfall, setStopSnowfall }) => {
   } ${t("textShowfallButton")}`;
 
   return (
-    <div className={styles.wrapper}>
+    <aside className={styles.wrapper} aria-label={t("playerLabel")}>
       <div className={`${styles.player} ${playing ? styles.playing : ""}`}>
         <audio
           ref={audioRef}
@@ -193,7 +193,7 @@ const MusicPlayer = ({ songs, stopSnowfall, setStopSnowfall }) => {
           </button>
         </div>
       </div>
-    </div>
+    </aside>
   );
 };
 

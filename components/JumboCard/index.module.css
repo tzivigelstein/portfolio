@@ -1,6 +1,6 @@
 .jumboCard {
   --card-text-primary-color: #1d1d1f;
-  --card-helper-color: #6e6e73;
+  --card-helper-color: #636366;
   --card-button: #0071e3;
   --card-button-text: #fff;
   --card-link-color: #06c;
@@ -157,6 +157,8 @@
 }
 
 .link {
+  position: relative;
+  z-index: 1;
   align-items: center;
   color: var(--card-link-color);
   display: flex;
@@ -190,6 +192,17 @@
   justify-content: center;
   padding: 0.5rem 1rem;
   line-height: 1.17648;
+}
+
+/* Stretches the action link over the whole card. */
+.button::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 1.125rem;
 }
 
 .wipBadge {

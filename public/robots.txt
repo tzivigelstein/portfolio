@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: http://www.tzivi.com/api/sitemap
+Sitemap: https://www.tzivi.com/api/sitemap
