@@ -19,6 +19,16 @@ export default [
         iconType: "work",
     },
     {
+        id: "4",
+        title: "timeline:title5",
+        description: "timeline:description5",
+        iconType: "education",
+        // Only the years are known, so only the years are shown.
+        yearOnly: true,
+        from: new Date("03/01/2016"),
+        to: new Date("12/01/2021"),
+    },
+    {
         id: "3",
         title: "timeline:title2",
         description: "timeline:description2",

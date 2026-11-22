@@ -11,7 +11,7 @@ export default class Timeline {
     events.sort((a, b) => b.from - a.from)
     this.translations = translations;
     this.language = lang;
-    this.events = events.map(({ title, description, from, to, iconType, ...rest }) => {
+    this.events = events.map(({ title, description, from, to, iconType, yearOnly, ...rest }) => {
       const icon = ICONS[iconType]
 
       return ({
@@ -20,7 +20,7 @@ export default class Timeline {
         from,
         to,
         icon,
-        date: this.getFromTo(from, to),
+        date: this.getFromTo(from, to, yearOnly),
         timeSpan: to !== Infinity && to !== undefined && this.getDiff(from, to),
         title: this.translations(title),
         description: <p>{this.translations(description)}</p>
@@ -63,28 +63,30 @@ export default class Timeline {
     return `${value} ${unit}`;
   }
 
-  getFromTo(startDate, endDate = new Date()) {
-    const start = this.formatDate(startDate);
-    const end = this.computeEndDate(endDate);
+  getFromTo(startDate, endDate = new Date(), yearOnly = false) {
+    const start = this.formatDate(startDate, yearOnly);
+    const end = this.computeEndDate(endDate, yearOnly);
 
     return `${start} - ${end}`;
   }
 
-  computeEndDate(date) {
+  computeEndDate(date, yearOnly = false) {
     let result = "";
     if (date === Infinity) {
       result = this.translations("timeline:noExpiryDate");
     } else if (this.isDateToday(date)) {
       result = this.translations("timeline:present");
     } else {
-      result = this.formatDate(date);
+      result = this.formatDate(date, yearOnly);
     }
 
     return result;
   }
 
-  formatDate(date) {
-    const options = { year: "numeric", month: "short" };
+  formatDate(date, yearOnly = false) {
+    const options = yearOnly
+      ? { year: "numeric" }
+      : { year: "numeric", month: "short" };
     return new Intl.DateTimeFormat(this.language, options).format(date);
   }
 

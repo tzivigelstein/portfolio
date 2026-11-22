@@ -1,7 +1,7 @@
 {
   "headline": "I'm Tzivi",
   "subHeadline": "Backend developer.",
-  "headerIntro": "I build data-heavy systems such as ingestion pipelines, search and recommendation, and web platforms on top of messy legacy data. I work mostly in Python and Go, and I run my own product, AC Hub.",
+  "headerIntro": "I build data-heavy systems such as ingestion pipelines, search and recommendation, and web platforms on top of messy legacy data. I work mostly in Python and Go, and I run my own product, AC Hub, which I built for a sim racing league where I'm an admin.",
   "resumeButton": "Resume",
   "emailButton": "Email",
 
