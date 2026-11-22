@@ -7,8 +7,6 @@ import {
   TelegramIcon,
 } from "@components/Icons";
 import useTranslation from "next-translate/useTranslation";
-import ThemeSwitcher from "@components/ThemeSwitcher";
-import LanguageSwitcher from "@components/LanguageSwitcher";
 
 const Footer = () => {
   const { t } = useTranslation();
@@ -82,10 +80,6 @@ const Footer = () => {
               </a>
             </li>
           </ul>
-        </div>
-        <div className={styles.bottom}>
-          <ThemeSwitcher />
-          <LanguageSwitcher />
         </div>
       </div>
     </footer>

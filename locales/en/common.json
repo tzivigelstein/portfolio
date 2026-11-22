@@ -2,6 +2,8 @@
   "headline": "I'm Tzivi",
   "subHeadline": "Backend developer.",
   "headerIntro": "I build data-heavy systems such as ingestion pipelines, search and recommendation, and web platforms on top of messy legacy data. I work mostly in Python and Go, and I run my own product, AC Hub.",
+  "resumeButton": "Resume",
+  "projectsSectionTitle": "Projects",
 
   "metaTitle": "Tzivi Gelstein | Backend developer",
   "metaDescription": "Tzivi Gelstein, backend developer from Argentina. Data pipelines, search and recommendation systems and web platforms with Python and Go. Creator of AC Hub.",

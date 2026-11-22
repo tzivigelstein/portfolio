@@ -1,48 +1,25 @@
 import styles from "./index.module.css";
 import useTranslation from "next-translate/useTranslation";
 import { ParagraphText } from "@components/Text";
-import Story from "@components/Story";
 import ProfessionalSkills from "@components/ProfessionalSkills";
-import SoftSkills from "@components/SoftSkills";
-import Recommendations from "@components/Recommendations";
-import { H2, H3 } from "@components/Heading";
+import Section from "@components/Section";
 
-const AboutSection = ({ post }) => {
+const AboutSection = () => {
   const { t } = useTranslation();
 
   return (
-    <section className={styles.container}>
-      <H2>{t("common:aboutSectionTitle")}</H2>
-      <div className={styles.aboutInfoContainer}>
-        <div>
-          <div>
-            <H3>{t("common:experienceTitle")}</H3>
-            {t("common:experienceText")
-              .split("\n\n")
-              .map((paragraph, index) => (
-                <ParagraphText
-                  key={index}
-                  style={index > 0 ? { marginTop: "1rem" } : undefined}
-                >
-                  {paragraph}
-                </ParagraphText>
-              ))}
-          </div>
-          <div>
-            <H3>{t("common:goalsTitle")}</H3>
-            <div className={styles.goalsContainer}>
-              <ParagraphText>{t("common:goals")}</ParagraphText>
-            </div>
-          </div>
-        </div>
-        <div style={{ display: "flex", flexDirection: "column", gap: "1.4rem" }}>
-          <ProfessionalSkills />
-          <SoftSkills />
-        </div>
+    <Section title={t("common:aboutSectionTitle")}>
+      <div className={styles.text}>
+        {t("common:experienceText")
+          .split("\n\n")
+          .map((paragraph, index) => (
+            <ParagraphText key={index}>{paragraph}</ParagraphText>
+          ))}
       </div>
-      <Story post={post} />
-      <Recommendations />
-    </section>
+      <div className={styles.skills}>
+        <ProfessionalSkills />
+      </div>
+    </Section>
   );
 };
 

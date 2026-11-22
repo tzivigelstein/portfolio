@@ -1,6 +1,6 @@
 import styles from './index.module.css'
 import Creator from '@components/Creator'
-import { H2, H4 } from '@components/Heading'
+import Section from '@components/Section'
 import CREATORS from '@data/creators'
 import useTranslation from 'next-translate/useTranslation'
 
@@ -8,16 +8,13 @@ export default function Recommendations () {
   const { t } = useTranslation()
 
   return (
-    <div>
-      <H2>{t('common:recommendationsTitle')}</H2>
-      <H4 as='p' style={{ margin: '1.33em 0' }}>
-        {t('common:recommendationsSubTitle')}
-      </H4>
+    <Section title={t('common:recommendationsTitle')}>
+      <p className={styles.subtitle}>{t('common:recommendationsSubTitle')}</p>
       <ul className={styles.recommendationsContainer}>
         {CREATORS.map(creator => (
           <Creator key={creator.id} creator={creator} />
         ))}
       </ul>
-    </div>
+    </Section>
   )
 }

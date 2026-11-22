@@ -27,3 +27,6 @@ yarn-debug.log*
 yarn-error.log*
 
 *Zone.Identifier
+
+# separate build folder for checks (see next.config.js)
+/.next-verify/

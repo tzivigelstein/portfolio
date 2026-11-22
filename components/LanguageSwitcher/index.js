@@ -29,7 +29,7 @@ export default function LanguageSwitcher() {
         className={styles.colorSchemeToggle}
         role="radiogroup"
         tabIndex="0"
-        aria-label="Select a color scheme preference"
+        aria-label="Select a language"
       >
         {THEME_OPTIONS.map(({ id, value, title }) => (
           <label key={id}>

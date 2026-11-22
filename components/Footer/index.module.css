@@ -1,22 +1,15 @@
 .wrapper {
-  padding-bottom: 6rem;
-  min-height: 500px;
-  backdrop-filter: invert(10%);
-  transition: 0.3s ease-in-out background-color;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  color: var(--footer-text-color);
+  border-top: 1px solid var(--border);
+  padding-bottom: 7rem;
 }
 
 .container {
-  width: 65%;
+  width: min(100% - 2.5rem, var(--content-width));
   margin: 0 auto;
+  padding: 2.5rem 0 0;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(12.5rem, 1fr));
-  padding: 2rem 0;
-  max-width: 1280px;
+  grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));
+  gap: 2rem;
 }
 
 .infoContainer {
@@ -26,9 +19,10 @@
 }
 
 .labelTitle {
-  margin: 1.33em 0;
-  font-size: 15px;
-  color: var(--text-color);
+  margin: 0 0 0.75rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text);
 }
 
 .socialList {
@@ -36,66 +30,27 @@
   padding: 0;
   list-style: none;
   display: grid;
-  gap: 10px;
-  width: max-content;
+  gap: 0.25rem;
   width: 100%;
 }
 
 .socialLink {
-  color: var(--label-color);
-  text-decoration: none;
-  padding: 0.8rem 1.5rem 0.8rem 0;
   display: flex;
   align-items: center;
-  transition: text-decoration 0.3s ease;
-  margin: 0;
-  cursor: pointer;
-  font-size: 15px;
-}
-
-.resumeLink {
-  color: var(--text-color);
+  padding: 0.4rem 0;
+  color: var(--muted);
+  font-size: 0.9375rem;
+  text-decoration: none;
 }
 
 .icon {
   margin-right: 0.6rem;
-  fill: var(--text-color);
-  transition: 0.3s ease-in-out fill;
-}
-
-@media (hover) {
-  .socialLink:hover .icon {
-    fill: var(--text-color);
-  }
-}
-
-.resumesContainer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.bottom {
-  margin: 20px 0;
-  gap: 1rem;
-  display: flex;
-  flex-direction: column;
+  fill: currentColor;
 }
 
 @media (hover) {
   .socialLink:hover {
+    color: var(--text);
     text-decoration: underline;
-  }
-}
-
-@media (min-width: 1361px) {
-  .container {
-    width: 60%;
-  }
-}
-
-@media (max-width: 1000px) {
-  .container {
-    width: 90%;
   }
 }

@@ -16,6 +16,7 @@ export default class Timeline {
 
       return ({
         ...rest,
+        type: iconType,
         from,
         to,
         icon,

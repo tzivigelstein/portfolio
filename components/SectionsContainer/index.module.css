@@ -1,17 +1,4 @@
 .sectionsContainer {
-  width: 65%;
-  max-width: 1280px;
+  width: min(100% - 2.5rem, var(--content-width));
   margin: 0 auto;
-}
-
-@media (min-width: 1361px) {
-  .sectionsContainer {
-    width: 60%;
-  }
-}
-
-@media (max-width: 1000px) {
-  .sectionsContainer {
-    width: 90%;
-  }
 }

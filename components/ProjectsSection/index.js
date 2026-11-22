@@ -1,53 +1,23 @@
 import styles from './index.module.css'
 import projects from '@data/projects'
-import Card from '@components/Card'
-import JumboCard from '@components/JumboCard'
+import ProjectCard from '@components/ProjectCard'
+import Section from '@components/Section'
 import useTranslation from 'next-translate/useTranslation'
-import { H2 } from '@components/Heading'
 
-export default function ProjectsSection() {
+export default function ProjectsSection () {
   const { t } = useTranslation()
 
   const activeProjects = projects.filter(({ active }) => active)
 
-  const webs = activeProjects.filter(({ category }) => category === 'web')
-  // With only a couple of projects every one gets a full-width card;
-  // otherwise the first is featured and the rest go to the grid.
-  const jumbos = webs.length <= 2 ? webs.splice(0) : webs.splice(0, 1)
-  const apps = activeProjects.filter(({ category }) => category === 'app')
-
   return (
-    <section className={styles.container}>
-      <section className={styles.secondarySection}>
-        <H2>{t('common:projectsSectionWebTitle')}</H2>
-        {jumbos.map((project) => (
-          <JumboCard key={project.id} project={project} />
+    <Section title={t('common:projectsSectionTitle')}>
+      <ul className={styles.projectList}>
+        {activeProjects.map((project, index) => (
+          <li key={project.id}>
+            <ProjectCard project={project} featured={index === 0} />
+          </li>
         ))}
-        {webs.length !== 0 && (
-          <ul className={styles.projectList}>
-            {webs.map((project) => (
-              <Card key={project.id} project={project} />
-            ))}
-          </ul>
-        )}
-      </section>
-      {apps.length !== 0 && (
-        <section className={styles.secondarySection}>
-          <h2 className={styles.sectionTitle}>
-            {t('common:projectsSectionAppTitle')}
-          </h2>
-          {apps.length === 1 ? (
-            <JumboCard project={apps[0]} />
-          ) : (
-            <ul className={styles.projectList}>
-              {apps.map((project) => (
-                <Card key={project.id} project={project} />
-              ))}
-            </ul>
-          )}
-        </section>
-      )}
-    </section>
+      </ul>
+    </Section>
   )
 }
-

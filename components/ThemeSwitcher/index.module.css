@@ -1,8 +1,8 @@
 .content {
   --toggle-border-radius-outer: 12px;
   --toggle-border-radius-inner: 10px;
-  --toggle-color-fill: #0071e3;
-  --toggle-color-text: #2997ff;
+  --toggle-color-fill: var(--accent);
+  --toggle-color-text: var(--muted);
   flex-shrink: 0;
 }
 
@@ -11,8 +11,7 @@
   line-height: 1.33337;
   font-weight: 400;
   letter-spacing: -0.01em;
-  font-family: sans-serif;
-  border: 1px solid var(--toggle-color-fill);
+  border: 1px solid var(--border);
   border-radius: var(--toggle-border-radius-outer, 2px);
   display: inline-flex;
   padding: 1px;
@@ -31,7 +30,7 @@
 }
 
 .input:checked + .text {
-  --toggle-color-text: #fff;
+  --toggle-color-text: var(--on-accent);
   background: var(--toggle-color-fill);
   border-color: var(--toggle-color-fill);
 }

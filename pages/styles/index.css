@@ -1,98 +1,52 @@
 :root {
-  --link: #1051a2;
+  /* One neutral background, one surface, one accent. */
+  --bg: #f7f5f1;
+  --surface: #ffffff;
+  --surface-accent: #eef3fb;
+  --text: #1c1b1a;
+  --muted: #625f59;
+  --border: rgba(28, 27, 26, 0.1);
+  --accent: #1456c4;
+  --on-accent: #ffffff;
+  --shadow: 0 1px 2px rgba(28, 27, 26, 0.04), 0 8px 24px -12px rgba(28, 27, 26, 0.12);
+  --radius: 1rem;
+  --content-width: 46rem;
 
-  --timeline-main: #1051a2;
-  --timeline-accent: rgb(33, 150, 243);
-  --timeline-secondary: rgba(33, 150, 243, 0.4);
-
-  --body-background-primary: #ffefba;
-  --body-background-secondary: #fff8e2;
-  --body-background-accent: #fdce94;
-  --header-backdrop-filter: invert(10%);
-
-  --header-background-color: #f5f5f7;
+  /* Names still used by older components. */
+  --text-color: var(--text);
+  --link: var(--accent);
+  --light-black: var(--border);
+  --label-color: var(--muted);
   --header-text-color: #1d1d1f;
-  --primary-color: #6ec2f7;
-  --secondary-color: #fff;
-  --background-color: #fff;
-  --background-primary-color: #fff;
-  --background-secondary-color: #fff;
-  --card-subtitle-color: #b45309;
-  --card-shadow: 0 0.188rem 1.25rem 0.125rem rgb(64 62 67 / 16%);
-  --tooltip-text-color: rgba(255, 255, 255, 0.87);
-  --hard-black: #222;
-  --light-black: rgba(0, 0, 0, 0.2);
-  --text-color: #1d1d1f;
-  --text-color-inverted: #f5f5f7;
-  --footer-background-color: #f5f5f7;
-  --language-indicator-background: #f7b457;
-  --language-indicator-color: rgba(0, 0, 0, 0.8);
+  --card-subtitle-color: var(--accent);
 }
 
 [data-theme='dark'] {
-  --background-primary: #0e0e0e;
-  --background-secondary: #1d1d1f;
-  --background-tertiary: #fbfbfd;
-
-  --link: #6ba8f3;
-  --timeline-main: #1051a2;
-  --timeline-secondary: #fefefe;
-  --timeline-accent: rgb(33, 150, 243);
-
-  --body-background-primary: #001045;
-  --body-background-secondary: rgb(2, 10, 36);
-  --body-background-accent: #420c59;
-  --header-backdrop-filter: brightness(150%);
-
-  --header-background-color: var(--background-tertiary);
-  --header-text-color: #1d1d1f;
-  --primary-color: #6ec2f7;
-  --secondary-color: #f7b457;
-  --background-primary-color: var(--background-primary);
-  --background-secondary-color: hsl(211, 28%, 25%);
-  --card-subtitle-color: #4c67e0;
-  --card-shadow: none;
-  --tooltip-text-color: rgba(255, 255, 255, 0.87);
-  --hard-black: #eee;
-  --light-black: rgba(255, 255, 255, 0.2);
-
-  --text-color: #f5f5f7;
-  --text-color-inverted: #1d1d1f;
-  --label-color: #a1a1a6;
-  --footer-background-color: #1d1d1f;
-  --footer-text-color: rgba(255, 255, 255, 0.87);
-  --language-indicator-background: #f7b457;
-  --language-indicator-color: rgba(0, 0, 0, 0.8);
+  --bg: #101011;
+  --surface: #1a1a1c;
+  --surface-accent: #16202f;
+  --text: #f2f1ee;
+  --muted: #a8a59f;
+  --border: rgba(242, 241, 238, 0.12);
+  --accent: #86b4ff;
+  --on-accent: #0b1220;
+  --shadow: none;
 }
 
-/* Christmas season (see pages/_document.js): same layout, a quieter
-   snow, pine and cranberry palette instead of the warm yellows. */
+/* Christmas season (see pages/_document.js): same system, pine accent
+   and a slightly deeper background so the snow shows. */
 [data-season='christmas'] {
-  --link: #1c5a3a;
-
-  --timeline-main: #1c5a3a;
-  --timeline-accent: #b83a3a;
-  --timeline-secondary: rgba(28, 90, 58, 0.35);
-
-  --body-background-primary: #dfeadb;
-  --body-background-secondary: #f6f0e6;
-  --body-background-accent: #efd0c8;
-
-  --card-subtitle-color: #b83a3a;
+  --bg: #e3ebdf;
+  --surface-accent: #eef5ec;
+  --accent: #1c5a3a;
 }
 
 [data-theme='dark'][data-season='christmas'] {
-  --link: #8fd0a8;
-
-  --timeline-main: #1c5a3a;
-  --timeline-accent: #b83a3a;
-  --timeline-secondary: #fefefe;
-
-  --body-background-primary: #0b2a1f;
-  --body-background-secondary: #07130f;
-  --body-background-accent: #3a0f18;
-
-  --card-subtitle-color: #b83a3a;
+  --bg: #0c1a14;
+  --surface: #13241c;
+  --surface-accent: #173024;
+  --accent: #8fd0a8;
+  --on-accent: #08130e;
 }
 
 * {
@@ -113,8 +67,12 @@ html {
 
 body {
   all: unset;
+  display: block;
   margin: 0;
   min-height: 100%;
+  background-color: var(--bg);
+  color: var(--text);
+  line-height: 1.5;
 }
 
 p {

@@ -1,19 +1,7 @@
 .container {
-  --inclination: 30deg;
   position: relative;
-
-  transition: 0.3s ease-in-out background-color;
-  background: var(--body-background-primary);
-  background: -webkit-linear-gradient(
-    var(--inclination),
-    var(--body-background-secondary),
-    var(--body-background-primary)
-  );
-  background: linear-gradient(
-    var(--inclination),
-    var(--body-background-accent) 0%,
-    var(--body-background-secondary) 35%,
-    var(--body-background-accent) 70%,
-    var(--body-background-primary) 100%
-  );
+  min-height: 100vh;
+  background-color: var(--bg);
+  color: var(--text);
+  transition: background-color 0.3s ease-in-out;
 }

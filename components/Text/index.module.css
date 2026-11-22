@@ -1,8 +1,8 @@
 .paragraphText {
-  color: var(--text-color);
+  color: var(--text);
   margin: 0;
-  font-size: 17px;
-  line-height: 1.6;
+  font-size: 1.0625rem;
+  line-height: 1.65;
 }
 
 .paragraphTextBig {
