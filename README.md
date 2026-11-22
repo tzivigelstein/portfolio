@@ -42,7 +42,7 @@ Then open [http://localhost:3000](http://localhost:3000).
 | `yarn dev` | Starts the development server with hot reload |
 | `yarn build` | Builds the site for production |
 | `yarn start` | Serves the production build |
-| `yarn jest` | Runs the tests once |
+| `yarn test` | Runs the tests once |
 | `yarn test-watch` | Runs the tests in watch mode |
 | `yarn test-coverage` | Runs the tests with a coverage report |
 | `yarn lint` | Checks code style with [standard](https://standardjs.com/) |
@@ -75,6 +75,7 @@ locales/      Translations, one folder per language
 pages/        The page itself, the 404, the sitemap endpoint and global styles
 posts/        The story, in MDX
 public/       Images, résumés, icons
+test/         Test helpers and tests that do not belong to one component
 ```
 
 ## Christmas mode

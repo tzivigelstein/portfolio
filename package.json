@@ -12,6 +12,7 @@
     "start": "next start",
     "lint": "standard .",
     "lint-fix": "standard . --fix",
+    "test": "jest",
     "test-watch": "jest --watchAll",
     "test-coverage": "jest --coverage",
     "test-suite": "jest --watchAll --coverage"
