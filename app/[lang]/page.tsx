@@ -8,8 +8,6 @@ import ChristmasSeason from '@/components/ChristmasSeason'
 import { getDictionary, hasLocale, localePath, type Locale } from '@/lib/i18n'
 import { SITE_NAME, SITE_URL } from '@/lib/site'
 
-const SOCIAL_COVER = { url: '/images/SocialCover.png', width: 1200, height: 630 }
-
 const OPEN_GRAPH_LOCALES: Record<Locale, string> = { en: 'en_US', es: 'es_AR' }
 
 interface PageProps {
@@ -43,15 +41,13 @@ export async function generateMetadata ({ params }: PageProps): Promise<Metadata
       siteName: SITE_NAME,
       locale: OPEN_GRAPH_LOCALES[lang],
       title,
-      description,
-      images: [SOCIAL_COVER]
+      description
     },
     twitter: {
       card: 'summary_large_image',
       creator: '@tzivigelstein',
       title,
-      description,
-      images: [SOCIAL_COVER.url]
+      description
     },
     icons: { icon: '/favicon.png', apple: '/favicon.png' },
     manifest: '/manifest.json'
