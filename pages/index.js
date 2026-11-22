@@ -1,26 +1,27 @@
 import { useEffect, useState } from "react";
-import Snowfall from "@components/Snowfall";
+import dynamic from "next/dynamic";
 import Container from "@components/Container";
 import Header from "@components/Header";
 import Sections from "@components/SectionsContainer";
 import Footer from "@components/Footer";
 import { getFileBySlug } from "lib/mdx";
-import MusicPlayer from "@components/MusicPlayer";
-import songs from "@data/songs";
+
+// Loaded on demand, only during the season (snowfall and music player).
+const ChristmasSeason = dynamic(() => import("@components/ChristmasSeason"), {
+  ssr: false,
+});
 
 export default function Home({ post }) {
-  const [stopSnowfall, setStopSnowfall] = useState(false);
   const [isChristmasSeason, setIsChristmasSeason] = useState(false);
 
   useEffect(() => {
     const currentDate = new Date();
+    const month = currentDate.getMonth();
 
-    const isWithinDateRange =
-      (currentDate.getMonth() === 11 && currentDate.getDate() >= 1) ||
-      (currentDate.getMonth() === 0 && currentDate.getDate() <= 8);
-
-
-    setIsChristmasSeason(isWithinDateRange);
+    // From December 1st to January 8th, in the visitor's local time.
+    setIsChristmasSeason(
+      month === 11 || (month === 0 && currentDate.getDate() <= 8)
+    );
   }, []);
 
   return (
@@ -28,16 +29,7 @@ export default function Home({ post }) {
       <Header />
       <Sections post={post} />
       <Footer />
-      {isChristmasSeason && (
-        <>
-          <MusicPlayer
-            songs={songs}
-            stopSnowfall={stopSnowfall}
-            setStopSnowfall={setStopSnowfall}
-          />
-          <Snowfall stopSnowfall={stopSnowfall} />
-        </>
-      )}
+      {isChristmasSeason && <ChristmasSeason />}
     </Container>
   );
 }

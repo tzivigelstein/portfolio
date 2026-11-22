@@ -1,5 +1,8 @@
 {
   "startSnowfallButton": "Empezar",
   "stopSnowfallButton": "Parar",
-  "textShowfallButton": "nevada"
+  "textShowfallButton": "nevada",
+  "playButton": "Reproducir",
+  "pauseButton": "Pausar",
+  "nextSongButton": "Siguiente canción"
 }

@@ -1,5 +1,8 @@
 {
   "startSnowfallButton": "Start",
   "stopSnowfallButton": "Stop",
-  "textShowfallButton": "snowfall"
+  "textShowfallButton": "snowfall",
+  "playButton": "Play",
+  "pauseButton": "Pause",
+  "nextSongButton": "Next song"
 }
