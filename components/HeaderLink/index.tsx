@@ -1,5 +1,5 @@
 import type { ReactNode } from 'react'
-import { ChevronIcon } from '@/components/Icons'
+import { ChevronRight } from 'lucide-react'
 import styles from './index.module.css'
 
 interface HeaderLinkProps {
@@ -35,7 +35,7 @@ export default function HeaderLink ({
       {icon ?? (
         <>
           {text}
-          <ChevronIcon aria-hidden='true' />
+          <ChevronRight aria-hidden='true' />
         </>
       )}
     </a>

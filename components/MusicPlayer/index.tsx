@@ -9,7 +9,7 @@ import {
   type SyntheticEvent
 } from 'react'
 import styles from './index.module.css'
-import { PauseIcon, PlayIcon, SkipNextIcon, SnowflakeIcon } from '@/components/Icons'
+import { Pause, Play, SkipForward, Snowflake } from 'lucide-react'
 import type { Song } from '@/data/songs'
 import type { Dictionary } from '@/lib/i18n'
 
@@ -192,7 +192,9 @@ export default function MusicPlayer ({
             aria-label={playing ? dictionary.pauseButton : dictionary.playButton}
             className={`${styles.button} ${styles.primaryButton}`}
           >
-            {playing ? <PauseIcon aria-hidden='true' /> : <PlayIcon aria-hidden='true' />}
+            {playing
+              ? <Pause fill='currentColor' aria-hidden='true' />
+              : <Play fill='currentColor' aria-hidden='true' />}
           </button>
           <button
             type='button'
@@ -200,7 +202,7 @@ export default function MusicPlayer ({
             aria-label={dictionary.nextSongButton}
             className={styles.button}
           >
-            <SkipNextIcon aria-hidden='true' />
+            <SkipForward fill='currentColor' aria-hidden='true' />
           </button>
           <span className={styles.divider} aria-hidden='true' />
           <button
@@ -210,7 +212,7 @@ export default function MusicPlayer ({
             title={snowfallLabel}
             className={`${styles.button} ${stopSnowfall ? styles.snowfallOff : ''}`}
           >
-            <SnowflakeIcon aria-hidden='true' />
+            <Snowflake aria-hidden='true' />
           </button>
         </div>
       </div>

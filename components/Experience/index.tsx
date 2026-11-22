@@ -1,7 +1,7 @@
 import styles from './index.module.css'
 import getTimeline from '@/data/timeline/timeline'
 import Section from '@/components/Section'
-import { ExternalLink } from '@/components/Icons'
+import { ExternalLink } from 'lucide-react'
 import type { Dictionary, Locale } from '@/lib/i18n'
 
 interface ExperienceProps {
@@ -41,7 +41,7 @@ export default function Experience ({ dictionary, lang }: ExperienceProps) {
                   rel='noopener noreferrer'
                 >
                   {linkText ?? link}
-                  <ExternalLink width={14} aria-hidden='true' />
+                  <ExternalLink size={14} aria-hidden='true' />
                 </a>
               )}
             </div>

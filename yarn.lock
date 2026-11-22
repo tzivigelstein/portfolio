@@ -4516,6 +4516,19 @@ __metadata:
   languageName: node
   linkType: hard
 
+"lucide-react@npm:^1.77.0":
+  version: 1.77.0
+  resolution: "lucide-react@npm:1.77.0"
+  peerDependencies:
+    "@types/react": "*"
+    react: ^16.5.1 || ^17.0.0 || ^18.0.0 || ^19.0.0
+  peerDependenciesMeta:
+    "@types/react":
+      optional: true
+  checksum: 10c0/602824e6080ae948bfeb875fef90b6ae341edaf9991d434405245460699ef3a7ed8aacb5c604cc2211794f4941179c13b1e43c0a9c0858964705b1b673a16f74
+  languageName: node
+  linkType: hard
+
 "lz-string@npm:^1.5.0":
   version: 1.5.0
   resolution: "lz-string@npm:1.5.0"
@@ -5536,6 +5549,7 @@ __metadata:
     gray-matter: "npm:4.0.3"
     jest: "npm:^30.5.2"
     jest-environment-jsdom: "npm:^30.5.2"
+    lucide-react: "npm:^1.77.0"
     neostandard: "npm:^0.14.1"
     next: "npm:16.4.6"
     next-mdx-remote: "npm:6.0.0"

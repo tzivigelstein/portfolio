@@ -3,7 +3,8 @@ import styles from './index.module.css'
 import HeaderLink from '@/components/HeaderLink'
 import ThemeSwitcher from '@/components/ThemeSwitcher'
 import LanguageSwitcher from '@/components/LanguageSwitcher'
-import { GithubIcon, LinkedinIcon, MailIcon } from '@/components/Icons'
+import { Mail } from 'lucide-react'
+import { GithubIcon, LinkedinIcon } from '@/components/Icons'
 import { EMAIL } from '@/data/contact'
 import type { Dictionary, Locale } from '@/lib/i18n'
 
@@ -66,7 +67,7 @@ export default function Header ({ dictionary, lang }: HeaderProps) {
             <HeaderLink
               text={dictionary.emailButton}
               link={`mailto:${EMAIL}`}
-              icon={<MailIcon aria-hidden='true' />}
+              icon={<Mail aria-hidden='true' />}
               newTab={false}
             />
           </div>

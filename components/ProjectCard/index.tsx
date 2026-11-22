@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import styles from './index.module.css'
-import { ChevronIcon } from '@/components/Icons'
+import { ChevronRight } from 'lucide-react'
 import localize from '@/lib/localize'
 import type { Project } from '@/data/projects'
 import type { Dictionary, Locale } from '@/lib/i18n'
@@ -67,7 +67,7 @@ export default function ProjectCard ({
               rel='noopener noreferrer'
             >
               {dictionary.cardRepositoryLink}
-              <ChevronIcon aria-hidden='true' />
+              <ChevronRight aria-hidden='true' />
             </a>
           )}
         </div>
