@@ -1,7 +1,7 @@
 import { Html, Head, Main, NextScript } from "next/document";
 
 // Local override to preview the season at any date. It only works with
-// `yarn dev`: set NEXT_PUBLIC_FORCE_CHRISTMAS=true in .env.local.
+// the dev server: set NEXT_PUBLIC_FORCE_CHRISTMAS=true in .env.local.
 const forceChristmasSeason =
   process.env.NODE_ENV === "development" &&
   process.env.NEXT_PUBLIC_FORCE_CHRISTMAS === "true";
