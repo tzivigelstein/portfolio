@@ -15,14 +15,6 @@
 
   "presentationSectionTitleTimeline": "Trabajo y certificaciones",
 
-  "presentationSectionTitle": "Qué hago",
-  "presentationSectionListItemTitle1": "Pipelines de datos",
-  "presentationSectionListItem1": "Construí un pipeline de ingesta desde cero y lo migré a Go, con lo que el procesamiento pasó de minutos a segundos por contenido.",
-  "presentationSectionListItemTitle2": "Búsqueda y recomendación",
-  "presentationSectionListItem2": "Diseñé un recomendador vectorial que devuelve contenido similar en pocos cientos de milisegundos.",
-  "presentationSectionListItemTitle3": "Sistemas heredados",
-  "presentationSectionListItem3": "Unifiqué varias bases PostgreSQL separadas en un solo modelo sin romper los servicios que dependen de él.",
-
   "projectsSectionWebTitle": "Proyectos",
   "wipLabel": "En progreso",
 

@@ -15,14 +15,6 @@
 
   "presentationSectionTitleTimeline": "Work and certifications",
 
-  "presentationSectionTitle": "What I do",
-  "presentationSectionListItemTitle1": "Data pipelines",
-  "presentationSectionListItem1": "Built an ingestion pipeline from scratch and migrated it to Go, taking processing from minutes to seconds per item.",
-  "presentationSectionListItemTitle2": "Search and recommendation",
-  "presentationSectionListItem2": "Designed a vector-based recommender that returns similar content in a few hundred milliseconds.",
-  "presentationSectionListItemTitle3": "Legacy systems",
-  "presentationSectionListItem3": "Unified several separate PostgreSQL databases into one model without breaking the services that depend on it.",
-
   "projectsSectionWebTitle": "Projects",
   "wipLabel": "Work in Progress",
 
