@@ -11,24 +11,13 @@ const ChristmasSeason = dynamic(() => import("@components/ChristmasSeason"), {
   ssr: false,
 });
 
-// Local override to preview the season at any date. It only works with
-// `npm run dev`: set NEXT_PUBLIC_FORCE_CHRISTMAS=true in .env.local.
-const forceChristmasSeason =
-  process.env.NODE_ENV === "development" &&
-  process.env.NEXT_PUBLIC_FORCE_CHRISTMAS === "true";
-
 export default function Home({ post }) {
   const [isChristmasSeason, setIsChristmasSeason] = useState(false);
 
   useEffect(() => {
-    const currentDate = new Date();
-    const month = currentDate.getMonth();
-
-    // From December 1st to January 8th, in the visitor's local time.
+    // The season is decided in pages/_document.js, before the first paint.
     setIsChristmasSeason(
-      forceChristmasSeason ||
-        month === 11 ||
-        (month === 0 && currentDate.getDate() <= 8)
+      document.documentElement.getAttribute("data-season") === "christmas"
     );
   }, []);
 

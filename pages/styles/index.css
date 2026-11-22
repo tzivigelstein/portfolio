@@ -65,6 +65,36 @@
   --language-indicator-color: rgba(0, 0, 0, 0.8);
 }
 
+/* Christmas season (see pages/_document.js): same layout, a quieter
+   snow, pine and cranberry palette instead of the warm yellows. */
+[data-season='christmas'] {
+  --link: #1c5a3a;
+
+  --timeline-main: #1c5a3a;
+  --timeline-accent: #b83a3a;
+  --timeline-secondary: rgba(28, 90, 58, 0.35);
+
+  --body-background-primary: #dfeadb;
+  --body-background-secondary: #f6f0e6;
+  --body-background-accent: #efd0c8;
+
+  --card-subtitle-color: #b83a3a;
+}
+
+[data-theme='dark'][data-season='christmas'] {
+  --link: #8fd0a8;
+
+  --timeline-main: #1c5a3a;
+  --timeline-accent: #b83a3a;
+  --timeline-secondary: #fefefe;
+
+  --body-background-primary: #0b2a1f;
+  --body-background-secondary: #07130f;
+  --body-background-accent: #3a0f18;
+
+  --card-subtitle-color: #b83a3a;
+}
+
 * {
   box-sizing: border-box;
   font-family: 'Inter', sans-serif;
