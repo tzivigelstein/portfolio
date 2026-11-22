@@ -22,13 +22,15 @@ export default function JumboCard({ project }) {
   const title = localize(project.title, lang)
   const shortTitle = localize(project.shortTitle, lang)
   const subtitle = localize(project.subtitle, lang)
+  const description = localize(project.description, lang)
+  const hasImage = Boolean(jumboImage ?? image)
   const { isMobile } = useMediaQueries()
 
   return (
     <article
       data-theme={theme}
       style={{ background: color }}
-      className={styles.jumboCard}
+      className={`${styles.jumboCard} ${hasImage ? '' : styles.noImage}`}
     >
       {wip && (
         <div className={styles.wipBadge}>
@@ -48,6 +50,7 @@ export default function JumboCard({ project }) {
           <h3 className={styles.title}>
             {isMobile && shortTitle ? shortTitle : title}
           </h3>
+          {description && <p className={styles.description}>{description}</p>}
           <div className={styles.cardLinks}>
             <a
               aria-label="action-link"
@@ -74,19 +77,21 @@ export default function JumboCard({ project }) {
             )}
           </div>
         </header>
-        <picture className={styles.cardPicture}>
-          <source
-            role="presentation"
-            media="(max-width: 480px)"
-            srcSet={mobileImage ?? image ?? jumboImage}
-          />
-          <img
-            alt={`${title} preview`}
-            loading="lazy"
-            className={styles.cardImage}
-            src={jumboImage ?? image}
-          />
-        </picture>
+        {hasImage && (
+          <picture className={styles.cardPicture}>
+            <source
+              role="presentation"
+              media="(max-width: 480px)"
+              srcSet={mobileImage ?? image ?? jumboImage}
+            />
+            <img
+              alt={`${title} preview`}
+              loading="lazy"
+              className={styles.cardImage}
+              src={jumboImage ?? image}
+            />
+          </picture>
+        )}
       </a>
     </article>
   )

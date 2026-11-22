@@ -38,6 +38,22 @@
   }
 }
 
+/* Text-only variant: used when the project has no image. */
+.jumboCard.noImage {
+  padding-bottom: 4%;
+  aspect-ratio: auto;
+}
+
+.noImage .cardHeader {
+  margin-bottom: 0;
+}
+
+@media (max-width: 480px) {
+  .jumboCard.noImage {
+    padding-bottom: 8%;
+  }
+}
+
 @media (hover) {
   .jumboCard:hover {
     transform: scale3d(1.01, 1.01, 1.01);
@@ -83,6 +99,14 @@
   .title {
     max-width: 80%;
   }
+}
+
+.description {
+  max-width: 44rem;
+  margin: 0.5rem auto;
+  font-size: 1.0625rem;
+  line-height: 1.5;
+  color: var(--card-text-primary-color);
 }
 
 .helper {

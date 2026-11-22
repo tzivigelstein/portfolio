@@ -1,5 +1,20 @@
 const projects = [
   {
+    id: 'AcH',
+    category: 'web',
+    title: 'AC Hub',
+    subtitle: { en: 'My own product', es: 'Producto propio' },
+    description: {
+      en: 'A platform for managing Assetto Corsa racing championships. Drivers upload their own car skins through a web portal or a Discord bot, the platform validates them automatically, and organizers publish straight to the game server. It also handles registration payments. In production with 100+ registered drivers. Built with Python, Flask and PostgreSQL, following Clean Architecture.',
+      es: 'Plataforma para gestionar campeonatos de Assetto Corsa. Los pilotos suben sus skins desde un portal web o un bot de Discord, la plataforma las valida automáticamente y los organizadores publican directo al servidor del juego. También gestiona los pagos de inscripción. En producción, con más de 100 pilotos registrados. Hecha con Python, Flask y PostgreSQL, siguiendo Clean Architecture.',
+    },
+    // Private repository: no repository link on purpose.
+    site: 'https://achub.pro/',
+    color: 'linear-gradient(135deg, #09090b, #12305a)',
+    theme: 'dark',
+    active: true,
+  },
+  {
     id: 'Sc7',
     category: 'web',
     shortTitle: 'Scooch',
@@ -50,6 +65,7 @@ const projects = [
     color: '#6aaa64',
     theme: 'dark',
     active: true,
+    earlier: true,
   },
   {
     id: 'lKu',
@@ -95,6 +111,7 @@ const projects = [
     site: 'https://producthunt-cl.vercel.app/',
     color: 'linear-gradient(90deg, #feaf04, #fa9814)',
     active: true,
+    earlier: true,
   },
   {
     id: 'gCh',

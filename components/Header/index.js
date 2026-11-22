@@ -13,6 +13,7 @@ const Header = () => {
           <h1 className={styles.headline}>{t('common:headline')}
             <span className={styles.subHeadline}>{t('common:subHeadline')}</span>
           </h1>
+          <p className={styles.intro}>{t('common:headerIntro')}</p>
           <div className={styles.headerLinksContainer}>
             <HeaderLink text='Github' link='https://github.com/tzivigelstein' />
             <HeaderLink text='Linkedin' link='https://www.linkedin.com/in/tzivigelstein/' />

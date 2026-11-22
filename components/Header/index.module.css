@@ -78,6 +78,24 @@
   line-height: 1;
 }
 
+.intro {
+  color: var(--text-color);
+  font-size: clamp(17px, 2vw, 24px);
+  line-height: 1.4;
+  margin: 1.25rem 0 0;
+  padding-left: 1.2rem;
+  max-width: 34rem;
+  transition: 0.3s ease-in-out color;
+}
+
+@media (max-width: 768px) {
+  .intro {
+    padding-left: 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
 .headerLinksContainer {
   display: flex;
   align-items: center;

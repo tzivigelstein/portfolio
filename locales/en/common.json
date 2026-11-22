@@ -1,6 +1,10 @@
 {
   "headline": "I'm Tzivi",
-  "subHeadline": "Software developer.",
+  "subHeadline": "Backend developer.",
+  "headerIntro": "I design and build data-heavy systems, and I run my own product, AC Hub.",
+
+  "metaTitle": "Tzivi Gelstein | Backend developer",
+  "metaDescription": "Tzivi Gelstein is a backend developer from Argentina. He builds data pipelines, search and recommendation systems and web platforms with Python and Go, and runs AC Hub.",
 
   "presentationSectionTitleTimeline": "Work and certifications",
 
@@ -13,6 +17,7 @@
   "presentationSectionListItem3": "Impactful apps",
 
   "projectsSectionWebTitle": "Web Projects",
+  "projectsSectionEarlierTitle": "Earlier projects",
   "wipLabel": "Work in Progress",
   "projectsSectionAppTitle": "App Projects",
 
@@ -22,10 +27,14 @@
 
   "aboutSectionTitle": "A bit about me",
   "experienceTitle": "Career and experience",
-  "experienceText": "I'm React and Python Developer with a passion for creating performant user experiences. With experience in backend development, unit and E2E testing, and manual testing, I collaborate with frontend teams to develop features for the project's API. My technical skills include Docker, React, Node, CSS, Bash, PostgreSQL, and MongoDB.",
+  "experienceText": "Backend developer. I design and build data-heavy systems, and I run my own product, AC Hub. I build data pipelines, search and recommendation systems and web platforms with Python and Go.",
   "goalsTitle": "Goals and objectives",
   "goals": "My dual focus is on improving our collaborative workspace while embracing daily learning opportunities. I believe that continuous growth and creating an efficient environment go hand in hand, allowing our team to deliver exceptional results while expanding our capabilities.",
   "professionalTitle": "Professional skills",
+  "skillsGroupMain": "Core",
+  "skillsGroupData": "Data and cloud",
+  "skillsGroupPractices": "Practices",
+  "skillsGroupFrontend": "Frontend",
   "softSkillsTitle": "Soft skills",
   "softSkillsFirstTip": "Self-motivated",
   "softSkillsSecondTip": "Adaptable to collaborative environments",

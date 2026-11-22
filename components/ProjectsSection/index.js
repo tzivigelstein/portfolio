@@ -3,16 +3,20 @@ import projects from '@data/projects'
 import Card from '@components/Card'
 import JumboCard from '@components/JumboCard'
 import useTranslation from 'next-translate/useTranslation'
-import { H2 } from '@components/Heading'
+import { H2, H3 } from '@components/Heading'
 
 export default function ProjectsSection() {
   const { t } = useTranslation()
 
   const activeProjects = projects.filter(({ active }) => active)
 
-  const webs = activeProjects.filter(({ category }) => category === 'web')
+  // Practice projects from the learning stage go to a secondary list.
+  const earlier = activeProjects.filter(({ earlier }) => earlier)
+  const current = activeProjects.filter(({ earlier }) => !earlier)
+
+  const webs = current.filter(({ category }) => category === 'web')
   const jumbo = webs.shift()
-  const apps = activeProjects.filter(({ category }) => category === 'app')
+  const apps = current.filter(({ category }) => category === 'app')
 
   return (
     <section className={styles.container}>
@@ -25,6 +29,16 @@ export default function ProjectsSection() {
           ))}
         </ul>
       </section>
+      {earlier.length !== 0 && (
+        <section className={styles.secondarySection}>
+          <H3>{t('common:projectsSectionEarlierTitle')}</H3>
+          <ul className={styles.projectList}>
+            {earlier.map((project) => (
+              <Card key={project.id} project={project} />
+            ))}
+          </ul>
+        </section>
+      )}
       {apps.length !== 0 && (
         <section className={styles.secondarySection}>
           <h2 className={styles.sectionTitle}>
