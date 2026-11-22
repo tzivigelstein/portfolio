@@ -5,8 +5,8 @@ const projects = [
     title: 'AC Hub',
     subtitle: { en: 'My own product', es: 'Producto propio' },
     description: {
-      en: 'A platform for managing Assetto Corsa racing championships. Drivers upload their own car skins through a web portal or a Discord bot, the platform validates them automatically, and organizers publish straight to the game server. It also handles registration payments. In production with 100+ registered drivers. Built with Python, Flask and PostgreSQL, following Clean Architecture.',
-      es: 'Plataforma para gestionar campeonatos de Assetto Corsa. Los pilotos suben sus skins desde un portal web o un bot de Discord, la plataforma las valida automáticamente y los organizadores publican directo al servidor del juego. También gestiona los pagos de inscripción. En producción, con más de 100 pilotos registrados. Hecha con Python, Flask y PostgreSQL, siguiendo Clean Architecture.',
+      en: 'Platform for managing Assetto Corsa racing championships. Drivers upload car skins through a web portal or a Discord bot, the platform validates them automatically, and organizers publish straight to the game server. In production with 100+ registered drivers.',
+      es: 'Plataforma para gestionar campeonatos de Assetto Corsa. Los pilotos suben sus skins desde un portal web o un bot de Discord, la plataforma las valida automáticamente y los organizadores publican directo al servidor del juego. En producción, con más de 100 pilotos registrados.',
     },
     // Private repository: no repository link on purpose.
     site: 'https://achub.pro/',
@@ -23,6 +23,10 @@ const projects = [
       es: 'Scooch: Imprimí más en cada hoja.',
     },
     subtitle: { en: 'Productivity App', es: 'Productividad' },
+    description: {
+      en: 'Web app that arranges images and PDF pages on paper at real size, using as few sheets as possible. Runs entirely in the browser. Built with Claude Code, React and TypeScript.',
+      es: 'Aplicación web que acomoda imágenes y páginas de PDF en hojas a tamaño real, usando la menor cantidad de hojas posible. Corre por completo en el navegador. Hecha con Claude Code, React y TypeScript.',
+    },
     image: '/images/Scooch.webp',
     mobileImage: '/images/Scooch.webp',
     repository: 'https://github.com/tzivigelstein/scooch',
@@ -64,8 +68,7 @@ const projects = [
     site: 'https://thisisnotwordle.vercel.app/',
     color: '#6aaa64',
     theme: 'dark',
-    active: true,
-    earlier: true,
+    active: false,
   },
   {
     id: 'lKu',
@@ -110,8 +113,7 @@ const projects = [
     repository: 'https://github.com/tzivigelstein/Product-Hunt-Clone',
     site: 'https://producthunt-cl.vercel.app/',
     color: 'linear-gradient(90deg, #feaf04, #fa9814)',
-    active: true,
-    earlier: true,
+    active: false,
   },
   {
     id: 'gCh',
@@ -170,7 +172,7 @@ const projects = [
     site: 'https://binast.vercel.app/',
     color: 'linear-gradient(90deg, #977EF1, #623CEA)',
     theme: 'dark',
-    active: true,
+    active: false,
   },
   {
     id: 'SGE',

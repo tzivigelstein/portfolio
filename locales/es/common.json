@@ -1,10 +1,10 @@
 {
   "headline": "Soy Tzivi",
   "subHeadline": "Desarrollador backend.",
-  "headerIntro": "Diseño y construyo sistemas con muchos datos, y opero mi propio producto, AC Hub.",
+  "headerIntro": "Construyo sistemas con muchos datos: pipelines de ingesta, búsqueda y recomendación, y plataformas web sobre datos heredados y desordenados. Trabajo sobre todo en Python y Go, y opero mi propio producto, AC Hub.",
 
   "metaTitle": "Tzivi Gelstein | Desarrollador backend",
-  "metaDescription": "Tzivi Gelstein es un desarrollador backend de Argentina. Construye pipelines de datos, sistemas de búsqueda y recomendación y plataformas web con Python y Go, y opera AC Hub.",
+  "metaDescription": "Tzivi Gelstein, desarrollador backend de Argentina. Pipelines de datos, sistemas de búsqueda y recomendación y plataformas web con Python y Go. Creador de AC Hub.",
 
   "presentationSectionTitleTimeline": "Trabajo y certificaciones",
 
@@ -17,7 +17,6 @@
   "presentationSectionListItem3": "Aplicaciones impactantes",
 
   "projectsSectionWebTitle": "Proyectos Web",
-  "projectsSectionEarlierTitle": "Proyectos anteriores",
   "wipLabel": "En progreso",
   "projectsSectionAppTitle": "Aplicaciones",
 
@@ -27,13 +26,13 @@
 
   "aboutSectionTitle": "Un poco sobre mí",
   "experienceTitle": "Carrera y experiencia",
-  "experienceText": "Desarrollador backend. Diseño y construyo sistemas con muchos datos, y opero mi propio producto, AC Hub. Construyo pipelines de datos, sistemas de búsqueda y recomendación y plataformas web con Python y Go.",
+  "experienceText": "Soy desarrollador backend de Buenos Aires, con más de cuatro años de experiencia construyendo sistemas con muchos datos: pipelines de ingesta, búsqueda y recomendación, y plataformas web sobre datos heredados y desordenados. Trabajo sobre todo en Python y Go, con PostgreSQL debajo.\n\nDesde 2022 trabajo como freelance en productos de low-code, streaming y créditos. Un ejemplo: construí desde cero un pipeline de ingesta de contenidos y después lo migré a Go, con lo que el procesamiento pasó de minutos a segundos por contenido.\n\nTambién construí y opero AC Hub, una plataforma para campeonatos de sim racing con más de 100 pilotos registrados.\n\nTrabajo AI-first con Claude Code y me hago responsable del diseño, de los trade-offs y de que funcione. Rindo mejor en equipos chicos, donde los desarrolladores están cerca de los usuarios y son dueños de lo que publican.",
   "goalsTitle": "Metas y objetivos",
   "goals": "Mi doble enfoque es mejorar nuestro espacio de trabajo colaborativo mientras abraza oportunidades diarias de aprendizaje. Creo que el crecimiento continuo y la creación de un entorno eficiente van de la mano, permitiendo a nuestro equipo entregar resultados excepcionales mientras expandimos nuestras capacidades.",
   "professionalTitle": "Habilidades profesionales",
   "skillsGroupMain": "Principales",
-  "skillsGroupData": "Datos y cloud",
-  "skillsGroupPractices": "Prácticas",
+  "skillsGroupData": "Cloud y datos",
+  "skillsGroupPractices": "Prácticas y herramientas",
   "skillsGroupFrontend": "Frontend",
   "softSkillsTitle": "Habilidades blandas",
   "softSkillsFirstTip": "Auto motivado",

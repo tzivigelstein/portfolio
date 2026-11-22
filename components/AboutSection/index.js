@@ -17,7 +17,16 @@ const AboutSection = ({ post }) => {
         <div>
           <div>
             <H3>{t("common:experienceTitle")}</H3>
-            <ParagraphText>{t("common:experienceText")}</ParagraphText>
+            {t("common:experienceText")
+              .split("\n\n")
+              .map((paragraph, index) => (
+                <ParagraphText
+                  key={index}
+                  style={index > 0 ? { marginTop: "1rem" } : undefined}
+                >
+                  {paragraph}
+                </ParagraphText>
+              ))}
           </div>
           <div>
             <H3>{t("common:goalsTitle")}</H3>

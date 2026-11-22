@@ -11,15 +11,13 @@
   "present": "presente",
   "noExpiryDate": "no expira",
 
-  "title4": "Desarrollador backend, subcontratista freelance (clientes confidenciales)",
-  "description4": "Plataforma de streaming: construí desde cero el pipeline de ingesta de contenidos, lo migré de Python a Go (el procesamiento pasó de minutos a segundos por contenido) y diseñé un sistema de recomendación vectorial.\nEmpresa de créditos: diseño y construyo un sistema de gestión de créditos que reemplaza una aplicación de escritorio heredada, con un modelo de datos unificado sobre varias bases PostgreSQL separadas y una interfaz web renderizada en servidor.\nConsultora: backend de un buscador interno de documentos con búsqueda vectorial.",
+  "title4": "Creador y desarrollador, AC Hub",
+  "description4": "Plataforma para gestionar campeonatos de Assetto Corsa (achub.pro). Los pilotos suben sus skins desde un portal web o un bot de Discord, la plataforma las valida automáticamente y los organizadores publican directo al servidor del juego. También gestiona los pagos de inscripción.\nEn producción, con 18 campeonatos y más de 100 pilotos registrados.\nPython, Flask y PostgreSQL con Clean Architecture, más de 2.000 tests automatizados, CI/CD y monitoreo.",
 
   "title2": "Prueba EF Standard English (EF SET)",
   "description2": "Certificado de inglés EF SET 75/100 (Competencia C2)",
 
-  "title1": "Desarrollador backend (TypeScript), subcontratista freelance (cliente confidencial)",
-  "description1": "Plataforma low-code que genera paneles de administración a partir de un esquema PostgreSQL: features y corrección de bugs de backend en TypeScript con Clean Architecture, más testing de UI/UX y pentesting básico.",
+  "title1": "Desarrollador backend, Freelance",
+  "description1": "Plataforma de streaming: construí desde cero el pipeline de ingesta de contenidos, lo migré de Python a Go (el procesamiento pasó de minutos a segundos por contenido) y diseñé un sistema de recomendación vectorial.\nEmpresa de créditos: diseño y construyo un sistema de gestión de créditos que reemplaza una aplicación de escritorio heredada, con un modelo de datos unificado sobre varias bases PostgreSQL separadas y una interfaz web renderizada en servidor.\nConsultora: backend de un buscador interno de documentos con búsqueda vectorial.\nPlataforma low-code: features de backend en TypeScript con Clean Architecture, más testing de UI/UX y pentesting básico."
 
-  "title3": "'Yo puedo programar' de Junior Achievement y Microsoft Argentina",
-  "description3": "He completado con éxito el curso 'Yo puedo programar' en el Campus virtual de Junior Achievement y Microsoft Argentina."
 }

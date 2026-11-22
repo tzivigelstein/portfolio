@@ -1,10 +1,10 @@
 {
   "headline": "I'm Tzivi",
   "subHeadline": "Backend developer.",
-  "headerIntro": "I design and build data-heavy systems, and I run my own product, AC Hub.",
+  "headerIntro": "I build data-heavy systems: ingestion pipelines, search and recommendation, and web platforms on top of messy legacy data. I work mostly in Python and Go, and I run my own product, AC Hub.",
 
   "metaTitle": "Tzivi Gelstein | Backend developer",
-  "metaDescription": "Tzivi Gelstein is a backend developer from Argentina. He builds data pipelines, search and recommendation systems and web platforms with Python and Go, and runs AC Hub.",
+  "metaDescription": "Tzivi Gelstein, backend developer from Argentina. Data pipelines, search and recommendation systems and web platforms with Python and Go. Creator of AC Hub.",
 
   "presentationSectionTitleTimeline": "Work and certifications",
 
@@ -17,7 +17,6 @@
   "presentationSectionListItem3": "Impactful apps",
 
   "projectsSectionWebTitle": "Web Projects",
-  "projectsSectionEarlierTitle": "Earlier projects",
   "wipLabel": "Work in Progress",
   "projectsSectionAppTitle": "App Projects",
 
@@ -27,13 +26,13 @@
 
   "aboutSectionTitle": "A bit about me",
   "experienceTitle": "Career and experience",
-  "experienceText": "Backend developer. I design and build data-heavy systems, and I run my own product, AC Hub. I build data pipelines, search and recommendation systems and web platforms with Python and Go.",
+  "experienceText": "I'm a backend developer from Buenos Aires with over four years of experience building data-heavy systems: ingestion pipelines, search and recommendation, and web platforms on top of messy legacy data. I work mostly in Python and Go, with PostgreSQL underneath.\n\nSince 2022 I've worked as a freelancer on low-code, streaming and lending products. One example: I built a content ingestion pipeline from scratch and later migrated it to Go, taking processing from minutes to seconds per item.\n\nI also built and run AC Hub, a platform for sim racing championships with 100+ registered drivers.\n\nI build AI-first with Claude Code and stay responsible for the design, the trade-offs and making sure it works. I do my best work in small teams where engineers are close to users and own what they ship.",
   "goalsTitle": "Goals and objectives",
   "goals": "My dual focus is on improving our collaborative workspace while embracing daily learning opportunities. I believe that continuous growth and creating an efficient environment go hand in hand, allowing our team to deliver exceptional results while expanding our capabilities.",
   "professionalTitle": "Professional skills",
   "skillsGroupMain": "Core",
-  "skillsGroupData": "Data and cloud",
-  "skillsGroupPractices": "Practices",
+  "skillsGroupData": "Cloud and data",
+  "skillsGroupPractices": "Practices and tools",
   "skillsGroupFrontend": "Frontend",
   "softSkillsTitle": "Soft skills",
   "softSkillsFirstTip": "Self-motivated",

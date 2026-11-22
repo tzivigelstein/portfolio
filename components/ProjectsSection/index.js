@@ -3,42 +3,34 @@ import projects from '@data/projects'
 import Card from '@components/Card'
 import JumboCard from '@components/JumboCard'
 import useTranslation from 'next-translate/useTranslation'
-import { H2, H3 } from '@components/Heading'
+import { H2 } from '@components/Heading'
 
 export default function ProjectsSection() {
   const { t } = useTranslation()
 
   const activeProjects = projects.filter(({ active }) => active)
 
-  // Practice projects from the learning stage go to a secondary list.
-  const earlier = activeProjects.filter(({ earlier }) => earlier)
-  const current = activeProjects.filter(({ earlier }) => !earlier)
-
-  const webs = current.filter(({ category }) => category === 'web')
-  const jumbo = webs.shift()
-  const apps = current.filter(({ category }) => category === 'app')
+  const webs = activeProjects.filter(({ category }) => category === 'web')
+  // With only a couple of projects every one gets a full-width card;
+  // otherwise the first is featured and the rest go to the grid.
+  const jumbos = webs.length <= 2 ? webs.splice(0) : webs.splice(0, 1)
+  const apps = activeProjects.filter(({ category }) => category === 'app')
 
   return (
     <section className={styles.container}>
       <section className={styles.secondarySection}>
         <H2>{t('common:projectsSectionWebTitle')}</H2>
-        <JumboCard project={jumbo} />
-        <ul className={styles.projectList}>
-          {webs.map((project) => (
-            <Card key={project.id} project={project} />
-          ))}
-        </ul>
-      </section>
-      {earlier.length !== 0 && (
-        <section className={styles.secondarySection}>
-          <H3>{t('common:projectsSectionEarlierTitle')}</H3>
+        {jumbos.map((project) => (
+          <JumboCard key={project.id} project={project} />
+        ))}
+        {webs.length !== 0 && (
           <ul className={styles.projectList}>
-            {earlier.map((project) => (
+            {webs.map((project) => (
               <Card key={project.id} project={project} />
             ))}
           </ul>
-        </section>
-      )}
+        )}
+      </section>
       {apps.length !== 0 && (
         <section className={styles.secondarySection}>
           <h2 className={styles.sectionTitle}>

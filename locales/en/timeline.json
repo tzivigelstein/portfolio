@@ -14,12 +14,10 @@
   "title2": "EF Standard English Test (EF SET)",
   "description2": "EF SET English Certificate 75/100 (C2 Proficient)",
 
-  "title4": "Backend developer, freelance subcontractor (clients confidential)",
-  "description4": "Streaming platform: built the content ingestion pipeline from scratch, migrated it from Python to Go (processing went from minutes to seconds per item), and designed a vector-based recommendation system.\nLending company: designing and building a loan management system that replaces a legacy desktop application, including a unified data model over several separate PostgreSQL databases and a server-rendered web interface.\nConsulting firm: backend work on an internal document search tool using vector search.",
+  "title4": "Creator & Developer, AC Hub",
+  "description4": "Platform for managing Assetto Corsa racing championships (achub.pro). Drivers upload car skins through a web portal or a Discord bot, the platform validates them automatically, and organizers publish straight to the game server. It also handles registration payments.\nIn production with 18 championships and 100+ registered drivers.\nPython, Flask and PostgreSQL with Clean Architecture, 2,000+ automated tests, CI/CD and monitoring.",
 
-  "title1": "Backend developer (TypeScript), freelance subcontractor (client confidential)",
-  "description1": "Low-code platform that generates admin panels from a PostgreSQL schema: backend features and bug fixes in TypeScript with Clean Architecture, plus UI/UX testing and basic penetration testing.",
+  "title1": "Backend developer, Freelance",
+  "description1": "Streaming platform: built the content ingestion pipeline from scratch, migrated it from Python to Go (processing went from minutes to seconds per item), and designed a vector-based recommendation system.\nLending company: designing and building a loan management system that replaces a legacy desktop application, with a unified data model over several separate PostgreSQL databases and a server-rendered web interface.\nConsulting firm: backend work on an internal document search tool using vector search.\nLow-code platform: backend features in TypeScript with Clean Architecture, plus UI/UX testing and basic penetration testing."
 
-  "title3": "'I can program' from Junior Achievement and Microsoft Argentina.",
-  "description3": "I have successfully completed the 'I can program' course at the Virtual Campus of Junior Achievement and Microsoft Argentina."
 }

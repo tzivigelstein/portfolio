@@ -7,21 +7,19 @@ const technologies = [
     items: [
       "Python",
       "Go",
-      "TypeScript",
       "PostgreSQL",
+      "TypeScript",
       "Flask",
       "FastAPI",
       "Docker",
-      "Git",
-      "Linux",
     ],
   },
   {
     id: "data",
     title: "common:skillsGroupData",
     items: [
-      "Azure (Service Bus, Cosmos DB, AI Search)",
-      "AWS (Lambda, S3)",
+      "Microsoft Azure",
+      "Amazon Web Services",
       "MongoDB",
       { en: "Vector search", es: "Búsqueda vectorial" },
     ],
@@ -29,12 +27,12 @@ const technologies = [
   {
     id: "practices",
     title: "common:skillsGroupPractices",
-    items: ["Clean Architecture", "Testing", "CI/CD"],
+    items: ["Clean Architecture", "Testing", "CI/CD", "Git", "Linux", "Bash"],
   },
   {
     id: "frontend",
     title: "common:skillsGroupFrontend",
-    items: ["React", "CSS"],
+    items: ["React", "JavaScript", "CSS"],
   },
 ];
 
