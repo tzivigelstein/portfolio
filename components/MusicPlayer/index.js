@@ -1,4 +1,9 @@
-import { DoubleArrow, PauseIcon, PlayIcon } from "@components/Icons";
+import {
+  PauseIcon,
+  PlayIcon,
+  SkipNextIcon,
+  SnowflakeIcon,
+} from "@components/Icons";
 import styles from "./index.module.css";
 
 import { useEffect, useRef, useState } from "react";
@@ -21,13 +26,12 @@ const MusicPlayer = ({ songs, stopSnowfall, setStopSnowfall }) => {
     Math.floor(Math.random() * songs.length)
   );
   const [playing, setPlaying] = useState(false);
-  const [animateNextSong, setAnimateNextSong] = useState(false);
-  const [toggleDownscaleMobile, setToggleDownscaleMobile] = useState(false);
   // The song is preloaded so play is instant, but only once the page has
   // finished loading and the browser is idle, so it never competes with it.
   const [loadAudio, setLoadAudio] = useState(false);
   const [preload, setPreload] = useState("auto");
   const audioRef = useRef(null);
+  const progressRef = useRef(null);
 
   useEffect(() => {
     if (shouldSkipPreload()) {
@@ -82,23 +86,18 @@ const MusicPlayer = ({ songs, stopSnowfall, setStopSnowfall }) => {
     }
   }, [playing, currentSongIndex, loadAudio]);
 
+  const setProgress = (ratio) => {
+    if (progressRef.current) {
+      progressRef.current.style.transform = `scaleX(${ratio})`;
+    }
+  };
+
   const playNextSong = () => {
-    setAnimateNextSong(true);
-
-    setTimeout(() => {
-      setAnimateNextSong(false);
-    }, 410);
-
+    setProgress(0);
     setCurrentSongIndex((prevIndex) => (prevIndex + 1) % songs.length);
   };
 
   const togglePlaying = () => {
-    setToggleDownscaleMobile(true);
-
-    setTimeout(() => {
-      setToggleDownscaleMobile(false);
-    }, 410);
-
     setLoadAudio(true);
     setPlaying((prev) => !prev);
   };
@@ -109,66 +108,90 @@ const MusicPlayer = ({ songs, stopSnowfall, setStopSnowfall }) => {
     if (!event.currentTarget.ended) setPlaying(false);
   };
 
+  // The progress bar is updated straight on the element: no re-renders.
+  const handleTimeUpdate = (event) => {
+    const { currentTime, duration } = event.currentTarget;
+    setProgress(duration ? Math.min(currentTime / duration, 1) : 0);
+  };
+
   const handlePreviewError = (event) => {
     if (!event.currentTarget.src.endsWith(FALLBACK_PREVIEW_IMAGE)) {
       event.currentTarget.src = FALLBACK_PREVIEW_IMAGE;
     }
   };
 
+  const song = songs[currentSongIndex];
+  const snowfallLabel = `${
+    stopSnowfall ? t("startSnowfallButton") : t("stopSnowfallButton")
+  } ${t("textShowfallButton")}`;
+
   return (
     <div className={styles.wrapper}>
-      <div className={styles.container}>
+      <div className={`${styles.player} ${playing ? styles.playing : ""}`}>
         <audio
           ref={audioRef}
-          src={loadAudio ? songs[currentSongIndex].url : undefined}
+          src={loadAudio ? song.url : undefined}
           preload={preload}
           onEnded={playNextSong}
           onPause={handlePause}
           onPlay={() => setPlaying(true)}
+          onTimeUpdate={handleTimeUpdate}
         />
 
-        <div className={styles.info}>
+        <div className={styles.cover}>
           <img
-            src={songs[currentSongIndex].previewImage}
+            key={song.id}
+            src={song.previewImage}
             alt=""
             onError={handlePreviewError}
             className={styles.preview}
           />
-          <p className={styles.title}>{songs[currentSongIndex].title}</p>
+          <span className={styles.equalizer} aria-hidden="true">
+            <span />
+            <span />
+            <span />
+          </span>
         </div>
+
+        <div className={styles.info}>
+          <p key={song.id} className={styles.title}>
+            {song.title}
+          </p>
+          <div className={styles.progress} aria-hidden="true">
+            <div ref={progressRef} className={styles.progressFill} />
+          </div>
+        </div>
+
         <div className={styles.controls}>
           <button
+            type="button"
             onClick={togglePlaying}
             aria-label={playing ? t("pauseButton") : t("playButton")}
-            className={`${styles.togglePlaying} ${
-              toggleDownscaleMobile ? styles.togglePlayingDownScale : ""
-            }`}
+            className={`${styles.button} ${styles.primaryButton}`}
           >
-            {playing ? (
-              <PauseIcon style={{ transform: "scale(1.5, 1.5)" }} />
-            ) : (
-              <PlayIcon style={{ transform: "scale(2, 2.4)" }} />
-            )}
+            {playing ? <PauseIcon aria-hidden="true" /> : <PlayIcon aria-hidden="true" />}
           </button>
           <button
+            type="button"
             onClick={playNextSong}
             aria-label={t("nextSongButton")}
-            className={`${styles.nextSong} ${
-              animateNextSong ? styles.animateNextSong : ""
+            className={styles.button}
+          >
+            <SkipNextIcon aria-hidden="true" />
+          </button>
+          <span className={styles.divider} aria-hidden="true" />
+          <button
+            type="button"
+            onClick={() => setStopSnowfall((prev) => !prev)}
+            aria-label={snowfallLabel}
+            title={snowfallLabel}
+            className={`${styles.button} ${
+              stopSnowfall ? styles.snowfallOff : ""
             }`}
           >
-            <DoubleArrow width={22} height={22} />
+            <SnowflakeIcon aria-hidden="true" />
           </button>
         </div>
-      </div>
-      <div className={styles.stopSnowfallContainer}>
-        <button
-          onClick={() => setStopSnowfall((prev) => !prev)}
-          className={styles.stopSnowfallButton}
-        >
-          {stopSnowfall ? t("startSnowfallButton") : t("stopSnowfallButton")}{" "}
-          {t("textShowfallButton")}
-        </button>
       </div>
     </div>
   );

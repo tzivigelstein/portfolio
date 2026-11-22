@@ -1,223 +1,276 @@
 .wrapper {
   position: fixed;
-  bottom: 1rem;
-  right: 1rem;
-  display: flex;
-  gap: 0.3rem;
-  flex-direction: column;
+  bottom: 1.25rem;
+  right: 1.25rem;
   z-index: 5;
-}
-
-.container {
-  border-radius: 1rem 1rem 0.2rem 0.2rem;
-  background-color: rgba(255, 255, 255, 0.8);
-  backdrop-filter: blur(5px);
-  padding: 0.8rem;
-  display: flex;
-  align-items: center;
-  box-shadow: 5px 0px 12px 5px rgba(0, 0, 0, 0.1);
-  z-index: 4;
-  min-width: 400px;
-  justify-content: space-between;
-  transition: 200ms ease background-color;
+  animation: enter 500ms cubic-bezier(0.2, 0.9, 0.3, 1.2) both;
 }
 
 @media (max-width: 480px) {
   .wrapper {
-    width: calc(100% - 2rem);
-    justify-content: space-between;
-  }
-
-  .container {
-    min-width: 0;
+    left: 1rem;
+    right: 1rem;
+    bottom: 1rem;
   }
 }
 
-@media (hover) {
-  .container:hover {
-    background-color: white;
+@keyframes enter {
+  from {
+    opacity: 0;
+    transform: translateY(1rem) scale(0.96);
+  }
+}
+
+.player {
+  --player-surface: rgba(255, 255, 255, 0.82);
+  --player-border: rgba(0, 0, 0, 0.08);
+  --player-text: #1d1d1f;
+  --player-muted: rgba(0, 0, 0, 0.1);
+  --player-hover: rgba(0, 0, 0, 0.07);
+  --player-primary: #1d1d1f;
+  --player-on-primary: #fff;
+
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  width: 25rem;
+  max-width: 100%;
+  padding: 0.5rem 0.625rem 0.5rem 0.5rem;
+  border-radius: 1.25rem;
+  border: 1px solid var(--player-border);
+  background-color: var(--player-surface);
+  color: var(--player-text);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  backdrop-filter: blur(20px) saturate(180%);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06), 0 12px 32px -8px rgba(0, 0, 0, 0.22);
+}
+
+html[data-theme='dark'] .player {
+  --player-surface: rgba(30, 30, 32, 0.8);
+  --player-border: rgba(255, 255, 255, 0.12);
+  --player-text: #f5f5f7;
+  --player-muted: rgba(255, 255, 255, 0.16);
+  --player-hover: rgba(255, 255, 255, 0.1);
+  --player-primary: #f5f5f7;
+  --player-on-primary: #1d1d1f;
+}
+
+@media (max-width: 480px) {
+  .player {
+    width: 100%;
+  }
+}
+
+.cover {
+  position: relative;
+  flex: none;
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  background-color: var(--player-muted);
+}
+
+.preview {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  animation: fadeIn 300ms ease both;
+}
+
+/* Small equalizer over the cover while a song is playing. */
+.equalizer {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 3px;
+  padding-bottom: 0.7rem;
+  background-color: rgba(0, 0, 0, 0.45);
+  opacity: 0;
+  transition: opacity 200ms ease;
+}
+
+.equalizer span {
+  width: 3px;
+  height: 0.9rem;
+  border-radius: 2px;
+  background-color: #fff;
+  transform-origin: bottom;
+  transform: scaleY(0.3);
+}
+
+.playing .equalizer {
+  opacity: 1;
+}
+
+.playing .equalizer span {
+  animation: bounce 900ms ease-in-out infinite;
+}
+
+.playing .equalizer span:nth-child(2) {
+  animation-delay: -300ms;
+}
+
+.playing .equalizer span:nth-child(3) {
+  animation-delay: -600ms;
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: scaleY(0.3);
+  }
+
+  50% {
+    transform: scaleY(1);
   }
 }
 
 .info {
+  flex: 1;
+  min-width: 0;
   display: flex;
-  align-items: center;
-  gap: 1rem;
-  margin-right: 0.5rem;
-  overflow: hidden;
+  flex-direction: column;
+  gap: 0.4rem;
 }
 
 .title {
-  color: var(--header-text-color);
-  font-size: 1.1rem;
+  margin: 0;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
+  animation: fadeIn 300ms ease both;
 }
 
-.preview {
-  width: 3rem;
-  aspect-ratio: 1;
-  object-fit: cover;
-  border-radius: 0.5rem;
+.progress {
+  height: 3px;
+  border-radius: 3px;
+  background-color: var(--player-muted);
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  border-radius: 3px;
+  background-color: var(--player-text);
+  transform-origin: left;
+  transform: scaleX(0);
+  transition: transform 250ms linear;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
 }
 
 .controls {
+  flex: none;
   display: flex;
-  gap: 0.5rem;
+  align-items: center;
+  gap: 0.125rem;
 }
 
-.togglePlaying,
-.nextSong {
-  background-color: transparent;
+.button {
+  display: grid;
+  place-items: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  padding: 0;
   border: none;
-  padding: 0.5rem 1rem;
+  border-radius: 50%;
+  background-color: transparent;
+  color: var(--player-text);
   cursor: pointer;
-  outline: none;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
+  transition: background-color 150ms ease, transform 150ms ease,
+    opacity 150ms ease;
 }
 
-.togglePlaying {
-  transition: 200ms ease transform;
-  transform: scale(1);
-}
-
-.togglePlaying svg {
+.button svg {
+  width: 1.375rem;
+  height: 1.375rem;
   pointer-events: none;
 }
 
-.togglePlaying svg path {
-  fill: #222;
+.button svg path,
+.button svg rect {
+  fill: currentColor;
 }
 
-.nextSong svg g path {
-  fill: #222;
-}
-
-.togglePlayingDownScale {
-  animation: 250ms ease-in-out forwards downscale;
-}
-
-@keyframes downscale {
-  49% {
-    opacity: 1;
-  }
-
-  50% {
-    opacity: 0.3;
-    transform: scale(0.7);
-  }
-
-  51% {
-    opacity: 1;
-  }
-
-  98% {
-    opacity: 1;
-    transform: scale(1.05);
-  }
-
-  100% {
-    transform: scale(1);
-  }
-}
-
-.nextSong {
-  padding-left: 0;
-}
-
-.animateNextSong {
-  animation: 400ms nextSong forwards ease;
-}
-
-.animateNextSong svg g path:first-of-type {
-  animation: 400ms nextSongIconFirst forwards ease;
-}
-
-.animateNextSong svg g path:last-of-type {
-  animation: 400ms nextSongIconLast forwards ease;
-}
-
-@keyframes nextSong {
-  25% {
-    opacity: 0.3;
-    transform: translateX(30%);
-  }
-
-  26% {
-    opacity: 0;
-  }
-
-  49% {
-    opacity: 0.3;
-  }
-
-  50% {
-    transform: translateX(-30%);
-  }
-
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-
-@keyframes nextSongIconFirst {
-  60% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes nextSongIconLast {
-  25% {
-    opacity: 0.3;
-  }
-
-  26% {
-    opacity: 0;
-  }
-
-  49% {
-    opacity: 0.3;
-  }
-
-  100% {
-    opacity: 1;
-  }
-}
-
-.stopSnowfallContainer {
-  border-radius: 0.2rem 0.2rem 1rem 1rem;
-  background-color: rgba(255, 255, 255, 0.6);
-  backdrop-filter: blur(5px);
+.button svg[stroke] path {
+  fill: none;
 }
 
 @media (hover) {
-  .stopSnowfallContainer:hover {
-    background-color: rgba(255, 255, 255, 0.8);
+  .button:hover {
+    background-color: var(--player-hover);
   }
 }
 
-.stopSnowfallButton {
-  background-color: transparent;
-  color: var(--header-text-color);
-  font-size: 1rem;
-  padding: 0.5rem;
-  width: 100%;
-  outline: none;
-  border: none;
-  padding: 0.8rem;
-  cursor: pointer;
+.button:active {
+  transform: scale(0.9);
 }
 
-.togglePlaying:focus-visible,
-.nextSong:focus-visible,
-.stopSnowfallButton:focus-visible {
-  outline: 2px solid #0071e3;
+.button:focus-visible {
+  outline: 2px solid var(--player-text);
   outline-offset: 2px;
-  border-radius: 0.5rem;
+}
+
+.primaryButton {
+  margin-right: 0.125rem;
+  background-color: var(--player-primary);
+  color: var(--player-on-primary);
+}
+
+@media (hover) {
+  .primaryButton:hover {
+    background-color: var(--player-primary);
+    transform: scale(1.06);
+  }
+
+  .primaryButton:active {
+    transform: scale(0.94);
+  }
+}
+
+.divider {
+  width: 1px;
+  height: 1.25rem;
+  margin: 0 0.25rem;
+  background-color: var(--player-muted);
+}
+
+/* Snowfall toggle: dimmed and crossed out while the snow is stopped. */
+.snowfallOff {
+  position: relative;
+  opacity: 0.45;
+}
+
+.snowfallOff::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 1.625rem;
+  height: 2px;
+  border-radius: 2px;
+  background-color: currentColor;
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .wrapper,
+  .preview,
+  .title,
+  .playing .equalizer span {
+    animation: none;
+  }
 }

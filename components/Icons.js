@@ -497,3 +497,30 @@ export const ExternalLink = (props) => (
     <line x1="10" y1="14" x2="21" y2="3"></line>
   </svg>
 )
+
+export const SkipNextIcon = (props) => (
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" {...props}>
+    <path
+      d="M5 7.2v9.6c0 1.2 1.3 1.9 2.3 1.3l7.2-4.8c.9-.6.9-1.9 0-2.5L7.3 5.9C6.3 5.3 5 6 5 7.2Z"
+      fill="currentColor"
+    />
+    <rect x="17" y="5.5" width="2.5" height="13" rx="1.25" fill="currentColor" />
+  </svg>
+)
+
+export const SnowflakeIcon = (props) => (
+  <svg
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="1.8"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    {...props}
+  >
+    <path d="M12 2.5v19M3.8 7.25l16.4 9.5M20.2 7.25l-16.4 9.5" />
+    <path d="M9.5 4.5 12 6.6l2.5-2.1M9.5 19.5l2.5-2.1 2.5 2.1M4 10.9l3.1-1.1-.6-3.2M20 13.1l-3.1 1.1.6 3.2M4 13.1l3.1 1.1-.6 3.2M20 10.9l-3.1-1.1.6-3.2" />
+  </svg>
+)
