@@ -31,6 +31,17 @@ Runs `standard 'root'` which logs all the files that have warnings or errors.
 
 Runs `standard 'root' --fix` which fixes all the files that have warnings or errors.
 
+## Christmas mode
+
+The snowfall and the music player show up from December 1st to January 8th.
+To preview them locally at any date, create a `.env.local` file with:
+
+```
+NEXT_PUBLIC_FORCE_CHRISTMAS=true
+```
+
+and restart `npm run dev`. The override is ignored in production builds.
+
 ## Technologies
 
 - React

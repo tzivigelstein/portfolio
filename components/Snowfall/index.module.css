@@ -15,18 +15,14 @@
   opacity: 0;
 }
 
-.hidden {
-  display: none;
-}
-
 .snowflake {
   position: absolute;
   top: 0;
   will-change: transform;
   animation-name: fall;
   animation-timing-function: linear;
-  animation-iteration-count: infinite;
-  animation-fill-mode: backwards;
+  animation-iteration-count: 1;
+  animation-fill-mode: both;
 }
 
 .icon {
@@ -41,11 +37,5 @@
 
   to {
     transform: translate3d(0, calc(100vh + 40px), 0);
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .container {
-    display: none;
   }
 }
