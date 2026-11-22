@@ -32,7 +32,6 @@
 .input:checked + .text {
   --toggle-color-text: var(--on-accent);
   background: var(--toggle-color-fill);
-  border-color: var(--toggle-color-fill);
 }
 
 .text {
@@ -40,12 +39,10 @@
   display: inline-block;
   padding: 1px 6px;
   min-width: 42px;
-  border: 1px solid transparent;
   border-radius: var(--toggle-border-radius-inner, 2px);
   text-align: center;
   color: var(--toggle-color-text);
   background-color: transparent;
-  border-color: none;
 }
 
 @media (hover) {

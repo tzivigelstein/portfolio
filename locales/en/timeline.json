@@ -1,25 +1,12 @@
 {
-  "units": {
-    "years": "years",
-    "year": "year",
-    "months": "months",
-    "month": "month",
-    "days": "days",
-    "day": "day"
-  },
-
   "present": "present",
   "noExpiryDate": "no expiry date",
-
   "title2": "EF Standard English Test (EF SET)",
   "description2": "EF SET English Certificate 75/100 (C2 Proficient)",
-
   "title4": "Creator & Developer, AC Hub",
   "description4": "In production with 18 championships and 100+ registered drivers.\nPython, Flask and PostgreSQL with Clean Architecture, 2,000+ automated tests, CI/CD and monitoring.",
-
   "title1": "Backend developer, Freelance",
   "description1": "Built the content ingestion pipeline of a streaming platform from scratch, migrated it from Python to Go (processing went from minutes to seconds per item), and designed a vector-based recommendation system.\nDesigning and building a loan management system for a lending company, which replaces a legacy desktop application, with a unified data model over several separate PostgreSQL databases and a server-rendered web interface.\nBackend work on an internal document search tool for a consulting firm, using vector search.\nBackend features in TypeScript with Clean Architecture for a low-code platform, plus UI/UX testing and basic penetration testing.",
-
   "title5": "Electronics Technician",
   "description5": "Escuela Técnica N.º 17 \"Brig. Gral. Cornelio Saavedra\", Buenos Aires"
 }

@@ -115,6 +115,7 @@
 
 .image {
   display: block;
+  height: auto;
   width: min(100%, 22rem);
   margin: 1.25rem auto 0;
 }

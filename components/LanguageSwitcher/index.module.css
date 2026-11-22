@@ -17,22 +17,10 @@
   padding: 1px;
 }
 
-.input {
-  position: absolute;
-  clip: rect(1px, 1px, 1px, 1px);
-  clip-path: inset(0px 0px 99.9% 99.9%);
-  overflow: hidden;
-  height: 1px;
-  width: 1px;
-  padding: 0;
-  border: 0;
-  appearance: none;
-}
-
-.input:checked + .text {
+/* Two classes, so it wins over the plain .text rule below. */
+.text.current {
   --toggle-color-text: var(--on-accent);
   background: var(--toggle-color-fill);
-  border-color: var(--toggle-color-fill);
 }
 
 .text {
@@ -40,12 +28,11 @@
   display: inline-block;
   padding: 1px 6px;
   min-width: 42px;
-  border: 1px solid transparent;
   border-radius: var(--toggle-border-radius-inner, 2px);
   text-align: center;
   color: var(--toggle-color-text);
   background-color: transparent;
-  border-color: none;
+  text-decoration: none;
 }
 
 @media (hover) {

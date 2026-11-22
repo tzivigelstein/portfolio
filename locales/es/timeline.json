@@ -1,25 +1,12 @@
 {
-  "units": {
-    "years": "años",
-    "year": "año",
-    "months": "meses",
-    "month": "mes",
-    "days": "día",
-    "day": "días"
-  },
-
   "present": "presente",
   "noExpiryDate": "no expira",
-
   "title4": "Creador y desarrollador, AC Hub",
   "description4": "En producción, con 18 campeonatos y más de 100 pilotos registrados.\nPython, Flask y PostgreSQL con Clean Architecture, más de 2.000 tests automatizados, CI/CD y monitoreo.",
-
   "title2": "Prueba EF Standard English (EF SET)",
   "description2": "Certificado de inglés EF SET 75/100 (Competencia C2)",
-
   "title1": "Desarrollador backend, Freelance",
   "description1": "Construí desde cero el pipeline de ingesta de contenidos de una plataforma de streaming, lo migré de Python a Go (el procesamiento pasó de minutos a segundos por contenido) y diseñé un sistema de recomendación vectorial.\nDiseño y construyo para una empresa de créditos un sistema de gestión que reemplaza una aplicación de escritorio heredada, con un modelo de datos unificado sobre varias bases PostgreSQL separadas y una interfaz web renderizada en servidor.\nBackend de un buscador interno de documentos con búsqueda vectorial para una consultora.\nFeatures de backend en TypeScript con Clean Architecture para una plataforma low-code, más testing de UI/UX y pentesting básico.",
-
   "title5": "Técnico en Electrónica",
   "description5": "Escuela Técnica N.º 17 \"Brig. Gral. Cornelio Saavedra\", Buenos Aires"
 }
