@@ -5,6 +5,7 @@ import LanguageSwitcher from '@components/LanguageSwitcher'
 import useTranslation from 'next-translate/useTranslation'
 import Image from 'next/image'
 import { EMAIL } from '@data/contact'
+import { GithubIcon, LinkedinIcon, MailIcon } from '@components/Icons'
 
 const Header = () => {
   const { t, lang } = useTranslation()
@@ -49,9 +50,22 @@ const Header = () => {
           <p className={styles.intro}>{t('common:headerIntro')}</p>
           <div className={styles.actions}>
             <HeaderLink primary text={t('common:resumeButton')} link={resume} />
-            <HeaderLink text='Github' link='https://github.com/tzivigelstein' />
-            <HeaderLink text='Linkedin' link='https://www.linkedin.com/in/tzivigelstein/' />
-            <HeaderLink text={t('common:emailButton')} link={`mailto:${EMAIL}`} newTab={false} />
+            <HeaderLink
+              text='Github'
+              link='https://github.com/tzivigelstein'
+              icon={<GithubIcon aria-hidden='true' />}
+            />
+            <HeaderLink
+              text='Linkedin'
+              link='https://www.linkedin.com/in/tzivigelstein/'
+              icon={<LinkedinIcon aria-hidden='true' />}
+            />
+            <HeaderLink
+              text={t('common:emailButton')}
+              link={`mailto:${EMAIL}`}
+              icon={<MailIcon aria-hidden='true' />}
+              newTab={false}
+            />
           </div>
         </div>
       </div>

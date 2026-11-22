@@ -3,14 +3,12 @@ import useTranslation from "next-translate/useTranslation";
 import { ParagraphText } from "@components/Text";
 import ProfessionalSkills from "@components/ProfessionalSkills";
 import Section from "@components/Section";
-import { H3 } from "@components/Heading";
 
 const AboutSection = () => {
   const { t } = useTranslation();
 
   return (
     <Section title={t("common:aboutSectionTitle")}>
-      <H3>{t("common:experienceTitle")}</H3>
       <div className={styles.text}>
         {t("common:experienceText")
           .split("\n\n")

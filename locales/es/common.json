@@ -23,8 +23,7 @@
   "cardDownloadLink": "Descargar",
 
   "aboutSectionTitle": "Un poco sobre mí",
-  "experienceTitle": "Carrera y experiencia",
-  "experienceText": "Soy desarrollador backend de Buenos Aires, con más de cuatro años de experiencia construyendo sistemas con muchos datos, como pipelines de ingesta, búsqueda y recomendación, y plataformas web sobre datos heredados y desordenados. Trabajo sobre todo en Python y Go, con PostgreSQL debajo.\n\nDesde 2022 trabajo como freelance en productos de low-code, streaming y créditos. En uno de ellos construí desde cero un pipeline de ingesta de contenidos y después lo migré a Go, con lo que el procesamiento pasó de minutos a segundos por contenido.\n\nTambién construí y opero AC Hub, una plataforma para campeonatos de sim racing con más de 100 pilotos registrados.\n\nTrabajo AI-first con Claude Code y me hago responsable del diseño, de los trade-offs y de que funcione. Rindo mejor en equipos chicos, donde los desarrolladores están cerca de los usuarios y son dueños de lo que publican.",
+  "experienceText": "Soy desarrollador backend de Buenos Aires, con más de cuatro años de experiencia.\n\nTrabajo AI-first con Claude Code y me hago responsable del diseño, de los trade-offs y de que funcione. Rindo mejor en equipos chicos, donde los desarrolladores están cerca de los usuarios y son dueños de lo que publican.",
   "professionalTitle": "Habilidades profesionales",
   "skillsGroupMain": "Principales",
   "skillsGroupData": "Cloud y datos",

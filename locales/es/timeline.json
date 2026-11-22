@@ -12,7 +12,7 @@
   "noExpiryDate": "no expira",
 
   "title4": "Creador y desarrollador, AC Hub",
-  "description4": "Plataforma para gestionar campeonatos de Assetto Corsa (achub.pro). Los pilotos suben sus skins desde un portal web o un bot de Discord, la plataforma las valida automáticamente y los organizadores publican directo al servidor del juego. También gestiona los pagos de inscripción.\nEn producción, con 18 campeonatos y más de 100 pilotos registrados.\nPython, Flask y PostgreSQL con Clean Architecture, más de 2.000 tests automatizados, CI/CD y monitoreo.",
+  "description4": "En producción, con 18 campeonatos y más de 100 pilotos registrados.\nPython, Flask y PostgreSQL con Clean Architecture, más de 2.000 tests automatizados, CI/CD y monitoreo.",
 
   "title2": "Prueba EF Standard English (EF SET)",
   "description2": "Certificado de inglés EF SET 75/100 (Competencia C2)",

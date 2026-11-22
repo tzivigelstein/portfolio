@@ -1,15 +1,28 @@
 import { ChevronIcon } from "@components/Icons";
 import styles from "./index.module.css";
 
-const HeaderLink = ({ text, link, primary = false, newTab = true }) => {
+// With an `icon` the link is a round button that shows only the icon;
+// its text becomes the accessible name and the tooltip.
+const HeaderLink = ({ text, link, icon, primary = false, newTab = true }) => {
+  const className = [
+    styles.headerLink,
+    primary ? styles.primary : "",
+    icon ? styles.iconOnly : "",
+  ].join(" ");
+
   return (
     <a
-      className={`${styles.headerLink} ${primary ? styles.primary : ""}`}
+      className={className}
       href={link}
       {...(newTab ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+      {...(icon ? { "aria-label": text, title: text } : {})}
     >
-      {text}
-      <ChevronIcon aria-hidden="true" />
+      {icon || (
+        <>
+          {text}
+          <ChevronIcon aria-hidden="true" />
+        </>
+      )}
     </a>
   );
 };

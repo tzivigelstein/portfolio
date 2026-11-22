@@ -524,3 +524,20 @@ export const SnowflakeIcon = (props) => (
     <path d="M9.5 4.5 12 6.6l2.5-2.1M9.5 19.5l2.5-2.1 2.5 2.1M4 10.9l3.1-1.1-.6-3.2M20 13.1l-3.1 1.1.6 3.2M4 13.1l3.1 1.1-.6 3.2M20 10.9l-3.1-1.1.6-3.2" />
   </svg>
 )
+
+export const MailIcon = (props) => (
+  <svg
+    width={24}
+    height={24}
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="1.8"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    {...props}
+  >
+    <rect x="3" y="5" width="18" height="14" rx="2.5" />
+    <path d="m4 7.5 8 5.5 8-5.5" />
+  </svg>
+)
