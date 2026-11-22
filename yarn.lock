@@ -549,6 +549,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@fontsource/inter@npm:^5.3.0":
+  version: 5.3.0
+  resolution: "@fontsource/inter@npm:5.3.0"
+  checksum: 10c0/568601c10c83601c23005f8cd7434499df6e007eaa22c4dabbb1dcae327cc8e4a148ece8d4a4edaa8bafc5d2371ea97a37d1cc91ffbed77a43e2d8c15a6e831b
+  languageName: node
+  linkType: hard
+
 "@humanfs/core@npm:^0.19.2":
   version: 0.19.2
   resolution: "@humanfs/core@npm:0.19.2"
@@ -5180,16 +5187,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"next-themes@npm:0.4.6":
-  version: 0.4.6
-  resolution: "next-themes@npm:0.4.6"
-  peerDependencies:
-    react: ^16.8 || ^17 || ^18 || ^19 || ^19.0.0-rc
-    react-dom: ^16.8 || ^17 || ^18 || ^19 || ^19.0.0-rc
-  checksum: 10c0/83590c11d359ce7e4ced14f6ea9dd7a691d5ce6843fe2dc520fc27e29ae1c535118478d03e7f172609c41b1ef1b8da6b8dd2d2acd6cd79cac1abbdbd5b99f2c4
-  languageName: node
-  linkType: hard
-
 "next@npm:16.4.6":
   version: 16.4.6
   resolution: "next@npm:16.4.6"
@@ -5536,6 +5533,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "portfolio@workspace:."
   dependencies:
+    "@fontsource/inter": "npm:^5.3.0"
     "@testing-library/dom": "npm:^10.4.2"
     "@testing-library/jest-dom": "npm:^8.0.0"
     "@testing-library/react": "npm:^16.3.3"
@@ -5553,7 +5551,6 @@ __metadata:
     neostandard: "npm:^0.14.1"
     next: "npm:16.4.6"
     next-mdx-remote: "npm:6.0.0"
-    next-themes: "npm:0.4.6"
     react: "npm:19.3.1"
     react-dom: "npm:19.3.1"
     typescript: "npm:6.0.3"

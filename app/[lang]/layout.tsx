@@ -1,11 +1,12 @@
 import type { ReactNode } from 'react'
-import type { Viewport } from 'next'
+import type { Metadata, Viewport } from 'next'
 import { Inter } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import { SpeedInsights } from '@vercel/speed-insights/next'
-import Providers from '@/components/Providers'
 import { defaultLocale, hasLocale, locales } from '@/lib/i18n'
 import { seasonScript } from '@/lib/season'
+import { themeScript } from '@/lib/theme'
+import { SITE_URL } from '@/lib/site'
 import '../globals.css'
 
 // Served from this site: no request to Google and no text shift on load.
@@ -15,6 +16,11 @@ const inter = Inter({
   variable: '--font-inter',
   display: 'swap'
 })
+
+// Base for every relative URL in the metadata, such as the social image.
+export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL)
+}
 
 export const viewport: Viewport = {
   themeColor: '#fff'
@@ -39,10 +45,11 @@ export default async function RootLayout ({ children, params }: RootLayoutProps)
     // React takes over, hence suppressHydrationWarning.
     <html lang={locale} className={inter.variable} suppressHydrationWarning>
       <head>
+        <script dangerouslySetInnerHTML={{ __html: themeScript }} />
         <script dangerouslySetInnerHTML={{ __html: seasonScript }} />
       </head>
       <body>
-        <Providers>{children}</Providers>
+        {children}
         <Analytics />
         <SpeedInsights />
       </body>
