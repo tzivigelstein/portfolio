@@ -4,7 +4,7 @@ import TimelineBuilder from '@data/timeline/timeline'
 import Section from '@components/Section'
 import { ExternalLink } from '@components/Icons'
 
-// Work and certifications as a plain list: dates on the side, then the
+// Work, certifications and education as a plain list: dates on the side, then the
 // role and what was done.
 export default function Experience () {
   const { t, lang } = useTranslation(['common', 'timeline'])
