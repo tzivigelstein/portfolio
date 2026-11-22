@@ -7,6 +7,7 @@ import {
   TelegramIcon,
 } from "@components/Icons";
 import useTranslation from "next-translate/useTranslation";
+import { EMAIL } from "@data/contact";
 
 const Footer = () => {
   const { t } = useTranslation();
@@ -59,6 +60,11 @@ const Footer = () => {
             {t("common:footerSecondSubtitle")}
           </h2>
           <ul className={styles.socialList}>
+            <li>
+              <a href={`mailto:${EMAIL}`} className={styles.socialLink}>
+                {EMAIL}
+              </a>
+            </li>
             <li>
               <a
                 target="_blank"

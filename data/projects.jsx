@@ -8,6 +8,13 @@ const projects = [
       en: 'Platform for managing Assetto Corsa racing championships. Drivers upload car skins through a web portal or a Discord bot, the platform validates them automatically, and organizers publish straight to the game server. In production with 100+ registered drivers.',
       es: 'Plataforma para gestionar campeonatos de Assetto Corsa. Los pilotos suben sus skins desde un portal web o un bot de Discord, la plataforma las valida automáticamente y los organizadores publican directo al servidor del juego. En producción, con más de 100 pilotos registrados.',
     },
+    image: '/images/ACHub.webp',
+    imageAlt: {
+      en: 'AC Hub landing page with usage numbers',
+      es: 'Landing de AC Hub con sus números de uso',
+    },
+    // Landscape screenshot: shown full width under the text.
+    imageFit: 'cover',
     // Private repository: no repository link on purpose.
     site: 'https://achub.pro/',
     color: 'linear-gradient(135deg, #09090b, #12305a)',

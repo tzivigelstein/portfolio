@@ -119,13 +119,36 @@
   margin: 1.25rem auto 0;
 }
 
+/* Landscape screenshots fill the whole width, uncropped. */
+.mediaCover {
+  max-height: none;
+  background-color: transparent;
+}
+
+.mediaCover .image {
+  width: 100%;
+  margin: 0;
+  aspect-ratio: 1280 / 700;
+  object-fit: cover;
+}
+
 @media (min-width: 720px) {
   .card {
     grid-template-columns: minmax(0, 1fr);
   }
 
-  .card:has(.media) {
+  .card:has(.media):not(.stacked) {
     grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+  }
+
+  .stacked .media {
+    height: auto;
+    border-left: none;
+    border-top: 1px solid var(--border);
+  }
+
+  .stacked .image {
+    width: 100%;
   }
 
   .media {

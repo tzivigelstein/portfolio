@@ -4,6 +4,7 @@ import ThemeSwitcher from '@components/ThemeSwitcher'
 import LanguageSwitcher from '@components/LanguageSwitcher'
 import useTranslation from 'next-translate/useTranslation'
 import Image from 'next/image'
+import { EMAIL } from '@data/contact'
 
 const Header = () => {
   const { t, lang } = useTranslation()
@@ -50,6 +51,7 @@ const Header = () => {
             <HeaderLink primary text={t('common:resumeButton')} link={resume} />
             <HeaderLink text='Github' link='https://github.com/tzivigelstein' />
             <HeaderLink text='Linkedin' link='https://www.linkedin.com/in/tzivigelstein/' />
+            <HeaderLink text={t('common:emailButton')} link={`mailto:${EMAIL}`} newTab={false} />
           </div>
         </div>
       </div>

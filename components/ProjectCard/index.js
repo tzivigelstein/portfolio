@@ -6,7 +6,9 @@ import localize from '../../lib/localize'
 // One card style for every project. The first one is tinted with the accent.
 export default function ProjectCard ({ project, featured = false }) {
   const { t, lang } = useTranslation()
-  const { image, repository, site, category, wip } = project
+  const { image, imageFit, repository, site, category, wip } = project
+  const imageAlt = localize(project.imageAlt, lang) ?? ''
+  const cover = imageFit === 'cover'
 
   const title = localize(project.title, lang)
   const name = localize(project.shortTitle, lang) || title
@@ -19,7 +21,11 @@ export default function ProjectCard ({ project, featured = false }) {
     category === 'web' ? t('common:cardSiteLink') : t('common:cardDownloadLink')
 
   return (
-    <article className={`${styles.card} ${featured ? styles.featured : ''}`}>
+    <article
+      className={`${styles.card} ${featured ? styles.featured : ''} ${
+        cover ? styles.stacked : ''
+      }`}
+    >
       <div className={styles.body}>
         <p className={styles.label}>
           {subtitle}
@@ -54,8 +60,13 @@ export default function ProjectCard ({ project, featured = false }) {
         </div>
       </div>
       {image && (
-        <div className={styles.media}>
-          <img alt='' loading='lazy' className={styles.image} src={image} />
+        <div className={`${styles.media} ${cover ? styles.mediaCover : ''}`}>
+          <img
+            alt={imageAlt}
+            loading='lazy'
+            className={styles.image}
+            src={image}
+          />
         </div>
       )}
     </article>

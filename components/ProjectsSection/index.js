@@ -10,7 +10,7 @@ export default function ProjectsSection () {
   const activeProjects = projects.filter(({ active }) => active)
 
   return (
-    <Section title={t('common:projectsSectionTitle')}>
+    <Section title={t('common:projectsSectionWebTitle')}>
       <ul className={styles.projectList}>
         {activeProjects.map((project, index) => (
           <li key={project.id}>
