@@ -19,9 +19,10 @@ I started this repo in 2021 as a place to practice. It has been rewritten a few 
 - [Next.js](https://nextjs.org/) 16 with the App Router and React 19. Almost everything is a Server Component; only the theme switcher and the Christmas extras run in the browser
 - TypeScript in strict mode, including the translations, so a key missing in one language does not compile
 - CSS Modules with a handful of design tokens in `app/globals.css`
-- [next-themes](https://github.com/pacocoursey/next-themes) for light and dark
+- Light and dark themes with a small script of its own (`lib/theme.ts`), no library
 - MDX (through `next-mdx-remote`) for the story
 - Jest and Testing Library for tests, ESLint with the [Standard](https://github.com/neostandard/neostandard) style for linting
+- GitHub Actions runs lint, types, tests and the build on every push
 - Deployed on [Vercel](https://vercel.com/) from the `main` branch
 
 ## Getting started
@@ -69,6 +70,7 @@ Most changes to the site are content changes, and content is kept apart from the
 | Résumés | `public/resume/` (keep the file names) |
 | Contact email | `data/contact.ts` |
 | Page title, description, social tags | `locales/*/common.json` (`meta…` keys) and `app/[lang]/page.tsx` |
+| The image shown when the site is shared | `lib/socialImage.tsx` (drawn from the header texts, one per language) |
 | Colors, light, dark and Christmas | `app/globals.css` |
 | Christmas playlist | `data/songs.ts` |
 
