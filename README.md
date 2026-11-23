@@ -67,7 +67,7 @@ Most changes to the site are content changes, and content is kept apart from the
 | Experience and education | `data/timeline/events.ts` for dates and links, `locales/*/timeline.json` for text |
 | Skills | `data/technologies.ts` |
 | My story | `posts/my-story-en.mdx` and `posts/my-story-es.mdx` |
-| Résumés | `public/resume/` (keep the file names) |
+| Résumés | Add the PDFs to `public/resume/` and list them in `data/contact.ts` (none are published right now) |
 | Contact email | `data/contact.ts` |
 | Page title, description, social tags | `locales/*/common.json` (`meta…` keys) and `app/[lang]/page.tsx` |
 | The image shown when the site is shared | `lib/socialImage.tsx` (drawn from the header texts, one per language) |

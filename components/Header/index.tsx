@@ -5,7 +5,7 @@ import ThemeSwitcher from '@/components/ThemeSwitcher'
 import LanguageSwitcher from '@/components/LanguageSwitcher'
 import { Mail } from 'lucide-react'
 import { GithubIcon, LinkedinIcon } from '@/components/Icons'
-import { EMAIL } from '@/data/contact'
+import { EMAIL, RESUMES } from '@/data/contact'
 import type { Dictionary, Locale } from '@/lib/i18n'
 
 interface HeaderProps {
@@ -14,7 +14,8 @@ interface HeaderProps {
 }
 
 export default function Header ({ dictionary, lang }: HeaderProps) {
-  const resume = `/resume/Tzivi_Gelstein_CV_${lang === 'es' ? 'ES' : 'EN'}.pdf`
+  // Without a résumé to offer, the mail takes its place as the main action.
+  const resume = RESUMES[lang]
 
   return (
     <header className={styles.header}>
@@ -53,7 +54,16 @@ export default function Header ({ dictionary, lang }: HeaderProps) {
           </h1>
           <p className={styles.intro}>{dictionary.headerIntro}</p>
           <div className={styles.actions}>
-            <HeaderLink primary text={dictionary.resumeButton} link={resume} />
+            {resume
+              ? <HeaderLink primary text={dictionary.resumeButton} link={resume} />
+              : (
+                  <HeaderLink
+                    primary
+                    text={dictionary.emailButton}
+                    link={`mailto:${EMAIL}`}
+                    newTab={false}
+                  />
+                )}
             <HeaderLink
               text='Github'
               link='https://github.com/tzivigelstein'
@@ -64,12 +74,14 @@ export default function Header ({ dictionary, lang }: HeaderProps) {
               link='https://www.linkedin.com/in/tzivigelstein/'
               icon={<LinkedinIcon aria-hidden='true' />}
             />
-            <HeaderLink
-              text={dictionary.emailButton}
-              link={`mailto:${EMAIL}`}
-              icon={<Mail aria-hidden='true' />}
-              newTab={false}
-            />
+            {resume && (
+              <HeaderLink
+                text={dictionary.emailButton}
+                link={`mailto:${EMAIL}`}
+                icon={<Mail aria-hidden='true' />}
+                newTab={false}
+              />
+            )}
           </div>
         </div>
       </div>

@@ -1,6 +1,6 @@
 import styles from './index.module.css'
 import { GithubIcon, LinkedinIcon, XIcon } from '@/components/Icons'
-import { EMAIL } from '@/data/contact'
+import { EMAIL, RESUMES } from '@/data/contact'
 import type { Dictionary } from '@/lib/i18n'
 
 const SOCIAL_LINKS = [
@@ -11,9 +11,9 @@ const SOCIAL_LINKS = [
 
 export default function Footer ({ dictionary }: { dictionary: Dictionary['common'] }) {
   const resumes = [
-    { name: dictionary.footerResumeEnglishLink, href: '/resume/Tzivi_Gelstein_CV_EN.pdf' },
-    { name: dictionary.footerResumeSpanishLink, href: '/resume/Tzivi_Gelstein_CV_ES.pdf' }
-  ]
+    { name: dictionary.footerResumeEnglishLink, href: RESUMES.en },
+    { name: dictionary.footerResumeSpanishLink, href: RESUMES.es }
+  ].filter((resume): resume is { name: string, href: string } => Boolean(resume.href))
 
   return (
     <footer className={styles.wrapper}>

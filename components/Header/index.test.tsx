@@ -1,6 +1,8 @@
 import { render, screen } from '@testing-library/react'
 import Header from './index'
-import { EMAIL } from '@/data/contact'
+import fs from 'node:fs'
+import path from 'node:path'
+import { EMAIL, RESUMES } from '@/data/contact'
 import { getDictionary, type Locale } from '@/lib/i18n'
 
 const renderHeader = (lang: Locale = 'en') =>
@@ -13,14 +15,22 @@ describe('Header', () => {
     expect(heading.textContent?.replace(/\s+/g, ' ').trim()).toBe("I'm Tzivi Backend developer.")
   })
 
-  test('links to the resume in the current language', () => {
-    renderHeader('en')
-    expect(screen.getByRole('link', { name: 'Resume' })).toHaveAttribute('href', '/resume/Tzivi_Gelstein_CV_EN.pdf')
-  })
+  test.each([['en', 'Resume'], ['es', 'Currículum']] as const)(
+    'links to the %s resume only when there is one',
+    (lang, name) => {
+      renderHeader(lang)
+      const link = screen.queryByRole('link', { name })
+      const resume = RESUMES[lang]
 
-  test('links to the Spanish resume in Spanish', () => {
-    renderHeader('es')
-    expect(screen.getByRole('link', { name: 'Currículum' })).toHaveAttribute('href', '/resume/Tzivi_Gelstein_CV_ES.pdf')
+      if (resume) expect(link).toHaveAttribute('href', resume)
+      else expect(link).not.toBeInTheDocument()
+    }
+  )
+
+  test('only lists resumes that are really in public/', () => {
+    for (const resume of Object.values(RESUMES)) {
+      expect(fs.existsSync(path.join(process.cwd(), 'public', resume))).toBe(true)
+    }
   })
 
   test('has Github, Linkedin and mail links', () => {
